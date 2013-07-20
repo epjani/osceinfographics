@@ -8,9 +8,11 @@ class ParserController < ApplicationController
 
 	def rasterize
 		aws_ip = "54.218.15.104"
+		file_name = params[:file_name]
+		csv = params[:csv]
 		begin 
 			Timeout.timeout(5) do
-				s = TCPSocket.new("http://#{aws_ip}/invoke_rasterization")
+				s = TCPSocket.new("http://#{aws_ip}/invoke_rasterization?file_name=#{file_name}&csv=#{csv}")
 				s.close
 
 				puts "Everything went well"
