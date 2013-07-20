@@ -12,7 +12,7 @@ class ParserController < ApplicationController
 		csv = params[:csv]
 		begin 
 			Timeout.timeout(5) do
-				s = IPSocket.new("http://#{aws_ip}/invoke_rasterization?file_name=#{file_name}&csv=#{csv}")
+				s = IPSocket.getaddress("http://#{aws_ip}/invoke_rasterization?file_name=#{file_name}&csv=#{csv}")
 				s.close
 
 				@error = "Everything went well"
