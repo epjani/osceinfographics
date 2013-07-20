@@ -1,1 +1,5 @@
-<%=@error%>
+<% unless @error %>
+	<%= link_to "See image", show_image_path(:file_name => params[:file_name]) %>
+<% else %>
+	<%= @error %>
+<% end %>

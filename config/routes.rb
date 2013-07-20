@@ -58,4 +58,6 @@ Osceinfographic::Application.routes.draw do
 
   get 'parse' => 'parser#parse'
   get 'rasterize' => 'parser#rasterize'
+  get 'show_image' => 'parser#show_image'
+  
 end
