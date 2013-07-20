@@ -24,8 +24,8 @@ class ParserController < ApplicationController
 		rescue Timeout::Error
 			@error = "Timeout error"
 			return false
-		rescue
-			@error = "Unknown error has ocured"
+		rescue Exception => e
+			@error = "Unknown error has ocured \n #{e}"
 			return false
 		end
 	end
