@@ -15,17 +15,17 @@ class ParserController < ApplicationController
 				s = TCPSocket.new("http://#{aws_ip}/invoke_rasterization?file_name=#{file_name}&csv=#{csv}")
 				s.close
 
-				puts "Everything went well"
+				@error = "Everything went well"
 				return true
 			end
 		rescue Errno::ECONNREFUSED
-			puts "Connection refused"
+			@error = "Connection refused"
 			return true
 		rescue Timeout::Error
-			puts "Timeout error"
+			@error = "Timeout error"
 			return false
 		rescue
-			puts "Unknown error has ocured"
+			@error = "Unknown error has ocured"
 			return false
 		end
 	end
