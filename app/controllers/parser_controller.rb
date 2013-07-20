@@ -14,23 +14,22 @@ class ParserController < ApplicationController
 		file_name = params[:file_name]
 		csv = params[:csv]
 
-		# begin 
-			# => Ping rasterization job with data provided
-			# Timeout.timeout(15) do
+		begin 
+			=> Ping rasterization job with data provided
+			Timeout.timeout(5) do
 				s = Net::HTTP.get(URI.parse("http://#{aws_ip}/invoke_rasterization?file_name=#{file_name}&csv=#{csv}"))
 				puts "respond : #{s}"
 				@error = false
-			# end
-		# rescue Errno::ECONNREFUSED
-		# 	@error = "Connection refused"
-		# 	return true
-		# rescue Timeout::Error
-		# 	@error = "Timeout error"
-		# 	return false
-		# rescue Exception => e
-		# 	@error = "Unknown error has ocured \n #{e}"
-		# 	return false
-		# end
+			end
+		rescue Errno::ECONNREFUSED
+			@error = "Connection refused"
+			return true
+		rescue Timeout::Error
+			@error = false
+		rescue Exception => e
+			@error = "Unknown error has ocured \n #{e}"
+			return false
+		end
 
 	end
 
