@@ -12,7 +12,7 @@ class ParserController < ApplicationController
 		csv = params[:csv]
 		begin 
 			Timeout.timeout(5) do
-				s = TCPSocket.new("http://#{aws_ip}/invoke_rasterization?file_name=#{file_name}&csv=#{csv}", 'aws-rasterize-helper')
+				s = IPSocket.new("http://#{aws_ip}/invoke_rasterization?file_name=#{file_name}&csv=#{csv}")
 				s.close
 
 				@error = "Everything went well"
