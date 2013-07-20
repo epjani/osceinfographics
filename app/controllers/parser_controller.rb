@@ -16,7 +16,7 @@ class ParserController < ApplicationController
 
 		begin 
 			# => Ping rasterization job with data provided
-			Timeout.timeout(5) do
+			Timeout.timeout(15) do
 				s = Net::HTTP.get(URI.parse("http://#{aws_ip}/invoke_rasterization?file_name=#{file_name}&csv=#{csv}"))
 				puts "respond : #{s}"
 				@error = false
