@@ -23,4 +23,4 @@ production:
   username: osceinfo_prod
   password: OsceInfo2013?
   pool: 5
-  host: infograph.doit.ba
+  host: localhost
