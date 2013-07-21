@@ -31,6 +31,7 @@ class ParserController < ApplicationController
 			@error = "Unknown error has ocured \n #{e}"
 			return false
 		end
+		sleep(1)
 		redirect_to show_image_path(:file_name => file_name)
 	end
 
@@ -44,7 +45,7 @@ class ParserController < ApplicationController
 		open(local_file, 'wb') do |file|
 		  file << open("http://#{aws_ip}/images/infographs/#{file_name}.png").read
 		end
-		sleep(1)
+		sleep(2)
 		@image_local = "images/infographs/#{file_name}.png"
 	end
 end
