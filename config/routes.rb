@@ -55,9 +55,12 @@ Osceinfographic::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
+  root :to => 'csv#index'
 
-  get 'parse' => 'parser#parse'
-  get 'rasterize' => 'parser#rasterize'
-  get 'show_image' => 'parser#show_image'
+  get 'parse' =>        'parser#parse'
+  get 'rasterize' =>    'parser#rasterize'
+  get 'show_image' =>   'parser#show_image'
   
+  get 'dashboard'  =>   'csv#index'
+  post 'upload'  =>     'csv#upload_file'
 end

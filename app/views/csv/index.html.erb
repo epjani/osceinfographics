@@ -1,0 +1,40 @@
+<h1>File Upload</h1>
+<%= form_for :upload_file, :url => {:action => "upload_file"}, :html => { :multipart => true } do |f| %>
+	<%= f.file_field :the_file %><br />
+	<label for="year">Year</label>
+	<input type="text" name="year" maxlength="4" /><br />
+	<label for="month">Month</label>
+	<select name="month">
+		<option value="1">January</option>
+		<option value="2">February</option>
+		<option value="3">March</option>
+		<option value="4">April</option>
+		<option value="5">May</option>
+		<option value="6">June</option>
+		<option value="7">July</option>
+		<option value="8">August</option>
+		<option value="9">September</option>
+		<option value="10">October</option>
+		<option value="11">November</option>
+		<option value="12">December</option>
+	</select><br />
+	<%= f.submit "Upload" %>
+<% end %>
+<br />
+<br />
+<h1>Uploaded CSVs</h1>
+<table>
+	<th>Date</th>
+	<th>Image</th>
+	<th>CSV</th>
+	<th>HTML</th>
+	
+	<% @csvs.each do |csv| %>
+		<tr>
+			<td><%= csv.date %></td>
+			<td><a href="<%=show_image_path({:file_name => csv.date })%>">link</a></td>
+			<td><a target="_blank" href="<%= csv.csv_file_location %>" />link</a></td>
+			<td><a href="<%=parse_path({:file_name => csv.date})%>">link</a></td>
+		</tr>
+	<% end %>
+</table>

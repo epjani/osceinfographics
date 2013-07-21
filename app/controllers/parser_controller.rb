@@ -6,7 +6,8 @@ require 'fileutils'
 class ParserController < ApplicationController	
 	
 	def parse
-		@string = params[:csv]
+		# => TODO invoke parser
+		@string = params[:csv].blank? ? [] : params[:csv]
 	end
 
 	def rasterize
@@ -15,7 +16,7 @@ class ParserController < ApplicationController
 		csv = params[:csv]
 
 		begin 
-			#=> Ping rasterization job with data provided
+			#=> Ping rasterization service with data provided
 			Timeout.timeout(5) do
 				s = Net::HTTP.get(URI.parse("http://#{aws_ip}/invoke_rasterization?file_name=#{file_name}&csv=#{csv}"))
 				puts "respond : #{s}"
@@ -38,6 +39,7 @@ class ParserController < ApplicationController
 		file_name = params[:file_name]
 		local_file = "public/images/infographs/#{file_name}.png"
 
+		# => TODO check if images exist don't go and download it
 		# => Download image locally
 		open(local_file, 'wb') do |file|
 		  file << open("http://#{aws_ip}/images/infographs/#{file_name}.png").read
