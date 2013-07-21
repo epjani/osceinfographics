@@ -4,7 +4,9 @@ class Csv < ActiveRecord::Base
 		tmp = upload.tempfile
 		stringified_date = stringify_date(selected_year, selected_month)
 		file = File.join("public/csv", stringified_date + ".csv")
+
 		FileUtils.cp tmp.path, file
+		File.chmod(644, file)
 		csv = Csv.new 
 		csv.image_file_location = "infographs/#{stringified_date}.png"
 		csv.csv_file_location = "csv/#{stringified_date}.csv"
