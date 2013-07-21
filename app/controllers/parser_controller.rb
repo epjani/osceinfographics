@@ -7,7 +7,8 @@ class ParserController < ApplicationController
 	
 	def parse
 		# => TODO invoke parser
-		@string = params[:csv].blank? ? [] : params[:csv]
+		file_name = params[:file_name]
+		@string = CsvData.parse(file_name)		
 	end
 
 	def rasterize
