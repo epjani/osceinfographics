@@ -32,7 +32,7 @@
 	<% @csvs.each do |csv| %>
 		<tr>
 			<td><%= csv.date %></td>
-			<td><a href="<%=show_image_path({:file_name => csv.date })%>">link</a></td>
+			<td><a href="<%=rasterize_path({:file_name => csv.date })%>">link</a></td>
 			<td><a target="_blank" href="<%= csv.csv_file_location %>" />link</a></td>
 			<td><a href="<%=parse_path({:file_name => csv.date})%>">link</a></td>
 		</tr>

@@ -31,7 +31,7 @@ class ParserController < ApplicationController
 			@error = "Unknown error has ocured \n #{e}"
 			return false
 		end
-
+		redirect_to show_image_path(:file_name => file_name)
 	end
 
 	def show_image
