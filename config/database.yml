@@ -1,10 +1,12 @@
 # SQLite version 3.x
 #   gem install sqlite3-ruby (not necessary on OS X Leopard)
 development:
-  adapter: sqlite3
-  database: db/development.sqlite3
+  adapter: postgresql
+  database: osceinfo_dev
+  username: osceinfo_prod
+  password: OsceInfo2013?
   pool: 5
-  timeout: 5000
+  host: localhost
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -16,7 +18,9 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
+  adapter: postgresql
+  database: osceinfo_prod
+  username: osceinfo_prod
+  password: OsceInfo2013?
   pool: 5
-  timeout: 5000
+  host: infograph.doit.ba
