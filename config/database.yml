@@ -2,7 +2,7 @@
 #   gem install sqlite3-ruby (not necessary on OS X Leopard)
 development:
   adapter: postgresql
-  database: osceinfo_dev
+  database: osceinfo_prod
   username: osceinfo_prod
   password: OsceInfo2013?
   pool: 5
