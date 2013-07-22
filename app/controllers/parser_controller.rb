@@ -8,7 +8,7 @@ class ParserController < ApplicationController
 	def parse
 		# => TODO invoke parser
 		file_name = params[:file_name]
-		@string = CsvData.parse(file_name)		
+		@string = CsvData.parse(file_name)	
 	end
 
 	def rasterize
@@ -19,7 +19,7 @@ class ParserController < ApplicationController
 		begin 
 			#=> Ping rasterization service with data provided
 			Timeout.timeout(5) do
-				s = Net::HTTP.get(URI.parse("http://#{aws_ip}/invoke_rasterization?file_name=#{file_name}&csv=#{csv}"))
+				s = Net::HTTP.post_form(URI.parse("http://#{aws_ip}/invoke_rasterization?file_name=#{file_name}&csv=#{csv}"))
 				puts "respond : #{s}"
 				@error = false
 			end
@@ -27,10 +27,10 @@ class ParserController < ApplicationController
 			@error = "Connection refused"
 			return true
 		rescue Timeout::Error
-			@error = false
+			@error = true
 		rescue Exception => e
 			@error = "Unknown error has ocured \n #{e}"
-			return false
+			return true
 		end
 		sleep(3)
 		redirect_to show_image_path(:file_name => file_name)
