@@ -8,7 +8,14 @@ class ParserController < ApplicationController
 	def parse
 		# => TODO invoke parser
 		file_name = params[:file_name]
-		@string = CsvData.parse(file_name)	
+		parsed_string = CsvData.parse(file_name)
+		puts "#{parsed_string}"
+		@month = parsed_string[:general_info][:month]
+		@year = parsed_string[:general_info][:year]
+		@total_incidents = parsed_string[:general_info][:total_incidents]
+		@total_responses = parsed_string[:general_info][:total_responses]
+		@responses_to_incidents = parsed_string[:general_info][:responses_to_incidents]
+		@monthly = parsed_string[:monthly_preview]
 	end
 
 	def rasterize
@@ -19,8 +26,7 @@ class ParserController < ApplicationController
 		begin 
 			#=> Ping rasterization service with data provided
 			Timeout.timeout(5) do
-				s = Net::HTTP.post_form(URI.parse("http://#{aws_ip}/invoke_rasterization?file_name=#{file_name}&csv=#{csv}"))
-				puts "respond : #{s}"
+				s = Net::HTTP.post(URI.parse("http://#{aws_ip}/invoke_rasterization?file_name=#{file_name}&csv=#{csv}"))
 				@error = false
 			end
 		rescue Errno::ECONNREFUSED

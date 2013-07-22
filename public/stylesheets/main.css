@@ -8,7 +8,144 @@
     font-weight: normal;
     font-style: normal;
 }
-
+@font-face{
+		font-family: 'gothambookregular';
+	    src: url('/fonts/gothambook-webfont.eot');
+	    src: url('/fonts/gothambook-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('/fonts/gothambook-webfont.woff') format('woff'),
+	         url('/fonts/gothambook-webfont.ttf') format('truetype'),
+	         url('/fonts/gothambook-webfont.svg#gothambookregular') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+}
+@font-face{
+		font-family: 'gothamblackregular';
+	    src: url('/fonts/gothamblack-webfont.eot');
+	    src: url('/fonts/gothamblack-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('/fonts/gothamblack-webfont.woff') format('woff'),
+	         url('/fonts/gothamblack-webfont.ttf') format('truetype'),
+	         url('/fonts/gothamblack-webfont.svg#gothamblackregular') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+}
+@font-face{
+		font-family: 'gothamboldregular';
+	    src: url('/fonts/gothambold-webfont.eot');
+	    src: url('/fonts/gothambold-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('/fonts/gothambold-webfont.woff') format('woff'),
+	         url('/fonts/gothambold-webfont.ttf') format('truetype'),
+	         url('/fonts/gothambold-webfont.svg#gothamboldregular') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+}
 .gotham-ultra{
 	font-family: 'gothamultraregular';
 }
+.gotham-book{
+	font-family: 'gothambookregular';
+}
+.gotham-black{
+	font-family: 'gothamblackregular';
+}
+.gotham-bold{
+	font-family: 'gothamboldregular';
+}
+
+.font-black{
+	color:#262626;
+}
+.font-green{
+	color:#829c9b;
+}
+.font-green-light{
+	color: #9dc4c5;
+}
+.clear{
+	clear:both;
+}
+.full_width{width:100%;}
+.infographic_wrapper{
+	width:2133px;
+	padding:75px 175px;
+	background-color:#e9e2ce;
+	zoom: 0.5;
+	-moz-transform: scale(0.5);
+	float:left;
+	color:#262626;
+}
+.infographic_wrapper .header{
+	height:83px;
+}
+.infographic_wrapper .header .green_line{
+	height:6px;
+	width:532px;
+	background-color: #829c9b;
+	float:left;
+	margin-top:66px;
+}
+.infographic_wrapper .header .title{
+	font-size:120px;
+	float:left;
+	height:125px;
+	margin:0 46px;
+}
+.month{
+	font-size: 44px;
+	text-align: center;
+	float:left;
+	width: 100%;
+}
+.infographic_wrapper .description{
+	text-align: justify;
+	font-size:38px;
+	margin-top:44px;
+}
+.infographic_wrapper .incidents_responses{
+	float: left;
+}
+.incidents_responses .incidents{
+	float: left;
+}
+.incidents_responses .responses{
+	float: left;
+	margin-left: 212px;
+}
+.incidents_responses .incidents .header, .incidents_responses .responses .header{
+	font-size: 93px;
+	padding:40px 0px 60px 0px;
+	margin-top: 68px;
+	float: left;
+	width: 960px;
+	text-align: center;
+}
+.incidents_responses .incidents .header{
+	background-color: #262626;
+	color:#9dc4c5;
+}
+.incidents_responses .responses .header{
+	background-color: #9dc4c5;
+	color:#262626;
+}
+.incidents_responses .full_width{text-align: center;}
+.incidents_responses .number_placeholder{
+	width: 398px;
+	text-align: center;
+	font-size: 310px;
+	float: left;
+}
+.incidents_responses .description{
+	float: left;
+	padding: 30px 26px;
+	width: 494px;
+	height: 164px;
+	margin-top: 68px;
+	margin-left: 14px;
+}
+.incidents .description, .responses .description{
+	background-color: #829c9b;
+}
+
+.incidents_responses .description .full_width{text-align: justify;font-size: 36px;}
+.incidents_responses .description .full_width.number_of_incidents{font-size: 58px;}
+.incidents_responses .description .incidents{font-size: 85px;margin-top:-9px;margin-bottom: -6px;}
+.incidents_responses .description .responses{font-size: 78px;margin-top:-9px;margin-bottom: -6px;margin-left: 0px;}
