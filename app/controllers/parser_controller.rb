@@ -26,7 +26,7 @@ class ParserController < ApplicationController
 		begin 
 			#=> Ping rasterization service with data provided
 			Timeout.timeout(5) do
-				s = Net::HTTP.post(URI.parse("http://#{aws_ip}/invoke_rasterization?file_name=#{file_name}&csv=#{csv}"))
+				s = Net::HTTP.get(URI.parse("http://#{aws_ip}/invoke_rasterization?file_name=#{file_name}&csv=#{csv}"))
 				@error = false
 			end
 		rescue Errno::ECONNREFUSED
