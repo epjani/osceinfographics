@@ -1,0 +1,14 @@
+@font-face{
+	font-family: 'gothamultraregular';
+    src: url('/fonts/gothamultra-webfont.eot');
+    src: url('/fonts/gothamultra-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/gothamultra-webfont.woff') format('woff'),
+         url('/fonts/gothamultra-webfont.ttf') format('truetype'),
+         url('/fonts/gothamultra-webfont.svg#gothamultraregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.gotham-ultra{
+	font-family: 'gothamultraregular';
+}
