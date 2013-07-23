@@ -38,6 +38,26 @@
 	    font-weight: normal;
 	    font-style: normal;
 }
+@font-face{
+		font-family: 'gothamlightregular';
+	    src: url('/fonts/gothamlight-webfont.eot');
+	    src: url('/fonts/gothamlight-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('/fonts/gothamlight-webfont.woff') format('woff'),
+	         url('/fonts/gothamlight-webfont.ttf') format('truetype'),
+	         url('/fonts/gothamlight-webfont.svg#gothamlightregular') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+}
+@font-face{
+		font-family: 'gothamthinregular';
+	    src: url('/fonts/gothamthin-webfont.eot');
+	    src: url('/fonts/gothamthin-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('/fonts/gothamthin-webfont.woff') format('woff'),
+	         url('/fonts/gothamthin-webfont.ttf') format('truetype'),
+	         url('/fonts/gothamthin-webfont.svg#gothamthinregular') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+}
 .gotham-ultra{
 	font-family: 'gothamultraregular';
 }
@@ -50,7 +70,12 @@
 .gotham-bold{
 	font-family: 'gothamboldregular';
 }
-
+.gotham-light{
+	font-family: 'gothamlightregular';
+}
+.gotham-thin{
+	font-family: 'gothamthinregular';
+}
 .font-black{
 	color:#262626;
 }
@@ -68,8 +93,6 @@
 	width:2133px;
 	padding:75px 175px;
 	background-color:#e9e2ce;
-	zoom: 0.5;
-	-moz-transform: scale(0.5);
 	float:left;
 	color:#262626;
 }
@@ -149,3 +172,26 @@
 .incidents_responses .description .full_width.number_of_incidents{font-size: 58px;}
 .incidents_responses .description .incidents{font-size: 85px;margin-top:-9px;margin-bottom: -6px;}
 .incidents_responses .description .responses{font-size: 78px;margin-top:-9px;margin-bottom: -6px;margin-left: 0px;}
+.monthly_statistics { width: 960px;float: left;margin-top: 20px;}
+.victim_characteristics .title{
+	text-align: justify;
+	font-size: 47px;
+	margin-bottom: 25px;
+}
+.victim_characteristics .first, .victim_characteristics .second, .victim_characteristics .third, .victim_characteristics .fourth{
+	height:76px;
+	float:left;
+	margin-bottom: 13px;
+}
+.victim_characteristics .first_lbl, .victim_characteristics .second_lbl, .victim_characteristics .third_lbl, .victim_characteristics .fourth_lbl{
+	float:left;
+	font-size:26px;
+}
+.victim_characteristics .first{background-color: #262626;}
+.victim_characteristics .second{background-color: #546060;}
+.victim_characteristics .third{background-color: #829c9b;}
+.victim_characteristics .fourth{background-color: #9dc4c5;}
+.victim_characteristics .first_lbl{color: #262626;}
+.victim_characteristics .second_lbl{color: #546060;}
+.victim_characteristics .third_lbl{color: #829c9b;}
+.victim_characteristics .fourth_lbl{color: #9dc4c5;}

@@ -16,6 +16,16 @@ class ParserController < ApplicationController
 		@total_responses = parsed_string[:general_info][:total_responses]
 		@responses_to_incidents = parsed_string[:general_info][:responses_to_incidents]
 		@monthly = parsed_string[:monthly_preview]
+		
+		vc = parsed_string[:victim_characteristics]
+		characteristict_sum = vc.values.inject{|sum, value| sum.to_i + value.to_i}
+		@vc = calculate_victim_characteristics(vc, characteristict_sum)
+
+		@since_year = parsed_string[:general_info][:since_year]
+		@since_month = parsed_string[:general_info][:since_month]
+		@since_incidents = parsed_string[:general_info][:since_incidents]
+		@since_responses = parsed_string[:general_info][:since_responses]
+
 	end
 
 	def rasterize
@@ -55,4 +65,39 @@ class ParserController < ApplicationController
 		sleep(4)
 		@image_local = "images/infographs/#{file_name}.png"
 	end
+
+	private
+
+	def percent_of(a, b)
+		a.to_f / b.to_f * 100.0
+	end
+
+	def calculate_victim_characteristics(vc, characteristict_sum)
+		
+		max_v_1 = vc.values.map{|v| v.to_i}.max 
+		max_n_1 = vc.key max_v_1.to_s
+		max_v_1 = percent_of(max_v_1, characteristict_sum)
+		vc.delete max_n_1
+
+		max_v_2 = vc.values.map{|v| v.to_i}.max 
+		max_n_2 = vc.key max_v_2.to_s
+		max_v_2 = percent_of(max_v_2, characteristict_sum)
+		vc.delete max_n_2
+
+		max_v_3 = vc.values.map{|v| v.to_i}.max 
+		max_n_3 = vc.key max_v_3.to_s
+		max_v_3 = percent_of(max_v_3, characteristict_sum)
+		vc.delete max_n_3
+		
+		return { :first => {stringify_vc(max_n_1) => max_v_1}, :second => {stringify_vc(max_n_2) => max_v_2}, :third => {stringify_vc(max_n_3) => max_v_3}, :others => percent_of(vc.values.map{|v| v.to_i}.sum, characteristict_sum)}
+	end
+
+	def stringify_vc(string)
+		splitted = string[3..-1].split('_')
+		unless splitted[2].nil?
+			splitted.delete_at(2)
+		end
+		return splitted.join('<br />')
+	end
+
 end

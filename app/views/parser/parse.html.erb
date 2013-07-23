@@ -5,31 +5,54 @@
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['', ''],
-          ['',  <%=@monthly[:i_jan]%>],
-          ['',  <%=@monthly[:i_feb]%>],
-          ['',  <%=@monthly[:i_mar]%>],
-          ['',  <%=@monthly[:i_apr]%>],
-          ['',  <%=@monthly[:i_may]%>],
-          ['',  <%=@monthly[:i_june]%>],
-          ['',  <%=@monthly[:i_july]%>],
-          ['',  <%=@monthly[:i_aug]%>],
-          ['',  <%=@monthly[:i_sep]%>],
-          ['',  <%=@monthly[:i_oct]%>],
-          ['',  <%=@monthly[:i_nov]%>],
-          ['',  <%=@monthly[:i_dec]%>]
+          ['Jan',  <%=@monthly[:i_jan]%>],
+          ['Feb',  <%=@monthly[:i_feb]%>],
+          ['Mar',  <%=@monthly[:i_mar]%>],
+          ['Apr',  <%=@monthly[:i_apr]%>],
+          ['May',  <%=@monthly[:i_may]%>],
+          ['Jun',  <%=@monthly[:i_june]%>],
+          ['Jul',  <%=@monthly[:i_july]%>],
+          ['Aug',  <%=@monthly[:i_aug]%>],
+          ['Sep',  <%=@monthly[:i_sep]%>],
+          ['Oct',  <%=@monthly[:i_oct]%>],
+          ['Nov',  <%=@monthly[:i_nov]%>],
+          ['Dec',  <%=@monthly[:i_dec]%>]
         ]);
 
         var options = {
           title: '',
           backgroundColor: 'transparent',
           colors: ['#556161'],
-          legend: null
+          legend: {position: 'none'},
+          vAxis: {baseline: -1, gridlines: {color: 'transparent'}, textStyle: {color: '#829c9b'}},
+          hAxis: { minorGridlines: {count: 10, color: '#000'}},
+          chartArea:{left:55,top:15,width:"100%",height:"100%"},
+          fontSize: 34,
+          fontName: 'gothamultraregular'
         };
 
         var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
         chart.draw(data, options);
       }
     </script>
+    <style type="text/css">
+    	.since_month{
+    		width: 960px;
+    		float: left;
+    		margin-left: 212px;
+    	}
+    	.since_month .title{
+    		font-size: 56px;
+    		color: #829c9b;
+    		border-bottom: 8px solid #829c9b;
+    	}
+    	.clocklike{
+    		font-size: 360px;
+    	}
+    	.clocklike .crimes, .clocklike .responses, .clocklike .divider{float: left;}
+    	.clocklike .divider{margin-top: -30px;}
+    	.since_month .description{color:#546060;font-size: 47px;}
+    </style>
 <div class="infographic_wrapper">
 	<div class="header">
 		<div class="green_line"></div>
@@ -52,9 +75,9 @@
 			<div class="clear"></div>
 			<div class="number_placeholder gotham-black"><%=@total_incidents%></div>
 			<div class="description">
-				<span class="full_width gotham-bold">B I A S  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M O T I V A T E D</span><br />
+				<span class="full_width gotham-bold">B I A S  &nbsp;&nbsp;&nbsp;&nbsp;M O T I V A T E D</span><br />
 				<span class="incidents gotham-ultra">INCIDENTS</span><br />
-				<span class="full_width gotham-bold">T &nbsp;&nbsp;H &nbsp;&nbsp;I &nbsp;&nbsp;S  &nbsp;&nbsp;&nbsp;&nbsp;M &nbsp;&nbsp;O &nbsp;&nbsp;N &nbsp;&nbsp;T &nbsp;&nbsp;H</span>
+				<span class="full_width gotham-bold">T &nbsp;H &nbsp;I &nbsp;S  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M &nbsp;O &nbsp;N &nbsp;T &nbsp;H</span>
 			</div>
 		</div>
 		<div class="responses">
@@ -66,13 +89,42 @@
 			<div class="number_placeholder gotham-black font-green-light"><%=@total_responses%></div>
 			<div class="description">
 				<span class="responses gotham-ultra">RESPONSES</span><br />
-				<span class="full_width gotham-bold">T &nbsp;&nbsp;H &nbsp;&nbsp;I &nbsp;&nbsp;S  &nbsp;&nbsp;&nbsp;&nbsp;M &nbsp;&nbsp;O &nbsp;&nbsp;N &nbsp;&nbsp;T &nbsp;&nbsp;H</span>
-				<div class="full_width gotham-ultra number_of_incidents">TO <span class="font-green-light"><%=@responses_to_incidents%></span> &nbsp;INCIDENTS</div><br />
+				<span class="full_width gotham-bold">T &nbsp;H &nbsp;I &nbsp;S  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M &nbsp;O &nbsp;N &nbsp;T &nbsp;H</span>
+				<div class="full_width gotham-ultra number_of_incidents">TO <span class="font-green-light"><%=@responses_to_incidents%></span> INCIDENTS</div><br />
 			</div>
 		</div>
 	</div>
 	<div class="clear"></div>
 	<div class="monthly_statistics">
-		<div id="chart_div" style="width: 960px; height: 500px;"></div>
+		<div id="chart_div" style="width: 960px; height: 380px;"></div>
+		<div class="victim_characteristics">
+			<div class="title gotham-light">
+				V I C T I M &nbsp;&nbsp;C H A R A C T E R I S T I C S
+			</div>
+			<div class="clear"></div>
+			<div class="first" style="width:<%=@vc[:first].first.last%>%;"></div>
+			<div class="second" style="width:<%=@vc[:second].first.last%>%;"></div>
+			<div class="third" style="width:<%=@vc[:third].first.last%>%;"></div>
+			<div class="fourth" style="width:<%=@vc[:others]%>%;"></div>
+
+			<div class="first_lbl gotham-ultra" style="width:<%=@vc[:first].first.last%>%;"><%=@vc[:first].first.first.html_safe%></div>
+			<div class="second_lbl gotham-ultra" style="width:<%=@vc[:second].first.last%>%;"><%=@vc[:second].first.first.html_safe%></div>
+			<div class="third_lbl gotham-ultra" style="width:<%=@vc[:third].first.last%>%;"><%=@vc[:third].first.first.html_safe%></div>
+			<div class="fourth_lbl gotham-ultra" style="width:<%=@vc[:others]%>%;">other</div>
+		</div>
+	</div>
+	<div class="since_month">
+		<div class="title gotham-black">SINCE <%=@since_month.upcase%> <%=@since_year.upcase%></div>
+		<div class="clocklike gotham-thin">
+			<div class="crimes">
+				<%=@since_incidents%>				
+			</div>
+			<div class="divider">:</div>
+			<div class="responses">
+				<%=@since_responses%>				
+			</div>			
+		</div>
+		<div style="width:472px;float:left;margin-left:20px;"><span class="description gotham-bold">hate incidents</span></div>
+		<div style="margin-left:40px;float:left"><span class="description gotham-bold">hate incidents<br />with at least<br />one response</span></div>
 	</div>
 </div>
