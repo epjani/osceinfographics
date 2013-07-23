@@ -45,11 +45,10 @@
 			url : 'http://54.218.15.104/invoke_rasterization?file_name=' + file_name,
 			dataType: 'jsonp',
 			success : function(){
-				window.open('54.218.15.104/images/infographs/' + file_name + '.png', '_blank')
+				window.open('54.218.15.104/images/infographs/' + file_name + '.png', '_blank');
 			},
 			error : function(data){
-				console.log('--- error ---');
-				console.log(data);
+				window.open('54.218.15.104/images/infographs/' + file_name + '.png', '_blank')
 			}
 		});
 	}
