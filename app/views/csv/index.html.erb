@@ -42,7 +42,7 @@
 	function get_image(file_name){
 		$.ajax({
 			type : 'GET',
-			url : '54.218.15.104/invoke_rasterization?file_name=' + file_name,
+			url : 'http://54.218.15.104/invoke_rasterization?file_name=' + file_name,
 			success : function(){
 				window.open('54.218.15.104/images/infographs/' + file_name + '.png', '_blank')
 			},
