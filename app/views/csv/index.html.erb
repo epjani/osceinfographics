@@ -32,9 +32,24 @@
 	<% @csvs.each do |csv| %>
 		<tr>
 			<td><%= csv.date %></td>
-			<td><a href="<%=rasterize_path({:file_name => csv.date })%>">link</a></td>
+			<td><a href="#" onclick="get_image('<%=csv.date%>');">link</a></td>
 			<td><a target="_blank" href="<%= csv.csv_file_location %>" />link</a></td>
 			<td><a href="<%=parse_path({:file_name => csv.date})%>">link</a></td>
 		</tr>
 	<% end %>
 </table>
+<script>
+	function get_image(file_name){
+		$.ajax({
+			type : 'GET',
+			url : '54.218.15.104/invoke_rasterization?file_name=' + file_name,
+			success : function(){
+				window.open('54.218.15.104/images/infographs/' + file_name + '.png', '_blank')
+			},
+			error : function(data){
+				console.log('--- error ---');
+				console.log(data);
+			}
+		});
+	}
+</script>
