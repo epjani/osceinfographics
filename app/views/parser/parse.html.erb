@@ -62,69 +62,24 @@
       }
     </script>
     <style>
-    	.map_wrapper{
-    		float: left;
-    		background-color: #262626;
-    		width: 100%;
-    	}
     	.map_wrapper .map{
-    		float: left;
-    		width: 960px;
-    		height: 100px;
+    		padding-left: 43px;
+    		margin-top:43px;
+    		background: url('images/bih_map.png') no-repeat 200px 60px;
+    		min-height: 810px;
     	}
-    	.map_wrapper .highlits{
-    		float: left;
-    		margin-left: 212px;
+    	.map_wrapper .map div.cities{
+    		margin-top:200px;
     	}
-    	.highlight_box_wrapper{
-    		float: left;
-    		width: 900px;
+    	ul#cities{
+    		list-style: none;
+    		padding:0;
     	}
-    	.hl_left, .hl_right{float: left;height: 35px;width: 24px;margin-top: -35px;}
-    	.hl_left{background: url('images/hl_left.png') no-repeat;}
-    	.hl_right{background: url('images/hl_right.png') no-repeat;}
-    	.highlight_box{
-    		margin-top: -35px;
-    		width: 852px;
-    		background-color: #9dc4c5;
-    		float: left;
-    		margin-left: 22px;
-    		height:417px;
-    	}
-    	.highlight_box .title{
+    	ul#cities li{
     		font-size: 33px;
-    		text-align: center;
-    		color:#829c9b;
-    	}
-    	.highlighted_txt{
-    		font-size: 22px;
     		color:#546060;
-    		padding:20px 25px 20px 25px;
     	}
-    	.hate_cases{margin-top:55px;}
-    	.hate_cases .title{
-    		font-size: 51px;
-    		color:#9dc4c5;
-    		border-bottom: 7px solid #9dc4c5;
-    		padding-bottom: 25px;
-    		padding-left: 5px;
-    		margin-bottom: 30px;
-    	}
-    	.hate_cases .li{
-    		font-size: 51px;
-    		color:#829c9b;
-    	}
-
-    	.hate_cases .li .txt, .hate_cases .li .dots, .hate_cases .li .value{
-    		float:left;
-    	}
-    	.hate_cases .li .value{
-    		margin-top: -15px;
-    		font-size: 90px;
-    	}
-    	.hate_cases .li .dots{
-    		margin-top: -10px;
-    	}
+    	ul#cities li span{color:#9dc4c5;}
     </style>
 <div class="infographic_wrapper">
 	<div class="header">
@@ -309,6 +264,14 @@
 	<div class="clear"></div>
 	<div class="map_wrapper">
 		<div class="map">
+			<div class="title gotham-bold">INCIDENTS AND RESPONSES THIS MONTH</div>
+			<div class="cities">
+				<ul id="cities">
+					<% @cities.each do |city|%>
+						<li class="gotham-light"><%=city.first%>&nbsp;&nbsp;<span class="gotham-bold"><%=city.last%></span></li>
+					<% end %>
+				</ul>
+			</div>
 		</div>
 		<div class="highlits">
 			<div class="highlight_box_wrapper">

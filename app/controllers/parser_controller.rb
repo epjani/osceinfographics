@@ -1,5 +1,3 @@
-require 'timeout'
-require 'net/http'
 require 'open-uri'
 require 'fileutils'
 
@@ -35,31 +33,8 @@ class ParserController < ApplicationController
 		@convictions = parsed_string[:hate_crimes_cases_in_a_year][:convictions]
 		@acquittals = parsed_string[:hate_crimes_cases_in_a_year][:acquittals]
 
+		@cities = parsed_string[:geographical_presentation_responses]
 		render :layout => false
-	end
-
-	def rasterize
-		aws_ip = "54.218.15.104"
-		file_name = params[:file_name]
-		csv = params[:csv]
-
-		begin 
-			#=> Ping rasterization service with data provided
-			Timeout.timeout(5) do
-				s = Net::HTTP.get(URI.parse("http://#{aws_ip}/invoke_rasterization?file_name=#{file_name}&csv=#{csv}"))
-				@error = false
-			end
-		rescue Errno::ECONNREFUSED
-			@error = "Connection refused"
-			return true
-		rescue Timeout::Error
-			@error = true
-		rescue Exception => e
-			@error = "Unknown error has ocured \n #{e}"
-			return true
-		end
-		sleep(3)
-		redirect_to show_image_path(:file_name => file_name)
 	end
 
 	def show_image

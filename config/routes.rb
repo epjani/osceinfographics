@@ -58,7 +58,6 @@ Osceinfographic::Application.routes.draw do
   root :to => 'csv#index'
 
   get 'parse' =>        'parser#parse'
-  get 'rasterize' =>    'parser#rasterize'
   get 'show_image' =>   'parser#show_image'
   
   get 'dashboard'  =>   'csv#index'
