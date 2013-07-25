@@ -1,15 +1,36 @@
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-  <title>Osceinfographic</title>
-  <%= stylesheet_link_tag :all %>
-  <%= csrf_meta_tag %>
-  <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
-  <script src="javascripts/jquery-2.0.3.min.js"></script>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+	<title>Osceinfographic</title>
+	<%= stylesheet_link_tag :all %>
+	<%= csrf_meta_tag %>
+	<link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap-responsive.min.css">
+	<script src="javascripts/jquery-2.0.3.min.js"></script>
+	<script src="javascripts/bootstrap.min.js"></script>
 </head>
 <body>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="brand" href="root_path()">OSCE Infograph generator</a>
+            </div>
+        </div>
+    </div>
 
-<%= yield %>
+	<div class="container">
+	    <!-- Example row of columns -->
+	    <%=yield%>
+	</div> <!-- /container -->
+
 
 </body>
 </html>

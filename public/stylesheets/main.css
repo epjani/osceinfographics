@@ -281,3 +281,10 @@ ul#incidents li .description, ul#responses li .description{
 	float: left;
 	margin-top: -5px;
 }
+
+
+/*	LAYOUT */
+.navbar-inner .container{margin-top: 0px;}
+.container{
+	margin-top: 50px;
+}
