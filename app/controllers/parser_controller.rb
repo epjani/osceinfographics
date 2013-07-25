@@ -34,6 +34,8 @@ class ParserController < ApplicationController
 		@cases_ongoing = parsed_string[:hate_crimes_cases_in_a_year][:trials_ongoing]
 		@convictions = parsed_string[:hate_crimes_cases_in_a_year][:convictions]
 		@acquittals = parsed_string[:hate_crimes_cases_in_a_year][:acquittals]
+
+		render :layout => false
 	end
 
 	def rasterize
