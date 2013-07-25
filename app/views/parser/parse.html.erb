@@ -60,23 +60,70 @@
         chart.draw(data, options);
       }
     </script>
-    <style type="text/css">
-    	.since_month{
+    <style>
+    	.map_wrapper{
+    		float: left;
+    		background-color: #262626;
+    		width: 100%;
+    	}
+    	.map_wrapper .map{
+    		float: left;
     		width: 960px;
+    		height: 100px;
+    	}
+    	.map_wrapper .highlits{
     		float: left;
     		margin-left: 212px;
     	}
-    	.since_month .title{
-    		font-size: 56px;
-    		color: #829c9b;
-    		border-bottom: 8px solid #829c9b;
+    	.highlight_box_wrapper{
+    		float: left;
+    		width: 900px;
     	}
-    	.clocklike{
-    		font-size: 360px;
+    	.hl_left, .hl_right{float: left;height: 35px;width: 24px;margin-top: -35px;}
+    	.hl_left{background: url('images/hl_left.png') no-repeat;}
+    	.hl_right{background: url('images/hl_right.png') no-repeat;}
+    	.highlight_box{
+    		margin-top: -35px;
+    		width: 852px;
+    		background-color: #9dc4c5;
+    		float: left;
+    		margin-left: 22px;
+    		height:417px;
     	}
-    	.clocklike .crimes, .clocklike .responses, .clocklike .divider{float: left;}
-    	.clocklike .divider{margin-top: -30px;}
-    	.since_month .description{color:#546060;font-size: 47px;}
+    	.highlight_box .title{
+    		font-size: 33px;
+    		text-align: center;
+    		color:#829c9b;
+    	}
+    	.highlighted_txt{
+    		font-size: 22px;
+    		color:#546060;
+    		padding:20px 25px 20px 25px;
+    	}
+    	.hate_cases{margin-top:55px;}
+    	.hate_cases .title{
+    		font-size: 51px;
+    		color:#9dc4c5;
+    		border-bottom: 7px solid #9dc4c5;
+    		padding-bottom: 25px;
+    		padding-left: 5px;
+    		margin-bottom: 30px;
+    	}
+    	.hate_cases .li{
+    		font-size: 51px;
+    		color:#829c9b;
+    	}
+
+    	.hate_cases .li .txt, .hate_cases .li .dots, .hate_cases .li .value{
+    		float:left;
+    	}
+    	.hate_cases .li .value{
+    		margin-top: -15px;
+    		font-size: 90px;
+    	}
+    	.hate_cases .li .dots{
+    		margin-top: -10px;
+    	}
     </style>
 <div class="infographic_wrapper">
 	<div class="header">
@@ -151,5 +198,149 @@
 		</div>
 		<div style="width:472px;float:left;margin-left:20px;"><span class="description gotham-bold">hate incidents</span></div>
 		<div style="margin-left:40px;float:left"><span class="description gotham-bold">hate incidents<br />with at least<br />one response</span></div>
+	</div>
+	<div class="clear"></div>
+	<div class="incidents_lists">
+		<div class="incidents">
+			<div class="title gotham-bold">
+				INCIDENTS
+			</div>
+			<div class="lists">
+				<ul id="incidents">
+					<li>
+						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_physical_assault]%></span><br />
+						<span class="gotham-medium description" >Physical<br />assault</span>
+					</li>
+					<li >
+						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_murder]%></span><br />
+						<span class="gotham-medium description" >Murder</span>
+					</li>
+					<li >
+						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_rape]%></span><br />
+						<span class="gotham-medium description" >Rape</span>
+					</li>
+					<li >
+						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_theft_robbery_armedrobbery]%></span><br />
+						<span class="gotham-medium description" >Theft</span>
+					</li>
+					<li>
+						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_property_damage]%></span><br />
+						<span class="gotham-medium description" >Property<br />damage</span>
+					</li>
+					<li>
+						<img src="images/incidents.png" /><span class="gotham-light font-88">-</span><br />
+						<span class="gotham-medium description" >Public hate<br />speech</span>
+					</li>
+					<li >
+						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_arson]%></span><br />
+						<span class="gotham-medium description" >Arson</span>
+					</li>
+					<li >
+						<img src="images/incidents.png" /><span class="gotham-light font-88">-</span><br />
+						<span class="gotham-medium description" >Offensive</span>
+					</li>
+					<li>
+						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_verbal_assault]%></span><br />
+						<span class="gotham-medium description" >Verbal<br />assault</span>
+					</li>
+					<li style="height:170px;">
+						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_distribution_offensive_materials]%></span><br />
+						<span class="gotham-medium description" >Distribution<br />of offensive<br />materials</span>
+					</li>
+					<li style="height:170px;">
+						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_damage_religious_facilities]%></span><br />
+						<span class="gotham-medium description" >Damage to<br /> religious<br />facilities</span>
+					</li>
+					<li style="height:195px;">
+						<img src="images/incidents.png" /><span class="gotham-light font-88">-</span><br />
+						<span class="gotham-medium description" >Insulting<br />phone,<br /> internet and <br />sms messages</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="responses">
+			<div class="title gotham-bold">
+				RESPONSES
+			</div>
+			<div class="lists">
+				<ul id="responses">
+					<li>
+						<img src="images/response.png" /><span class="gotham-light font-88">-</span><br />
+						<span class="gotham-medium description" >Public Condemation<br />by officials</span>
+					</li>
+					<li >
+						<img src="images/response.png" /><span class="gotham-light font-88"><%=@responses[:r_public_condemnation_religious_leaders]%></span><br />
+						<span class="gotham-medium description" >Public Condemation<br />by Religious Leaders</span>
+					</li>
+					<li >
+						<img src="images/response.png" /><span class="gotham-light font-88">-</span><br />
+						<span class="gotham-medium description" >Public Condemation<br />by Civil Society</span>
+					</li>
+					<li >
+						<img src="images/response.png" /><span class="gotham-light font-88">-</span><br />
+						<span class="gotham-medium description" >Reporting<br />Damaged Property</span>
+					</li>
+					<li>
+						<img src="images/response.png" /><span class="gotham-light font-88"><%=@responses[:r_peaceful_gathering_vigil_march]%></span><br />
+						<span class="gotham-medium description" >Peaceful gathering /<br />Vigil / March</span>
+					</li>
+					<li>
+						<img src="images/response.png" /><span class="gotham-light font-88"><%=@responses[:r_graffiti_removal]%></span><br />
+						<span class="gotham-medium description" >Graffiti<br />removal</span>
+					</li>
+					<li >
+						<img src="images/response.png" /><span class="gotham-light font-88"><%=@responses[:r_social_media_campaign]%></span><br />
+						<span class="gotham-medium description" >Social Media<br />Campaign</span>
+					</li>
+					<li >
+						<img src="images/response.png" /><span class="gotham-light font-88"><%=@responses[:r_roundtable_conference]%></span><br />
+						<span class="gotham-medium description" >Roundtable<br />Conference</span>
+					</li>
+					<li>
+						<img src="images/response.png" /><span class="gotham-light font-88">-</span><br />
+						<span class="gotham-medium description" >Concert / Performance /<br />Exibithion</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="map_wrapper">
+		<div class="map">
+		</div>
+		<div class="highlits">
+			<div class="highlight_box_wrapper">
+				<div class="hl_left"></div>
+				<div class="highlight_box">
+					<div class="title gotham-light">highlighted response</div>
+					<div class="clear"></div>
+					<div class="highlighted_txt gotham-light"><%=@highlighted%></div>
+				</div>
+				<div class="hl_right"></div>
+			</div>
+			<div class="clear"></div>
+			<div class="hate_cases">
+				<div class="title gotham-bold">
+					H&nbsp;A&nbsp;T&nbsp;E &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C&nbsp;R&nbsp;I&nbsp;M&nbsp;E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C&nbsp;A&nbsp;S&nbsp;E&nbsp;S
+				</div>
+				<div class="clear"></div>
+				<div class="gotham-light li">
+					<div class="txt">Trials Ongoing</div>
+					<div class="dots">.......................................</div>
+					<div class="value"><%=@cases_ongoing%></div>
+				</div>
+				<div class="gotham-light li">
+					<div class="txt">Convictions in <%=@year%></div>
+					<div class="dots">.............................</div>
+					<div class="value"><%=@convictions%></div>
+				</div>
+				<div class="gotham-light li">
+					<div class="txt">Acquittals in <%=@year%></div>
+					<div class="dots">.................................</div>
+					<div class="value"><%=@acquittals%></div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>

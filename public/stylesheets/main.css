@@ -58,6 +58,16 @@
 	    font-weight: normal;
 	    font-style: normal;
 }
+@font-face{
+		font-family: 'gothammediumregular';
+	    src: url('/fonts/gothammedium-webfont.eot');
+	    src: url('/fonts/gothammedium-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('/fonts/gothammedium-webfont.woff') format('woff'),
+	         url('/fonts/gothammedium-webfont.ttf') format('truetype'),
+	         url('/fonts/gothammedium-webfont.svg#gothammediumregular') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+}
 .gotham-ultra{
 	font-family: 'gothamultraregular';
 }
@@ -76,6 +86,9 @@
 .gotham-thin{
 	font-family: 'gothamthinregular';
 }
+.gotham-medium{
+	font-family: 'gothammediumregular';
+}
 .font-black{
 	color:#262626;
 }
@@ -84,6 +97,9 @@
 }
 .font-green-light{
 	color: #9dc4c5;
+}
+.font-88{
+	font-size:88px;
 }
 .clear{
 	clear:both;
@@ -195,3 +211,73 @@
 .victim_characteristics .second_lbl{color: #546060;}
 .victim_characteristics .third_lbl{color: #829c9b;}
 .victim_characteristics .fourth_lbl{color: #9dc4c5;}
+.since_month{
+	width: 960px;
+	float: left;
+	margin-left: 212px;
+}
+.since_month .title{
+	font-size: 56px;
+	color: #829c9b;
+	border-bottom: 8px solid #829c9b;
+}
+.clocklike{
+	font-size: 360px;
+}
+.clocklike .crimes, .clocklike .responses, .clocklike .divider{float: left;}
+.clocklike .divider{margin-top: -30px;}
+.since_month .description{color:#546060;font-size: 47px;}
+.incidents_lists{
+	width: 100%;
+	background-color: #829c9b;
+	float: left;
+	padding-top:35px;
+	padding-bottom: 35px;
+	margin-top:35px;
+}
+.incidents_lists .incidents, .incidents_lists .responses{
+	padding-left: 43px;
+	width: 917px;
+	float: left;
+}
+.incidents_lists .responses{
+	padding-left: 0px;
+	margin-left: 212px;
+}
+.incidents_lists .incidents .title, .incidents_lists .responses .title{
+	font-size: 47px;
+	float: left;
+	color:#262626;
+	border-bottom:7px solid #9dc4c5;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	width: 100%;
+}
+.incidents_lists .incidents .lists{
+	float: left;
+}
+ul#incidents, ul#responses{
+	list-style: none;
+	padding: 0px;
+}
+ul#incidents li{
+	width: 228px;
+	float:left;
+	height: 150px;
+}
+ul#responses li{
+	width:298px;
+	float:left;
+	height:150px;
+}
+ul#incidents li img, ul#responses li img{
+	float:left;
+	margin-top:18px;
+	margin-right: 10px;
+}
+ul#incidents li .description, ul#responses li .description{
+	font-size: 23px;
+	color:#9dc4c5;
+	float: left;
+	margin-top: -5px;
+}

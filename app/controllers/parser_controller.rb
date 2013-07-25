@@ -21,11 +21,19 @@ class ParserController < ApplicationController
 		characteristict_sum = vc.values.inject{|sum, value| sum.to_i + value.to_i}
 		@vc = calculate_victim_characteristics(vc, characteristict_sum)
 
-		@since_year = parsed_string[:general_info][:since_year]
-		@since_month = parsed_string[:general_info][:since_month]
-		@since_incidents = parsed_string[:general_info][:since_incidents]
-		@since_responses = parsed_string[:general_info][:since_responses]
+		@since_year = parsed_string[:incidents_since][:since_year]
+		@since_month = parsed_string[:incidents_since][:since_month]
+		@since_incidents = parsed_string[:incidents_since][:since_incidents]
+		@since_responses = parsed_string[:incidents_since][:since_at_least_one_response]
 
+		@incidents = parsed_string[:incidents]
+		@responses = parsed_string[:responses]
+
+		@highlighted = parsed_string[:responses][:r_highlighted_response]
+
+		@cases_ongoing = parsed_string[:hate_crimes_cases_in_a_year][:trials_ongoing]
+		@convictions = parsed_string[:hate_crimes_cases_in_a_year][:convictions]
+		@acquittals = parsed_string[:hate_crimes_cases_in_a_year][:acquittals]
 	end
 
 	def rasterize
