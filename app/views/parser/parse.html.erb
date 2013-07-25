@@ -5,18 +5,42 @@
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['', ''],
-          ['Jan',  <%=@monthly[:i_jan]%>],
-          ['Feb',  <%=@monthly[:i_feb]%>],
-          ['Mar',  <%=@monthly[:i_mar]%>],
-          ['Apr',  <%=@monthly[:i_apr]%>],
-          ['May',  <%=@monthly[:i_may]%>],
-          ['Jun',  <%=@monthly[:i_june]%>],
-          ['Jul',  <%=@monthly[:i_july]%>],
-          ['Aug',  <%=@monthly[:i_aug]%>],
-          ['Sep',  <%=@monthly[:i_sep]%>],
-          ['Oct',  <%=@monthly[:i_oct]%>],
-          ['Nov',  <%=@monthly[:i_nov]%>],
-          ['Dec',  <%=@monthly[:i_dec]%>]
+          <% if @monthly[:i_jan].to_i > 0 %>
+          	['Jan',  <%=@monthly[:i_jan]%>],
+          <% end %>
+          <% if @monthly[:i_feb].to_i > 0 %>
+          	['Feb',  <%=@monthly[:i_feb]%>],
+          <% end %>	
+          <% if @monthly[:i_mar].to_i > 0 %>
+          	['Mar',  <%=@monthly[:i_mar]%>],
+          <% end %>
+          <% if @monthly[:i_apr].to_i > 0 %>
+          	['Apr',  <%=@monthly[:i_apr]%>],
+          <% end %>
+          <% if @monthly[:i_may].to_i > 0 %>
+          	['May',  <%=@monthly[:i_may]%>],
+          <% end %>
+          <% if @monthly[:i_june].to_i > 0 %>
+          	['Jun',  <%=@monthly[:i_june]%>],
+          <% end %>
+          <% if @monthly[:i_july].to_i > 0 %>
+          	['Jul',  <%=@monthly[:i_july]%>],
+          <% end %>
+          <% if @monthly[:i_aug].to_i > 0 %>
+          	['Aug',  <%=@monthly[:i_aug]%>],
+          <% end %>
+          <% if @monthly[:i_sep].to_i > 0 %>
+          	['Sep',  <%=@monthly[:i_sep]%>],
+          <% end %>
+          <% if @monthly[:i_oct].to_i > 0 %>
+          	['Oct',  <%=@monthly[:i_oct]%>],
+          <% end %>
+          <% if @monthly[:i_nov].to_i > 0 %>
+          	['Nov',  <%=@monthly[:i_nov]%>],
+          <% end %>
+          <% if @monthly[:i_dec].to_i > 0 %>
+          	['Dec',  <%=@monthly[:i_dec]%>]
+          <% end %>
         ]);
 
         var options = {
@@ -24,14 +48,15 @@
           backgroundColor: 'transparent',
           colors: ['#556161'],
           legend: {position: 'none'},
-          vAxis: {baseline: -1, gridlines: {color: 'transparent'}, textStyle: {color: '#829c9b'}},
-          hAxis: { minorGridlines: {count: 10, color: '#000'}},
-          chartArea:{left:55,top:15,width:"100%",height:"100%"},
+          vAxis: { gridlines: {color: 'transparent'}, textStyle: {color: '#829c9b'}},
+          hAxis: { minorGridlines: {count: 10, color: '#000'}, textStyle: {color: '#829c9b'}, allowContainerBoundaryTextCufoff: true},
+          chartArea:{left:130,top:0,width:"83%",height:"65%"},
           fontSize: 34,
-          fontName: 'gothamultraregular'
+          fontName: 'gothamultraregular',
+          isStacked: true
         };
 
-        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
         chart.draw(data, options);
       }
     </script>
@@ -96,7 +121,7 @@
 	</div>
 	<div class="clear"></div>
 	<div class="monthly_statistics">
-		<div id="chart_div" style="width: 960px; height: 380px;"></div>
+		<div id="chart_div" style="width: 1010px; height: 380px;margin-left:-50px;"></div>
 		<div class="victim_characteristics">
 			<div class="title gotham-light">
 				V I C T I M &nbsp;&nbsp;C H A R A C T E R I S T I C S
