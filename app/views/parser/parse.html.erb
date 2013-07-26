@@ -1,3 +1,4 @@
+<script src="javascripts/jquery-2.0.3.min.js"></script>
 <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -61,26 +62,6 @@
         chart.draw(data, options);
       }
     </script>
-    <style>
-    	.map_wrapper .map{
-    		padding-left: 43px;
-    		margin-top:43px;
-    		background: url('images/bih_map.png') no-repeat 200px 60px;
-    		min-height: 810px;
-    	}
-    	.map_wrapper .map div.cities{
-    		margin-top:200px;
-    	}
-    	ul#cities{
-    		list-style: none;
-    		padding:0;
-    	}
-    	ul#cities li{
-    		font-size: 33px;
-    		color:#546060;
-    	}
-    	ul#cities li span{color:#9dc4c5;}
-    </style>
 <div class="infographic_wrapper">
 	<div class="header">
 		<div class="green_line"></div>
@@ -267,10 +248,43 @@
 			<div class="title gotham-bold">INCIDENTS AND RESPONSES THIS MONTH</div>
 			<div class="cities">
 				<ul id="cities">
-					<% @cities.each do |city|%>
+					<% @cities.each_with_index do |city, i|%>						
 						<li class="gotham-light"><%=city.first%>&nbsp;&nbsp;<span class="gotham-bold"><%=city.last%></span></li>
+						<% break if i >10 %>
 					<% end %>
-				</ul>
+				</ul>								
+			</div>
+			<div class="map_position">
+				<style>
+					.Bihać{
+						left:117px;
+						top:100px;
+					}
+					.Banja.Luka{
+						left:220px;
+						top:100px;
+					}
+					.Bijeljina{
+						left:550px;
+						top:150px;
+					}
+					.Bugojno{
+						top:280px;
+						left:250px;
+					}
+					.Donji.Vakuf{
+						top:280px;
+						left: 250px;
+					}
+					.Doboj{
+						top:120px;
+						left:350px;
+					}
+				</style>
+				<% @graphical_cities.each do |gcity| %>
+					<div class="<%=gcity[0]%> incident graphical gotham-light"><%=gcity[1]%></div>
+					<div class="<%=gcity[0]%> response graphical gotham-light"><%=gcity[2]%></div>
+				<% end %>
 			</div>
 		</div>
 		<div class="highlits">

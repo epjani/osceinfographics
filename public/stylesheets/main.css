@@ -349,9 +349,54 @@ ul#incidents li .description, ul#responses li .description{
 	font-size: 41px;
 	color:#546060;
 }
+.map_wrapper .map{
+	padding-left: 43px;
+	margin-top:43px;
+	background: url('/images/bih_map.png') no-repeat 200px 60px;
+	min-height: 810px;
+}
+.map_wrapper .map div.cities{
+	margin-top:200px;
+	float: left;
+	width: 190px;
+}
+ul#cities{
+	list-style: none;
+	padding:0;
+}
+ul#cities li{
+	font-size: 33px;
+	color:#546060;
+}
+ul#cities li span{color:#9dc4c5;}
+.graphical{
+	width:48px;
+	height:48px;
+	background-color: #fff;
+	font-size: 44px;
+	text-align: center;
+	position: absolute;
+}
+.graphical.incident{
+	margin-top:55px;
+	margin-left: -55px;
+	background: url('/images/black_dot.png') no-repeat;
+	color: #b3caca;
+}
+.graphical.response{
+	background: url('/images/green_dot.png') no-repeat;
+	color: #272727;
+}
 
 /*	LAYOUT */
 .navbar-inner .container{margin-top: 0px;}
 .container{
 	margin-top: 50px;
+}
+.map_position{
+	float: left;
+	width: 700px;
+	height: 700px;
+	border: 1px solid #fff;
+	position: relative;  		
 }

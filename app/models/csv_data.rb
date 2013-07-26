@@ -26,7 +26,7 @@ class CsvData < ActiveRecord::Base
 		rafined_data = {}
 		file_path = "public/csv/#{file_name}.csv"		
 		
-		raw_csv = CSV.read(file_path, {:headers => true, :col_sep => ";", :encoding => "ISO-8859-2"})		
+		raw_csv = CSV.read(file_path, {:headers => true, :col_sep => ";", :encoding => "UTF-8"})		
 		
 		switcher = :general_info
 		rafined_data[switcher] = {}

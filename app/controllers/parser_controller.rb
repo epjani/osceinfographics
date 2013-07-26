@@ -10,8 +10,8 @@ class ParserController < ApplicationController
 		puts "#{parsed_string}"
 		@month = parsed_string[:general_info][:month]
 		@year = parsed_string[:general_info][:year]
-		@total_incidents = parsed_string[:general_info][:total_incidents]
-		@total_responses = parsed_string[:general_info][:total_responses]
+		@total_incidents = parsed_string[:general_info][:total_incidents_monthly]
+		@total_responses = parsed_string[:general_info][:total_responses_monthly]
 		@responses_to_incidents = parsed_string[:general_info][:responses_to_incidents]
 		@monthly = parsed_string[:monthly_preview]
 		
@@ -34,6 +34,7 @@ class ParserController < ApplicationController
 		@acquittals = parsed_string[:hate_crimes_cases_in_a_year][:acquittals]
 
 		@cities = parsed_string[:geographical_presentation_responses]
+		@graphical_cities = calculate_graphical_data(parsed_string[:geographical_presentation_incidents], parsed_string[:geographical_presentation_responses])
 		render :layout => false
 	end
 
@@ -85,4 +86,25 @@ class ParserController < ApplicationController
 		return splitted.join('<br />')
 	end
 
+	def calculate_graphical_data(incidents, responses)
+		first_incident_v = incidents.values.map{|v| v.to_i}.max
+		first_incident_k = incidents.key first_incident_v.to_s
+		first_response_v = responses[first_incident_k]
+		incidents.delete first_incident_k
+		responses.delete first_incident_k
+
+		second_incident_v = incidents.values.map{|v| v.to_i}.max
+		second_incident_k = incidents.key second_incident_v.to_s
+		second_response_v = responses[second_incident_k]
+		incidents.delete second_incident_k
+		responses.delete second_incident_k
+
+		third_incident_v = incidents.values.map{|v| v.to_i}.max
+		third_incident_k = incidents.key third_incident_v.to_s
+		third_response_v = responses[third_incident_k]
+		incidents.delete third_incident_k
+		responses.delete third_incident_k
+
+		return [[first_incident_k.to_s, first_incident_v, first_response_v], [second_incident_k.to_s, second_incident_v, second_response_v], [third_incident_k.to_s, third_incident_v, third_response_v]]
+	end
 end
