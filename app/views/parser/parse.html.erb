@@ -51,8 +51,9 @@
           colors: ['#556161'],
           legend: {position: 'none'},
           vAxis: { gridlines: {color: 'transparent'}, textStyle: {color: '#829c9b'}},
-          hAxis: { minorGridlines: {count: 10, color: '#000'}, textStyle: {color: '#829c9b'}, allowContainerBoundaryTextCufoff: true},
-          chartArea:{left:130,top:0,width:"83%",height:"65%"},
+          hAxis: { minorGridlines: {count: 10, color: '#000'}, textStyle: {color: '#829c9b'}, allowContainerBoundaryTextCufoff: true,
+                   slantedText: true, slantedTextAngle: 30},
+          chartArea:{left:130,top:15,width:"83%",height:"70%"},
           fontSize: 34,
           fontName: 'gothamultraregular',
           isStacked: true
@@ -105,8 +106,8 @@
 	</div>
 	<div class="clear"></div>
 	<div class="monthly_statistics">
-		<div id="chart_div" style="width: 1010px; height: 380px;margin-left:-50px;"></div>
-		<div class="victim_characteristics">
+		<div id="chart_div" style="width: 1010px; height: 390px;margin-left:-50px;"></div>
+		<div class="victim_characteristics" style="margin-top: 20px">
 			<div class="title gotham-light">
 				V I C T I M &nbsp;&nbsp;C H A R A C T E R I S T I C S
 			</div>
@@ -133,7 +134,7 @@
 				<%=@since_responses%>				
 			</div>			
 		</div>
-		<div style="width:472px;float:left;margin-left:20px;"><span class="description gotham-bold">hate incidents</span></div>
+		<div style="width:472px;float:left;margin-left:55px;"><span class="description gotham-bold">hate incidents</span></div>
 		<div style="margin-left:40px;float:left"><span class="description gotham-bold">hate incidents<br />with at least<br />one response</span></div>
 	</div>
 	<div class="clear"></div>
@@ -262,23 +263,35 @@
 					}
 					.Banja.Luka{
 						left:220px;
-						top:100px;
+						top:120px;
 					}
 					.Bijeljina{
 						left:550px;
 						top:150px;
 					}
 					.Bugojno{
-						top:280px;
-						left:250px;
+						top:330px;
+						left:260px;
 					}
 					.Donji.Vakuf{
 						top:280px;
-						left: 250px;
+						left: 260px;
 					}
 					.Doboj{
 						top:120px;
 						left:350px;
+					}
+					.Gradiška{
+						top:50px;
+						left:220px;
+					}
+					.Mostar{
+						top:500px;
+						left:390px;
+					}
+					.Prijedor{
+						top:60px;
+						left:160px;
 					}
 				</style>
 				<% @graphical_cities.each do |gcity| %>
@@ -305,17 +318,29 @@
 				<div class="clear"></div>
 				<div class="gotham-light li">
 					<div class="txt">Trials Ongoing</div>
+					<% if Integer(@cases_ongoing) < 9 %>
 					<div class="dots">.......................................</div>
+					<% else %>
+					<div class="dots">.....................................</div>
+					<% end %>
 					<div class="value"><%=@cases_ongoing%></div>
 				</div>
 				<div class="gotham-light li">
 					<div class="txt">Convictions in <%=@year%></div>
+					<% if Integer(@convictions) < 9 %>
 					<div class="dots">.............................</div>
+					<% else %>
+					<div class="dots">...........................</div>
+					<% end %>
 					<div class="value"><%=@convictions%></div>
 				</div>
 				<div class="gotham-light li">
 					<div class="txt">Acquittals in <%=@year%></div>
+					<% if Integer(@acquittals) < 9 %>
 					<div class="dots">.................................</div>
+					<% else %>
+					<div class="dots">...............................</div>
+					<% end %>
 					<div class="value"><%=@acquittals%></div>
 				</div>
 			</div>

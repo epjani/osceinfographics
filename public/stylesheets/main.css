@@ -188,7 +188,7 @@
 .incidents_responses .description .full_width.number_of_incidents{font-size: 58px;}
 .incidents_responses .description .incidents{font-size: 85px;margin-top:-9px;margin-bottom: -6px;}
 .incidents_responses .description .responses{font-size: 78px;margin-top:-9px;margin-bottom: -6px;margin-left: 0px;}
-.monthly_statistics { width: 960px;float: left;margin-top: 20px;}
+.monthly_statistics { width: 960px;float: left;}
 .victim_characteristics .title{
 	text-align: justify;
 	font-size: 47px;
@@ -215,6 +215,7 @@
 	width: 960px;
 	float: left;
 	margin-left: 212px;
+	margin-top: 10px
 }
 .since_month .title{
 	font-size: 56px;
@@ -224,7 +225,7 @@
 .clocklike{
 	font-size: 360px;
 }
-.clocklike .crimes, .clocklike .responses, .clocklike .divider{float: left;}
+.clocklike .crimes, .clocklike .responses, .clocklike .divider{float: left; text-align: center;}
 .clocklike .crimes, .clocklike .responses{width: 445px;}
 .clocklike .divider{margin-top: -30px;}
 .since_month .description{color:#546060;font-size: 47px;}
@@ -317,9 +318,11 @@ ul#incidents li .description, ul#responses li .description{
 	color:#829c9b;
 }
 .highlighted_txt{
-	font-size: 22px;
+	font-size: 33px;
 	color:#546060;
 	padding:20px 25px 20px 25px;
+	line-height: 1.5;
+	text-align: justify;
 }
 .hate_cases{margin-top:55px;}
 .hate_cases .title{
@@ -378,8 +381,8 @@ ul#cities li span{color:#9dc4c5;}
 	position: absolute;
 }
 .graphical.incident{
-	margin-top:55px;
-	margin-left: -55px;
+	margin-top:-10px;
+	margin-left: -50px;
 	background: url('/images/black_dot.png') no-repeat;
 	color: #b3caca;
 }
@@ -397,6 +400,6 @@ ul#cities li span{color:#9dc4c5;}
 	float: left;
 	width: 700px;
 	height: 700px;
-	border: 1px solid #fff;
+	/*border: 1px solid #fff; */
 	position: relative;  		
 }
