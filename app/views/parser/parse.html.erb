@@ -98,8 +98,13 @@
 			<div class="clear"></div>
 			<div class="number_placeholder gotham-black font-green-light"><%=@total_responses%></div>
 			<div class="description">
+				<% if Integer(@total_responses) == 1 %>
+				<span class="responses gotham-ultra">RESPONSE&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+				<span class="full_width gotham-bold">T &nbsp;H &nbsp;I &nbsp;S  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M &nbsp;O &nbsp;N &nbsp;T &nbsp;H</span>
+				<% else %>
 				<span class="responses gotham-ultra">RESPONSES</span><br />
 				<span class="full_width gotham-bold">T &nbsp;H &nbsp;I &nbsp;S  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M &nbsp;O &nbsp;N &nbsp;T &nbsp;H</span>
+				<% end %>				
 				<div class="full_width gotham-ultra number_of_incidents">TO <span class="font-green-light"><%=@responses_to_incidents%></span> INCIDENTS</div><br />
 			</div>
 		</div>
@@ -166,7 +171,7 @@
 						<span class="gotham-medium description" >Property<br />damage</span>
 					</li>
 					<li>
-						<img src="images/incidents.png" /><span class="gotham-light font-88">-</span><br />
+						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_hate_speech]%></span><br />
 						<span class="gotham-medium description" >Public hate<br />speech</span>
 					</li>
 					<li >
@@ -174,7 +179,7 @@
 						<span class="gotham-medium description" >Arson</span>
 					</li>
 					<li >
-						<img src="images/incidents.png" /><span class="gotham-light font-88">-</span><br />
+						<img src="images/incidents.png" /><span class="gotham-light font-88">0</span><br />
 						<span class="gotham-medium description" >Offensive</span>
 					</li>
 					<li>
@@ -190,7 +195,7 @@
 						<span class="gotham-medium description" >Damage to<br /> religious<br />facilities</span>
 					</li>
 					<li style="height:195px;">
-						<img src="images/incidents.png" /><span class="gotham-light font-88">-</span><br />
+						<img src="images/incidents.png" /><span class="gotham-light font-88">0</span><br />
 						<span class="gotham-medium description" >Insulting<br />phone,<br /> internet and <br />sms messages</span>
 					</li>
 				</ul>
@@ -204,7 +209,7 @@
 			<div class="lists">
 				<ul id="responses">
 					<li>
-						<img src="images/response.png" /><span class="gotham-light font-88">-</span><br />
+						<img src="images/response.png" /><span class="gotham-light font-88">0</span><br />
 						<span class="gotham-medium description" >Public Condemation<br />by officials</span>
 					</li>
 					<li >
@@ -212,11 +217,11 @@
 						<span class="gotham-medium description" >Public Condemation<br />by Religious Leaders</span>
 					</li>
 					<li >
-						<img src="images/response.png" /><span class="gotham-light font-88">-</span><br />
+						<img src="images/response.png" /><span class="gotham-light font-88">0</span><br />
 						<span class="gotham-medium description" >Public Condemation<br />by Civil Society</span>
 					</li>
 					<li >
-						<img src="images/response.png" /><span class="gotham-light font-88">-</span><br />
+						<img src="images/response.png" /><span class="gotham-light font-88">0</span><br />
 						<span class="gotham-medium description" >Reporting<br />Damaged Property</span>
 					</li>
 					<li>
@@ -236,7 +241,7 @@
 						<span class="gotham-medium description" >Roundtable<br />Conference</span>
 					</li>
 					<li>
-						<img src="images/response.png" /><span class="gotham-light font-88">-</span><br />
+						<img src="images/response.png" /><span class="gotham-light font-88">0</span><br />
 						<span class="gotham-medium description" >Concert / Performance /<br />Exibithion</span>
 					</li>
 				</ul>
