@@ -43,11 +43,10 @@ class CsvData < ActiveRecord::Base
 				rafined_data[switcher].merge!({c["general_info"].to_sym => c[nil].to_s})
 			end
 		end
-		if flag_as_generated
-			csv = CsvData.where(:date => file_name).first
-			csv.generated = true
-			csv.save
-		end 
+	
+		csv = CsvData.where(:date => file_name).first
+		csv.generated = true
+		csv.save
 		return rafined_data
 	end
 end

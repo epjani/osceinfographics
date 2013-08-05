@@ -39,7 +39,7 @@
 						<% if csv.generated.blank? %>
 							<a href="#" onclick="get_image('<%=csv.date%>');">link</a>
 						<% else %>
-							<a href="http://54.218.15.104/invoke_rasterization?file_name=<%=csv.date%>&dont_save=true">link</a>
+							<a href="http://54.218.15.104/images/infographs/<%=csv.date%>.png">link</a>
 						<% end %>
 					</td>
 					<td><a target="_blank" href="<%= csv.csv_file_location %>" />link</a></td>
