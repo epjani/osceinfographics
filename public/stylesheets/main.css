@@ -358,10 +358,17 @@ ul#incidents li .description, ul#responses li .description{
 	background: url('/images/bih_map.png') no-repeat 200px 60px;
 	min-height: 810px;
 }
+.map_wrapper .map.hide_map{
+	background: none;
+}
 .map_wrapper .map div.cities{
 	margin-top:200px;
 	float: left;
-	width: 190px;
+	width: 240px;
+	position: absolute;
+}
+.map_wrapper .map.hide_map div.cities{
+	margin-top:50px;
 }
 ul#cities{
 	list-style: none;
@@ -402,4 +409,73 @@ ul#cities li span{color:#9dc4c5;}
 	height: 700px;
 	/*border: 1px solid #fff; */
 	position: relative;  		
+}
+
+.Bihać{
+	left:167px;
+	top:100px;
+}
+.Banja.Luka{
+	left:270px;
+	top:120px;
+}
+.Bijeljina{
+	left:735px;
+	top:150px;
+}
+.Bugojno{
+	top:330px;
+	left:310px;
+}
+.Donji.Vakuf{
+	top:280px;
+	left: 310px;
+}
+.Doboj{
+	top:120px;
+	left:400px;
+}
+.Gradiška{
+	top:85px;
+	left:480px;
+}
+.Ilidža, .Sarajevo, .Stari.Grad.Sarajevo{
+	top: 300px;
+	left: 600px;
+}
+.Kneževo{
+	left:430px;
+	top:210px;
+}
+.Livno, .Tomislavgrad{
+	left:420px;
+	top:350px;
+}
+.Mostar{
+	top:500px;
+	left:440px;
+}
+.Novi.Travnik, .Travnik{
+	top:250px;
+	left:580px;
+}
+.Srebrenica{
+	left: 805px;
+	top: 386px;
+}
+.Prijedor{
+	top:120px;
+	left:3450px;
+}
+.Tuzla{
+	left: 680px;
+	top:202px;
+}
+.Trebinje{
+	left: 633px;
+	top: 602px;
+}
+.Zenica{
+	top: 230px;
+	left: 580px;
 }

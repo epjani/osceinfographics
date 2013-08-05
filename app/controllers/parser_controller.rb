@@ -12,7 +12,7 @@ class ParserController < ApplicationController
 		@year = parsed_string[:general_info][:year]
 		@total_incidents = parsed_string[:general_info][:total_incidents_monthly]
 		@total_responses = parsed_string[:general_info][:total_responses_monthly]
-		@responses_to_incidents = parsed_string[:general_info][:responses_to_incidents]
+		@responses_to_incidents = parsed_string[:general_info][:incidents_responded_to_monthly]
 		@monthly = parsed_string[:monthly_preview]
 		
 		vc = parsed_string[:victim_characteristics]
@@ -35,6 +35,9 @@ class ParserController < ApplicationController
 
 		@cities = parsed_string[:geographical_presentation_responses]
 		@graphical_cities = calculate_graphical_data(parsed_string[:geographical_presentation_incidents], parsed_string[:geographical_presentation_responses])
+		
+		@render_map = @graphical_cities.length < 10 ? true : false
+
 		render :layout => false
 	end
 
@@ -87,24 +90,17 @@ class ParserController < ApplicationController
 	end
 
 	def calculate_graphical_data(incidents, responses)
-		first_incident_v = incidents.values.map{|v| v.to_i}.max
-		first_incident_k = incidents.key first_incident_v.to_s
-		first_response_v = responses[first_incident_k]
-		incidents.delete first_incident_k
-		responses.delete first_incident_k
+		graphical_presentation = []
 
-		second_incident_v = incidents.values.map{|v| v.to_i}.max
-		second_incident_k = incidents.key second_incident_v.to_s
-		second_response_v = responses[second_incident_k]
-		incidents.delete second_incident_k
-		responses.delete second_incident_k
-
-		third_incident_v = incidents.values.map{|v| v.to_i}.max
-		third_incident_k = incidents.key third_incident_v.to_s
-		third_response_v = responses[third_incident_k]
-		incidents.delete third_incident_k
-		responses.delete third_incident_k
-
-		return [[first_incident_k.to_s, first_incident_v, first_response_v], [second_incident_k.to_s, second_incident_v, second_response_v], [third_incident_k.to_s, third_incident_v, third_response_v]]
+		incidents.each do |i|
+			incident_v = i.second
+			incident_k = i.first
+			response_v = responses[incident_k]
+			
+			if incident_v.to_i > 0 && response_v.to_i > 0
+				graphical_presentation << {:key => incident_k, :incidents => incident_v, :responses => response_v}
+			end
+		end
+		return graphical_presentation
 	end
 end

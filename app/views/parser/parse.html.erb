@@ -250,58 +250,27 @@
 	</div>
 	<div class="clear"></div>
 	<div class="map_wrapper">
-		<div class="map">
+		<div class="map <%='hide_map' unless @render_map%>">
 			<div class="title gotham-bold">INCIDENTS AND RESPONSES THIS MONTH</div>
 			<div class="cities">
 				<ul id="cities">
-					<% @cities.each_with_index do |city, i|%>						
-						<li class="gotham-light"><%=city.first%>&nbsp;&nbsp;<span class="gotham-bold"><%=city.last%></span></li>
-						<% break if i >10 %>
+					<% @graphical_cities.each_with_index do |city, i|%>						
+						<li class="gotham-light"><%=city[:key]%>&nbsp;&nbsp;<span class="gotham-bold"><%=city[:responses]%></span></li>	
+						<% if i >10 && @render_map%>
+							<% break %>
+						<% else %>
+							<div class="clear"></div>
+						<% end %>
 					<% end %>
 				</ul>								
 			</div>
 			<div class="map_position">
-				<style>
-					.Bihać{
-						left:117px;
-						top:100px;
-					}
-					.Banja.Luka{
-						left:220px;
-						top:120px;
-					}
-					.Bijeljina{
-						left:550px;
-						top:150px;
-					}
-					.Bugojno{
-						top:330px;
-						left:260px;
-					}
-					.Donji.Vakuf{
-						top:280px;
-						left: 260px;
-					}
-					.Doboj{
-						top:120px;
-						left:350px;
-					}
-					.Gradiška{
-						top:50px;
-						left:220px;
-					}
-					.Mostar{
-						top:500px;
-						left:390px;
-					}
-					.Prijedor{
-						top:60px;
-						left:160px;
-					}
-				</style>
-				<% @graphical_cities.each do |gcity| %>
-					<div class="<%=gcity[0]%> incident graphical gotham-light"><%=gcity[1]%></div>
-					<div class="<%=gcity[0]%> response graphical gotham-light"><%=gcity[2]%></div>
+				<% if @render_map %>
+					<% @graphical_cities.each do |gcity| %>
+						<%p gcity%>
+						<div class="<%=gcity[:key]%> incident graphical gotham-light"><%=gcity[:incidents]%></div>
+						<div class="<%=gcity[:key]%> response graphical gotham-light"><%=gcity[:responses]%></div>
+					<% end %>
 				<% end %>
 			</div>
 		</div>
