@@ -22,7 +22,7 @@ class CsvData < ActiveRecord::Base
 		"#{selected_year}-#{selected_month}"
 	end
 
-	def self.parse(file_name)
+	def self.parse(file_name, flag_as_generated = false)
 		rafined_data = {}
 		file_path = "public/csv/#{file_name}.csv"		
 		
@@ -43,8 +43,10 @@ class CsvData < ActiveRecord::Base
 				rafined_data[switcher].merge!({c["general_info"].to_sym => c[nil].to_s})
 			end
 		end
-		self.generated = true
-		self.save
+		if flag_as_generated
+			self.generated = true
+			self.save
+		end
 		return rafined_data
 	end
 end

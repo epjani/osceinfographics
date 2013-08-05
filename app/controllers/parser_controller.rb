@@ -6,7 +6,8 @@ class ParserController < ApplicationController
 	def parse
 		# => TODO invoke parser
 		file_name = params[:file_name]
-		parsed_string = CsvData.parse(file_name)
+		flag_as_generated = params[:dont_save].blank? ? false : true
+		parsed_string = CsvData.parse(file_name, flag_as_generated)
 		puts "#{parsed_string}"
 		@month = parsed_string[:general_info][:month]
 		@year = parsed_string[:general_info][:year]
