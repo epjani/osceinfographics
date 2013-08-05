@@ -43,6 +43,8 @@ class CsvData < ActiveRecord::Base
 				rafined_data[switcher].merge!({c["general_info"].to_sym => c[nil].to_s})
 			end
 		end
+		self.generated = true
+		self.save
 		return rafined_data
 	end
 end

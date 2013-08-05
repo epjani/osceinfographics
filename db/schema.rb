@@ -10,12 +10,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130721122812) do
+ActiveRecord::Schema.define(:version => 20130805180956) do
 
   create_table "csv_datas", :force => true do |t|
-    t.string "image_file_location"
-    t.string "csv_file_location"
-    t.string "date"
+    t.string  "image_file_location"
+    t.string  "csv_file_location"
+    t.string  "date"
+    t.boolean "generated",           :default => false
   end
 
 end
