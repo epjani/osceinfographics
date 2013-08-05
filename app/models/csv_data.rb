@@ -30,7 +30,7 @@ class CsvData < ActiveRecord::Base
 			raw_csv = CSV.read(file_path, {:headers => true, :col_sep => ";", :encoding => "UTF-8"})
 		rescue
 			raw_csv = CSV.read(file_path, {:headers => true, :col_sep => ";", :encoding => "ISO-8859-2"})
-		
+		end
 		switcher = :general_info
 		rafined_data[switcher] = {}
 		raw_csv.each_with_index do |c, i|
