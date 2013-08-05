@@ -44,9 +44,10 @@ class CsvData < ActiveRecord::Base
 			end
 		end
 		if flag_as_generated
-			self.generated = true
-			self.save
-		end
+			csv = CsvData.where(:date => file_name).first
+			csv.generated = true
+			csv.save
+		end 
 		return rafined_data
 	end
 end
