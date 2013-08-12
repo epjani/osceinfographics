@@ -6,23 +6,15 @@
 	<title>Osceinfographic</title>
 	<%= stylesheet_link_tag :all %>
 	<%= csrf_meta_tag %>
-	<link rel="stylesheet" type="text/css" href="stylesheets/main.css">
 	<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/main.css">
 	<script src="javascripts/jquery-2.0.3.min.js"></script>
 	<script src="javascripts/bootstrap.min.js"></script>
 </head>
 <body>
-	<div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="container">
-                <a class="brand" href="root_path()">OSCE Infograph generator</a>
-            </div>
-        </div>
-    </div>
-
 	<div class="container">
-	    <!-- Example row of columns -->
+		<div class="header-title row">HATE MONITOR</div>
 	    <%=yield%>
 	</div> <!-- /container -->
 

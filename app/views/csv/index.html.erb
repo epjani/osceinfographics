@@ -1,56 +1,55 @@
 <div class="row">
-	<div class="span3 hide_on_print">
-		<h1>File Upload</h1>
+	<div class="span1"></div>
+	<div class="span4 hide_on_print box-wrapper dashboard_box">
+		<h1>Upload CSV file</h1>
 		<%= form_for :upload_file, :url => {:action => "upload_file"}, :html => { :multipart => true } do |f| %>
-			<%= f.file_field :the_file %><br />
-			<label for="year">Year</label>
-			<input type="text" name="year" maxlength="4" /><br />
-			<label for="month">Month</label>
-			<select name="month">
-				<option value="1">January</option>
-				<option value="2">February</option>
-				<option value="3">March</option>
-				<option value="4">April</option>
-				<option value="5">May</option>
-				<option value="6">June</option>
-				<option value="7">July</option>
-				<option value="8">August</option>
-				<option value="9">September</option>
-				<option value="10">October</option>
-				<option value="11">November</option>
-				<option value="12">December</option>
-			</select><br />
+			<input type="button" id="upload_file_btn" onclick="getFile()" value="Select file" />
+			<div id="file_name_placeholder"></div>
+			<div style='height: 0px;width: 0px; overflow:hidden;'><input id="upload_file_the_file" type="file" value="upload" name="upload_file[the_file]" onchange="sub(this)"/></div>
 			<%= f.submit "Upload" %>
 		<% end %>
 	</div>
 
-    <div id="main_container" class="span9">
-		<h1>Uploaded CSVs</h1>
-		<table class="table">
-			<th>Date</th>
-			<th>Image</th>
-			<th>CSV</th>
-			<th>HTML</th>
-			
-			<% @csvs.each do |csv| %>
-				<tr>
-					<td><%= csv.date %></td>
-					<td>
-						<% if csv.generated.blank? %>
-							<a href="#" onclick="get_image('<%=csv.date%>');">link</a>
-						<% else %>
-							<a href="http://54.218.15.104/images/infographs/<%=csv.date%>.png">link</a>
-						<% end %>
-					</td>
-					<td><a target="_blank" href="<%= csv.csv_file_location %>" />link</a></td>
-					<td><a href="<%=parse_path({:file_name => csv.date, :ly => true})%>">link</a></td>
-				</tr>
+
+	<div class="span2"></div>
+	<div class="span4 hide_on_print box-wrapper dashboard_box">
+		<h1>Preview infographic online</h1>
+		<select name="year" class="year changeable_combo">
+			<option name="Year" value="-1">Year</option>
+			<% @years.each_with_index do |year, i| %>								
+				<option name="<%=year.first%>" value="<%=year.first%>" ><%=year.first%></option>				
 			<% end %>
-		</table>
+		</select>
+		<% @years.each_with_index do |year, i| %>
+			<select name="month" class="month_<%=year.first%> hideabable_combo changeable_combo" style="<%='display:none;' if i > 0 %>">
+				<option name="Month" value="-1">Month</option>
+				<% year.second.each do |month| %>
+					<option name="<%=month%>" value="<%=month%>"><%=month%></option>
+				<% end %>
+			</select>
+		<% end %><br /><br /><br /><br /><br />
+		<input type="button" onclick="get_image();" value="Preview" />
 	</div>
+	<div class="span1"></div>
 </div>
 <script>
-	function get_image(file_name){
+	$(document).ready(function(){
+		$(".changeable_combo").change(function(){
+
+			if($(this).hasClass("year")){
+				var year = $(this).val();
+				$('.hideabable_combo').hide();
+				$('.month_' + year).show();
+				__year = year;
+			}else{
+				__month = $(this).val();
+			}
+		});
+	});
+	__year = '';
+	__month = '';
+	function get_image(){
+		file_name = __year + '-' + __month;
 		$.ajax({
 			type : 'GET',
 			url : 'http://54.218.15.104/invoke_rasterization?file_name=' + file_name,
@@ -63,4 +62,12 @@
 			}
 		});
 	}
+	function getFile(){
+	   document.getElementById("upload_file_the_file").click();
+	 }
+	 function sub(obj){
+	    var file = obj.value;
+	    var fileName = file.split("\\");
+	    document.getElementById("file_name_placeholder").innerHTML = fileName[fileName.length-1];
+	  }
 </script>

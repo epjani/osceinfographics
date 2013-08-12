@@ -2,20 +2,36 @@ require 'csv'
 
 class CsvData < ActiveRecord::Base
 	
+	# => TODO Parse data and store it in csv_datas after upload (not  during /parse request) @ line #25
 	def self.save(upload, selected_year, selected_month)
 		tmp = upload.tempfile
-		stringified_date = stringify_date(selected_year, selected_month)
-		file = File.join("public/csv", stringified_date + ".csv")
+		tmp_file_name = "tmp_file"
 
-		FileUtils.cp tmp.path, file
-		
+		tmp_file = File.join("public/csv", tmp_file_name + ".csv")
+
+		FileUtils.cp tmp.path, tmp_file
+		`chmod 644 #{tmp_file}`
+
 		csv = CsvData.new 
-		csv.image_file_location = "infographs/#{stringified_date}.png"
-		csv.csv_file_location = "csv/#{stringified_date}.csv"
-		csv.date = stringified_date
+		csv.csv_file_location = "csv/#{tmp_file_name}.csv"
+		csv.date = tmp_file_name
 		csv.save
 
-		`chmod 644 #{file}`
+		parsed_data = CsvData.parse(tmp_file_name, false)
+		year = parsed_data[:general_info][:year].to_i
+		month = Date::MONTHNAMES.index(parsed_data[:general_info][:month])
+		quarter = month <= 3 ? 1 : (month <= 6 ? 2 : ( month <= 9 ? 3 : 4))
+		stringified_date = stringify_date(year, month)
+		
+		csv.image_file_location = "infographs/#{stringified_date}.png"
+		csv.date = stringified_date
+		csv.year = year
+		csv.month = month
+		csv.quarter = quarter
+		csv.save
+
+		FileUtils.mv(tmp_file, File.join("public/csv", stringified_date + ".csv"))
+		
 	end
 
 	def self.stringify_date(selected_year, selected_month)
