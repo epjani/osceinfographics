@@ -24,7 +24,7 @@
 			<select name="month" class="month_<%=year.first%> hideabable_combo changeable_combo" style="<%='display:none;' if i > 0 %>">
 				<option name="Month" value="-1">Month</option>
 				<% year.second.each do |month| %>
-					<option name="<%=month%>" value="<%=month%>"><%=month%></option>
+					<option name="<%=month%>" value="<%=month%>"><%=Date::MONTHNAMES[month]%></option>
 				<% end %>
 			</select>
 		<% end %><br /><br /><br /><br /><br />
