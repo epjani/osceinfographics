@@ -1,0 +1,114 @@
+general_info;
+month;May
+year;2011
+total_incidents_monthly;6
+total_responses_monthly;1
+incidents_responded_to_monthly;1
+incidents_since;
+since_incidents;17
+since_at_least_one_response;4
+since_year;2013
+since_month;May 
+hate_crimes_cases_in_a_year;
+trials_ongoing;0
+convictions;0
+acquittals;0
+monthly_preview;
+i_jan;0
+i_feb;0
+i_mar;0
+i_apr;0
+i_may;11
+i_june;6
+i_july;0
+i_aug;0
+i_sep;0
+i_oct;0
+i_nov;0
+i_dec;0
+victim_characteristics;
+vc_ethnicity_nationality_religion;6
+vc_race_colour;0
+vc_sexual_orientation;0
+vc_sex_gender;0
+vc_language_script;0
+vc_political_affiliation;0
+vc_social_origin_social status;0
+vc_age;0
+vc_health;0
+vc_other;0
+incidents;
+i_physical_assault;0
+i_murder;0
+i_rape;0
+i_theft_robbery_armedrobbery;0
+i_property_damage;1
+i_hate_speech;0
+i_damage_religious_facilities;1
+i_desecrating_graveyards_gravestones;3
+i_arson;0
+i_verbal_assault;0
+i_graffiti;0
+i_distribution_offensive_materials;0
+i_displaying_flags_symbols;1
+i_insulting_phone_internet_sms_messages;1
+i_other;0
+responses;
+r_public_condemnation_religious_leaders;1
+r_public_condemnation_officials;0
+r_public_condemnation_civil_society;0
+r_public_condemnation_political_parties;0
+r_graffiti_removal;0
+r_reporting_damaged_property;0
+r_repairing_cleaning_cemetery;0
+r_peaceful_gathering_vigil_march;0
+r_petition_letter-writing;0
+r_social_media_campaign;0
+r_roundtable_conference;0
+r_concert_performance_exhibition;0
+r_other;0
+r_highlighted_response;"The Interreligious council Livno issued a public statement condemning the incident. It was signed by the representatives of the Islamic, Catholic and Orthodox community. "
+geographical_presentation_incidents;
+Banja Luka;6
+Bihać;1
+Bijeljina;3
+Bugojno;1
+Doboj;2
+Donji Vakuf;1
+Gradiška;1
+Ilidža;3
+Kneževo;4
+Livno;1
+Mostar;5
+Novi Travnik;5
+Prijedor;6
+Sarajevo;6
+Srebrenica;7
+Stari Grad Sarajevo;1
+Tomislavgrad;0
+Travnik;1
+Trebinje;0
+Tuzla;0
+Zenica;0
+geographical_presentation_responses;
+Banja Luka;2
+Bihać;4
+Bijeljina;1
+Bugojno;3
+Doboj;2
+Donji Vakuf;2
+Gradiška;2
+Ilidža;1
+Kneževo;6
+Livno;1
+Mostar;5
+Novi Travnik;1
+Prijedor;0
+Sarajevo;0
+Srebrenica;0
+Stari Grad Sarajevo;0
+Tomislavgrad;0
+Travnik;0
+Trebinje;0
+Tuzla;0
+Zenica;0

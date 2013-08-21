@@ -117,15 +117,13 @@
 				V I C T I M &nbsp;&nbsp;C H A R A C T E R I S T I C S
 			</div>
 			<div class="clear"></div>
-			<div class="first" style="width:<%=@vc[:first].first.last%>%;"></div>
-			<div class="second" style="width:<%=@vc[:second].first.last%>%;"></div>
-			<div class="third" style="width:<%=@vc[:third].first.last%>%;"></div>
-			<div class="fourth" style="width:<%=@vc[:others]%>%;"></div>
+			<div class="first gotham-light"><div style="margin-left:5px;"><%=@vc[:first].first.last%> %</div></div>
+			<div class="second gotham-light"><div style="margin-left:5px;"><%=@vc[:second].first.last%> %</div></div>
+			<div class="third gotham-light"><div style="margin-left:5px;"><%=@vc[:third].first.last%> %</div></div>
 
-			<div class="first_lbl gotham-ultra" style="width:<%=@vc[:first].first.last%>%;"><%=@vc[:first].first.first.html_safe%></div>
-			<div class="second_lbl gotham-ultra" style="width:<%=@vc[:second].first.last%>%;"><%=@vc[:second].first.first.html_safe%></div>
-			<div class="third_lbl gotham-ultra" style="width:<%=@vc[:third].first.last%>%;"><%=@vc[:third].first.first.html_safe%></div>
-			<div class="fourth_lbl gotham-ultra" style="width:<%=@vc[:others]%>%;">other</div>
+			<div class="first_lbl gotham-ultra"><%=@vc[:first].first.first.html_safe%></div>
+			<div class="second_lbl gotham-ultra" ><%=@vc[:second].first.first.html_safe%></div>
+			<div class="third_lbl gotham-ultra" ><%=@vc[:third].first.first.html_safe%></div>
 		</div>
 	</div>
 	<div class="since_month">
@@ -151,52 +149,40 @@
 			<div class="lists">
 				<ul id="incidents">
 					<li>
-						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_physical_assault]%></span><br />
-						<span class="gotham-medium description" >Physical<br />assault</span>
-					</li>
-					<li >
-						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_murder]%></span><br />
-						<span class="gotham-medium description" >Murder</span>
-					</li>
-					<li >
-						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_rape]%></span><br />
-						<span class="gotham-medium description" >Rape</span>
-					</li>
-					<li >
-						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_theft_robbery_armedrobbery]%></span><br />
-						<span class="gotham-medium description" >Theft</span>
+						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_physical_violence]%></span><br />
+						<span class="gotham-medium description" >Physical<br />violence</span>
 					</li>
 					<li>
 						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_property_damage]%></span><br />
 						<span class="gotham-medium description" >Property<br />damage</span>
 					</li>
-					<li>
-						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_hate_speech]%></span><br />
-						<span class="gotham-medium description" >Public hate<br />speech</span>
-					</li>
-					<li >
-						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_arson]%></span><br />
-						<span class="gotham-medium description" >Arson</span>
-					</li>
 					<li >
 						<img src="images/incidents.png" /><span class="gotham-light font-88">0</span><br />
-						<span class="gotham-medium description" >Offensive</span>
+						<span class="gotham-medium description" >Offensive graffiti</span>
+					</li>
+					<li style="height:170px;">
+						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents["i_damage_religious_facilities-desecration_of_graveyards".to_sym]%></span><br />
+						<span style="width:270px;" class="gotham-medium description" >Damage to religious<br />facilities / Desecration <br />of graveyards</span>
 					</li>
 					<li>
 						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_verbal_assault]%></span><br />
 						<span class="gotham-medium description" >Verbal<br />assault</span>
+					</li>				
+					<li>
+						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_public_hate_speech]%></span><br />
+						<span class="gotham-medium description" >Public hate<br />speech</span>
 					</li>
-					<li style="height:170px;">
-						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_distribution_offensive_materials]%></span><br />
-						<span class="gotham-medium description" >Distribution<br />of offensive<br />materials</span>
-					</li>
-					<li style="height:170px;">
-						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_damage_religious_facilities]%></span><br />
-						<span class="gotham-medium description" >Damage to<br /> religious<br />facilities</span>
+					<li>
+						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_displaying_symbols]%></span><br />
+						<span class="gotham-medium description" >Displaying<br />symbols</span>
 					</li>
 					<li style="height:195px;">
 						<img src="images/incidents.png" /><span class="gotham-light font-88">0</span><br />
-						<span class="gotham-medium description" >Insulting<br />phone,<br /> internet and <br />sms messages</span>
+						<span class="gotham-medium description" style="width:270px;">Insulting phone,<br /> internet and <br />sms messages</span>
+					</li>
+					<li>
+						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_other]%></span><br />
+						<span class="gotham-medium description" >Other</span>
 					</li>
 				</ul>
 			</div>
@@ -209,7 +195,9 @@
 			<div class="lists">
 				<ul id="responses">
 					<li>
-						<img src="images/response.png" /><span class="gotham-light font-88">0</span><br />
+						<img src="images/response.png" /><span class="gotham-light font-88">
+							<%=@responses[:r_public_condemnation_officials]%>
+						</span><br />
 						<span class="gotham-medium description" >Public Condemation<br />by officials</span>
 					</li>
 					<li >
@@ -217,32 +205,20 @@
 						<span class="gotham-medium description" >Public Condemation<br />by Religious Leaders</span>
 					</li>
 					<li >
-						<img src="images/response.png" /><span class="gotham-light font-88">0</span><br />
+						<img src="images/response.png" /><span class="gotham-light font-88"><%=@responses[:r_public_condemnation_civil_society]%></span><br />
 						<span class="gotham-medium description" >Public Condemation<br />by Civil Society</span>
 					</li>
 					<li >
-						<img src="images/response.png" /><span class="gotham-light font-88">0</span><br />
-						<span class="gotham-medium description" >Reporting<br />Damaged Property</span>
+						<img src="images/response.png" /><span class="gotham-light font-88"><%=@responses["r_repairing_damaged_property_graffiti_removal-clean-up_action".to_sym]%></span><br />
+						<span class="gotham-medium description" >Repairing damaged<br /> property/Graffiti removal<br />Cleanup action</span>
 					</li>
 					<li>
-						<img src="images/response.png" /><span class="gotham-light font-88"><%=@responses[:r_peaceful_gathering_vigil_march]%></span><br />
-						<span class="gotham-medium description" >Peaceful gathering /<br />Vigil / March</span>
+						<img src="images/response.png" /><span class="gotham-light font-88"><%=@responses[:r_peaceful_gathering_march]%></span><br />
+						<span class="gotham-medium description" >Peaceful gathering /<br />March</span>
 					</li>
 					<li>
-						<img src="images/response.png" /><span class="gotham-light font-88"><%=@responses[:r_graffiti_removal]%></span><br />
-						<span class="gotham-medium description" >Graffiti<br />removal</span>
-					</li>
-					<li >
-						<img src="images/response.png" /><span class="gotham-light font-88"><%=@responses[:r_social_media_campaign]%></span><br />
-						<span class="gotham-medium description" >Social Media<br />Campaign</span>
-					</li>
-					<li >
-						<img src="images/response.png" /><span class="gotham-light font-88"><%=@responses[:r_roundtable_conference]%></span><br />
-						<span class="gotham-medium description" >Roundtable<br />Conference</span>
-					</li>
-					<li>
-						<img src="images/response.png" /><span class="gotham-light font-88">0</span><br />
-						<span class="gotham-medium description" >Concert / Performance /<br />Exibithion</span>
+						<img src="images/response.png" /><span class="gotham-light font-88"><%=@responses[:r_other]%></span><br />
+						<span class="gotham-medium description" >Other</span>
 					</li>
 				</ul>
 			</div>
@@ -278,9 +254,8 @@
 			<div class="highlight_box_wrapper">
 				<div class="hl_left"></div>
 				<div class="highlight_box">
-					<div class="title gotham-light">highlighted response</div>
 					<div class="clear"></div>
-					<div class="highlighted_txt gotham-light"><%=@highlighted%></div>
+					<div class="highlighted_txt gotham-bold"><%=@highlighted.html_safe%></div>
 				</div>
 				<div class="hl_right"></div>
 			</div>
@@ -293,30 +268,44 @@
 				<div class="gotham-light li">
 					<div class="txt">Trials Ongoing</div>
 					<% if Integer(@cases_ongoing) < 9 %>
-					<div class="dots">.......................................</div>
+					<div class="dots">...........................................................................</div>
 					<% else %>
-					<div class="dots">.....................................</div>
+					<div class="dots">.............................................................</div>
 					<% end %>
 					<div class="value"><%=@cases_ongoing%></div>
 				</div>
 				<div class="gotham-light li">
 					<div class="txt">Convictions in <%=@year%></div>
 					<% if Integer(@convictions) < 9 %>
-					<div class="dots">.............................</div>
+					<div class="dots">............................................................................</div>
 					<% else %>
-					<div class="dots">...........................</div>
+					<div class="dots">.................................................................</div>
 					<% end %>
 					<div class="value"><%=@convictions%></div>
 				</div>
 				<div class="gotham-light li">
 					<div class="txt">Acquittals in <%=@year%></div>
 					<% if Integer(@acquittals) < 9 %>
-					<div class="dots">.................................</div>
+					<div class="dots">.....................................................................</div>
 					<% else %>
-					<div class="dots">...............................</div>
+					<div class="dots">.................................................................</div>
 					<% end %>
 					<div class="value"><%=@acquittals%></div>
 				</div>
+			</div>
+		</div>
+		<div class="preventions_wrapper">
+			<div class="preventions gotham-blackitalic">
+				P R E V E N T I O N
+			</div>
+			<div class="lists">
+				<div class="first width gotham-light"><%=@prevention[:p_local_coalitions_preventive_actions]%></div>
+				<div class="second width gotham-light"><%=@prevention[:p_working_groups_response]%></div>
+				<div class="third width gotham-light"><%=@prevention[:p_municipalities_adopted_strategies]%></div>
+				<div class="clear"></div>
+				<div class="width lbl gotham-light">local coalitions<br /> preventive actions</div>
+				<div class="width lbl gotham-light">working group<br />response</div>
+				<div class="width lbl gotham-light" style="width:312px;">municipalities adopted<br />strategies</div>
 			</div>
 		</div>
 	</div>

@@ -1,0 +1,99 @@
+general_info;
+month;August
+year;2013
+total_incidents;55
+total_responses;10
+responses_to_incidents;5
+incidents_since;
+since_incidents;70
+since_at_least_one_response;70
+since_year;2013
+since_month;May
+hate_crimes_cases_in_a_year;
+trials_ongoing;2
+convictions;12
+acquittals;1
+monthly_preview;
+i_jan;0
+i_feb;0
+i_mar;0
+i_apr;0
+i_may;20
+i_june;30
+i_july;15
+i_aug;0
+i_sep;0
+i_oct;0
+i_nov;0
+i_dec;0
+victim_characteristics;
+vc_ethnicity_religion;2
+vc_sexual_orientation;1
+vc_other;5
+incidents;
+i_offensive_graffiti;3
+i_physical_violence;2
+i_property_damage;3
+i_damage_religious_facilities-desecration_of_graveyards;3
+i_verbal_assault;2
+i_insulting phone_internet_sms_messages ;4
+i_public_hate_speech;5
+i_displaying_symbols;0
+i_other;1
+responses;
+r_public_condemnation_officials;2
+r_public_condemnation_religious_leaders;1
+r_public_condemnation_civil_society ;0
+r_repairing_damaged_property_graffiti_removal-clean-up_action  ;4
+r_peaceful_gathering_march;0
+r_other;0
+r_highlighted_action_01;In Bihac, XX organized XX...
+r_highlighted_action_02;In Sarajevo....
+prevention;
+p_local_coalitions_preventive_actions;2
+p_working_groups_response;4
+p_municipalities_adopted_strategies;12
+geographical_presentation_incidents;
+Banja Luka;0
+Bihać;0
+Bijeljina;0
+Bugojno;1
+Doboj;0
+Donji Vakuf;1
+Gradiška;1
+Ilidža;0
+Kneževo;0
+Livno;1
+Mostar;0
+Novi Travnik;0
+Prijedor;0
+Sarajevo;0
+Srebrenica;0
+Stari Grad Sarajevo;1
+Tomislavgrad;0
+Travnik;1
+Trebinje;0
+Tuzla;0
+Zenica;0
+geographical_presentation_responses;
+Banja Luka;0
+Bihać;0
+Bijeljina;0
+Bugojno;0
+Doboj;0
+Donji Vakuf;0
+Gradiška;0
+Ilidža;0
+Kneževo;0
+Livno;1
+Mostar;0
+Novi Travnik;0
+Prijedor;0
+Sarajevo;0
+Srebrenica;0
+Stari Grad Sarajevo;0
+Tomislavgrad;0
+Travnik;0
+Trebinje;0
+Tuzla;0
+Zenica;0
