@@ -10,8 +10,8 @@ class ParserController < ApplicationController
 		puts "#{parsed_string}"
 		@month = parsed_string[:general_info][:month]
 		@year = parsed_string[:general_info][:year]
-		@total_incidents = parsed_string[:general_info][:total_incidents]
-		@total_responses = parsed_string[:general_info][:total_responses]
+		@total_incidents = parsed_string[:general_info][:total_incidents_monthly]
+		@total_responses = parsed_string[:general_info][:total_responses_monthly]
 		@responses_to_incidents = parsed_string[:general_info][:incidents_responded_to_monthly]
 		@monthly = parsed_string[:monthly_preview]
 		
@@ -27,7 +27,7 @@ class ParserController < ApplicationController
 		@incidents = parsed_string[:incidents]
 		@responses = parsed_string[:responses]
 
-		@highlighted = parsed_string[:responses][:r_highlighted_action_01] + '<br />' + parsed_string[:responses][:r_highlighted_action_02]
+		@highlighted = parsed_string[:responses][:r_highlighted_action_01] + '<br /><br />' + parsed_string[:responses][:r_highlighted_action_02]
 
 		@cases_ongoing = parsed_string[:hate_crimes_cases_in_a_year][:trials_ongoing]
 		@convictions = parsed_string[:hate_crimes_cases_in_a_year][:convictions]

@@ -8,40 +8,40 @@
         var data = google.visualization.arrayToDataTable([
           ['', ''],
           <% if @monthly[:i_jan].to_i > 0 %>
-          	['Jan',  <%=@monthly[:i_jan]%>],
+          	['JAN',  <%=@monthly[:i_jan]%>],
           <% end %>
           <% if @monthly[:i_feb].to_i > 0 %>
-          	['Feb',  <%=@monthly[:i_feb]%>],
+          	['FEB',  <%=@monthly[:i_feb]%>],
           <% end %>	
           <% if @monthly[:i_mar].to_i > 0 %>
-          	['Mar',  <%=@monthly[:i_mar]%>],
+          	['MAR',  <%=@monthly[:i_mar]%>],
           <% end %>
           <% if @monthly[:i_apr].to_i > 0 %>
-          	['Apr',  <%=@monthly[:i_apr]%>],
+          	['APR',  <%=@monthly[:i_apr]%>],
           <% end %>
           <% if @monthly[:i_may].to_i > 0 %>
-          	['May',  <%=@monthly[:i_may]%>],
+          	['MAY',  <%=@monthly[:i_may]%>],
           <% end %>
           <% if @monthly[:i_june].to_i > 0 %>
-          	['Jun',  <%=@monthly[:i_june]%>],
+          	['JUN',  <%=@monthly[:i_june]%>],
           <% end %>
           <% if @monthly[:i_july].to_i > 0 %>
-          	['Jul',  <%=@monthly[:i_july]%>],
+          	['JUL',  <%=@monthly[:i_july]%>],
           <% end %>
           <% if @monthly[:i_aug].to_i > 0 %>
-          	['Aug',  <%=@monthly[:i_aug]%>],
+          	['AUG',  <%=@monthly[:i_aug]%>],
           <% end %>
           <% if @monthly[:i_sep].to_i > 0 %>
-          	['Sep',  <%=@monthly[:i_sep]%>],
+          	['SEP',  <%=@monthly[:i_sep]%>],
           <% end %>
           <% if @monthly[:i_oct].to_i > 0 %>
-          	['Oct',  <%=@monthly[:i_oct]%>],
+          	['OCT',  <%=@monthly[:i_oct]%>],
           <% end %>
           <% if @monthly[:i_nov].to_i > 0 %>
-          	['Nov',  <%=@monthly[:i_nov]%>],
+          	['NOV',  <%=@monthly[:i_nov]%>],
           <% end %>
           <% if @monthly[:i_dec].to_i > 0 %>
-          	['Dec',  <%=@monthly[:i_dec]%>]
+          	['DEC',  <%=@monthly[:i_dec]%>]
           <% end %>
         ]);
 
@@ -144,7 +144,7 @@
 	<div class="incidents_lists">
 		<div class="incidents">
 			<div class="title gotham-bold">
-				INCIDENTS
+				TYPES OF INCIDENTS
 			</div>
 			<div class="lists">
 				<ul id="incidents">
@@ -161,7 +161,7 @@
 						<span class="gotham-medium description" >Offensive graffiti</span>
 					</li>
 					<li style="height:170px;">
-						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents["i_damage_religious_facilities-desecration_of_graveyards".to_sym]%></span><br />
+						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_damage_religious_facilities_desecration_of_graveyards]%></span><br />
 						<span style="width:270px;" class="gotham-medium description" >Damage to religious<br />facilities / Desecration <br />of graveyards</span>
 					</li>
 					<li>
@@ -177,8 +177,8 @@
 						<span class="gotham-medium description" >Displaying<br />symbols</span>
 					</li>
 					<li style="height:195px;">
-						<img src="images/incidents.png" /><span class="gotham-light font-88">0</span><br />
-						<span class="gotham-medium description" style="width:270px;">Insulting phone,<br /> internet and <br />sms messages</span>
+						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_insulting_phone_internet_sms_messages]%></span><br />
+						<span class="gotham-medium description" style="width:270px;">Insulting phone,<br /> Internet and <br />sms messages</span>
 					</li>
 					<li>
 						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_other]%></span><br />
@@ -190,7 +190,7 @@
 
 		<div class="responses">
 			<div class="title gotham-bold">
-				RESPONSES
+				TYPES OF RESPONSES
 			</div>
 			<div class="lists">
 				<ul id="responses">
@@ -198,19 +198,19 @@
 						<img src="images/response.png" /><span class="gotham-light font-88">
 							<%=@responses[:r_public_condemnation_officials]%>
 						</span><br />
-						<span class="gotham-medium description" >Public Condemation<br />by officials</span>
+						<span class="gotham-medium description" >Public Condemnation<br />by Officials</span>
 					</li>
 					<li >
 						<img src="images/response.png" /><span class="gotham-light font-88"><%=@responses[:r_public_condemnation_religious_leaders]%></span><br />
-						<span class="gotham-medium description" >Public Condemation<br />by Religious Leaders</span>
+						<span class="gotham-medium description" >Public Condemnation<br />by Religious Leaders</span>
 					</li>
 					<li >
 						<img src="images/response.png" /><span class="gotham-light font-88"><%=@responses[:r_public_condemnation_civil_society]%></span><br />
-						<span class="gotham-medium description" >Public Condemation<br />by Civil Society</span>
+						<span class="gotham-medium description" >Public Condemnation<br />by Civil Society</span>
 					</li>
 					<li >
-						<img src="images/response.png" /><span class="gotham-light font-88"><%=@responses["r_repairing_damaged_property_graffiti_removal-clean-up_action".to_sym]%></span><br />
-						<span class="gotham-medium description" >Repairing damaged<br /> property/Graffiti removal<br />Cleanup action</span>
+						<img src="images/response.png" /><span class="gotham-light font-88"><%=@responses[:r_repairing_damaged_property_graffiti_removal_clean_up_action]%></span><br />
+						<span class="gotham-medium description" >Repairing damaged<br /> property/Graffiti<br />removal/Cleanup action</span>
 					</li>
 					<li>
 						<img src="images/response.png" /><span class="gotham-light font-88"><%=@responses[:r_peaceful_gathering_march]%></span><br />
