@@ -425,8 +425,8 @@ ul#cities li span{color:#9dc4c5;}
 /*	LAYOUT */
 .dashboard_box{
 	padding: 20px;
-	height: 300px;
-	margin-left: 0px;
+	height: 200px;
+	margin-left: 30px;
 }
 .navbar-inner .container{margin-top: 0px;}
 .container{
@@ -457,8 +457,8 @@ ul#cities li span{color:#9dc4c5;}
 	margin-bottom: 25px;
 }
 #file_name_placeholder{
-	height:70px;
-	padding-top:65px;
+	height:30px;
+	padding-top:35px;
 }
 #upload_file_the_file{
 	margin-left: 26px;
@@ -514,6 +514,57 @@ ul#cities li span{color:#9dc4c5;}
 	color: #819b9b;
 	padding-right: 10px;
 	margin-top: 15px;
+}
+
+.home {
+	padding:55px 105px;
+	background-color:#e9e2ce;
+	color:#262626;
+	float: left;
+}
+.home .header .green_line{
+	height:6px;
+	width:225px;
+	background-color: #829c9b;
+	float:left;
+	margin-top:8px;
+}
+.home .header .title{
+	font-size:50px;
+	float:left;
+	height:80px;
+	margin:0 46px;
+}
+.home .footer {
+	margin-top: 50px;
+	width: 950px;	
+	border-top: 1px black solid;
+}
+.home .footer .logo {
+	margin-top: 20px;	
+	background-image: url("/images/osce-logo.png");
+	width: 450px;
+    height: 100px;    
+    background-size:contain;
+}
+#headline {
+	font-size: 25px;
+	font-weight: 50px;
+	padding-bottom: 20px;
+}
+#upload_file_btn {
+	background-color: white;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	width: 150px;
+	height: 30px;
+}
+#blackbtn {
+	background-color: black;
+	border: 1px solid #ccc;
+	width: 150px;
+	height: 30px;
+	color: white;
 }
 /* 	LAYOUT  */
 .Bihać{
