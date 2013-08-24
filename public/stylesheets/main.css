@@ -571,7 +571,7 @@ ul#cities li span{color:#9dc4c5;}
 }
 .home .footer .logo {
 	margin-top: 20px;	
-	background-image: url("/images/osce-logo.png");
+	/*background-image: url("/images/osce-logo.png");*/
 	width: 450px;
     height: 100px;    
     background-size:contain;
