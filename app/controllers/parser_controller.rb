@@ -10,9 +10,9 @@ class ParserController < ApplicationController
 		puts "#{parsed_string}"
 		@month = parsed_string[:general_info][:month]
 		@year = parsed_string[:general_info][:year]
-		@total_incidents = parsed_string[:general_info][:total_incidents]
-		@total_responses = parsed_string[:general_info][:total_responses]
-		@responses_to_incidents = parsed_string[:general_info][:responses_to_incidents]
+		@total_incidents = parsed_string[:general_info][:total_incidents_monthly]
+		@total_responses = parsed_string[:general_info][:total_responses_monthly]
+		@responses_to_incidents = parsed_string[:general_info][:incidents_responded_to_monthly]
 		@monthly = parsed_string[:monthly_preview]
 		
 		vc = parsed_string[:victim_characteristics]

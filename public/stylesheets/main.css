@@ -91,7 +91,7 @@
 	font-family: 'gothamblackregular';
 }
 .gotham-bold{
-	font-family: 'gothamboldregular';
+	font-family: 'gothamboldregular' !important;
 }
 .gotham-light{
 	font-family: 'gothamlightregular';
@@ -588,8 +588,10 @@ ul#cities li span{color:#9dc4c5;}
 	width: 150px;
 	height: 30px;
 }
-#blackbtn {
-	background-color: black;
+#blackbtn, #upload_file_submit {
+	font-family: 'gothamboldregular' !important;
+	text-align: center;
+	background-color: black !important;
 	border: 1px solid #ccc;
 	width: 150px;
 	height: 30px;
