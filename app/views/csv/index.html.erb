@@ -1,36 +1,39 @@
 <div class="row">
-	<div class="span1"></div>
-	<div class="span4 hide_on_print box-wrapper dashboard_box">
-		<h1>Upload CSV file</h1>
+	<div class="span3 hide_on_print box-wrapper dashboard_box">
+		<div class="gotham-book" id="headline">UPLOAD CSV FILE</div>
 		<%= form_for :upload_file, :url => {:action => "upload_file"}, :html => { :multipart => true } do |f| %>
-			<input type="button" id="upload_file_btn" onclick="getFile()" value="Select file" />
+			<input type="button" id="upload_file_btn" class="description gotham-bold" onclick="getFile()" value="Select file" />
 			<div id="file_name_placeholder"></div>
 			<div style='height: 0px;width: 0px; overflow:hidden;'><input id="upload_file_the_file" type="file" value="upload" name="upload_file[the_file]" onchange="sub(this)"/></div>
 			<%= f.submit "Upload" %>
 		<% end %>
 	</div>
 
-
-	<div class="span2"></div>
-	<div class="span4 hide_on_print box-wrapper dashboard_box">
-		<h1>Preview infographic online</h1>
-		<select name="year" class="year changeable_combo">
+	<div class="span1"></div>
+	<div class="span5 hide_on_print box-wrapper dashboard_box">
+		<div class="gotham-book" id="headline">PREVIEW INFOGRAPHIC ONLINE</div>
+		<select name="language" class="lang changeable_combo description gotham-bold">
+			<option name="Language" value="-1">Language</option>
+			<option name="English" value="-1">English</option>
+			<option name="Bosanski" value="-1">Bosanski</option>
+		</select><br />
+		<select name="year" class="year changeable_combo description gotham-bold">
 			<option name="Year" value="-1">Year</option>
 			<% @years.each_with_index do |year, i| %>								
 				<option name="<%=year.first%>" value="<%=year.first%>" ><%=year.first%></option>				
 			<% end %>
-		</select>
+		</select><br />
 		<% @years.each_with_index do |year, i| %>
-			<select name="month" class="month_<%=year.first%> hideabable_combo changeable_combo" style="<%='display:none;' if i > 0 %>">
+			<select name="month" class="month_<%=year.first%> hideabable_combo changeable_combo description gotham-bold" style="<%='display:none;' if i > 0 %>">
 				<option name="Month" value="-1">Month</option>
 				<% year.second.each do |month| %>
 					<option name="<%=month%>" value="<%=month%>"><%=Date::MONTHNAMES[month]%></option>
 				<% end %>
-			</select>
-		<% end %><br /><br /><br /><br /><br />
-		<input type="button" onclick="get_image();" value="Preview" />
+			</select>			
+		<% end %><br /><br />
+		<input type="button" id="blackbtn" class="description gotham-bold" onclick="get_image();" value="Preview" />
 	</div>
-	<div class="span1"></div>
+	<div class="span3"></div>
 </div>
 <script>
 	$(document).ready(function(){
