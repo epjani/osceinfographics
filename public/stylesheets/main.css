@@ -121,6 +121,7 @@
 .infographic_wrapper{
 	width:2133px;
 	padding:75px 175px;
+	padding-bottom: 0px;
 	background-color:#e9e2ce;
 	float:left;
 	color:#262626;
@@ -149,7 +150,7 @@
 }
 .infographic_wrapper .description{
 	text-align: justify;
-	font-size:38px;
+	font-size:35px;
 	margin-top:44px;
 }
 .infographic_wrapper .incidents_responses{
@@ -515,7 +516,32 @@ ul#cities li span{color:#9dc4c5;}
 	padding-right: 10px;
 	margin-top: 15px;
 }
-/* 	LAYOUT  */
+.monitor_provides{
+	font-size: 23px;
+	text-align: justify;
+}
+/* justyfies one line of text */
+.monitor_provides {
+  height: 40px;
+  line-height: 40px;
+  text-align: justify;
+  text-align-last: justify;
+}
+.monitor_provides:after {
+  content: ".";
+  display: inline-block;
+  width: 100%;
+  height: 0;
+  visibility: hidden;
+}
+.footer{
+	padding:85px;
+	border:1px solid #000;
+	width:2222px;
+	background:#e9e2ce;
+	padding-left:175px;
+}
+/* 	MAP  */
 .Bihać{
 	left:167px;
 	top:100px;
