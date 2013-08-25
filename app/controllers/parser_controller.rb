@@ -2,7 +2,9 @@ require 'open-uri'
 require 'fileutils'
 
 class ParserController < ApplicationController	
-	
+
+	before_filter :set_locale
+
 	def parse
 		# => TODO invoke parser
 		file_name = params[:file_name]
@@ -104,5 +106,11 @@ class ParserController < ApplicationController
 			end
 		end
 		return graphical_presentation
+	end
+
+	protected
+
+	def set_locale
+		I18n.locale = params[:locale] || I18n.default_locale
 	end
 end

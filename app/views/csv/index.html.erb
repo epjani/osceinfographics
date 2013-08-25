@@ -12,7 +12,7 @@
 	<div class="span1"></div>
 	<div class="span5 hide_on_print box-wrapper dashboard_box">
 		<div class="gotham-book" id="headline">PREVIEW INFOGRAPHIC ONLINE</div>
-		<select name="language" class="lang changeable_combo description gotham-bold">
+		<select name="locale" class="lang changeable_combo description gotham-bold">
 			<option name="Language" value="-1">Language</option>
 			<option name="English" value="-1">English</option>
 			<option name="Bosanski" value="-1">Bosanski</option>
@@ -45,23 +45,29 @@
 				$('.month_' + year).show();
 				__year = year;
 			}else{
-				__month = $(this).val();
+				if($(this).hasClass("lang")){
+					__lang = $(this).val();
+				}else{
+					__month = $(this).val();
+				}
 			}
 		});
 	});
 	__year = '';
 	__month = '';
+	__lang = 'en';
 	function get_image(){
 		file_name = __year + '-' + __month;
+		final_file_name = file_name + __lang;
 		$.ajax({
 			type : 'GET',
-			url : 'http://54.218.15.104/invoke_rasterization?file_name=' + file_name,
+			url : 'http://54.218.15.104/invoke_rasterization?file_name=' + file_name + '&locale=' + __lang,
 			dataType: 'jsonp',
 			success : function(){
-				window.open('http://54.218.15.104/images/infographs/' + file_name + '.png');
+				window.open('http://54.218.15.104/images/infographs/' + final_file_name + '.png');
 			},
 			error : function(data){
-				window.open('http://54.218.15.104/images/infographs/' + file_name + '.png');
+				window.open('http://54.218.15.104/images/infographs/' + final_file_name + '.png');
 			}
 		});
 	}
