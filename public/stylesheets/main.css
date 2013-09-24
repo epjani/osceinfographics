@@ -167,7 +167,7 @@ body{background: #e9e2ce;}
 .incidents_responses .incidents .header, .incidents_responses .responses .header{
 	font-size: 93px;
 	padding:40px 0px 60px 0px;
-	margin-top: 68px;
+	margin-top: 50px;
 	float: left;
 	width: 960px;
 	text-align: center;
@@ -186,13 +186,14 @@ body{background: #e9e2ce;}
 	text-align: center;
 	font-size: 310px;
 	float: left;
+	margin-top: -22px;
 }
 .incidents_responses .description{
 	float: left;
 	padding: 30px 26px;
 	width: 494px;
 	height: 164px;
-	margin-top: 68px;
+	margin-top: 45px;
 	margin-left: 14px;
 }
 .incidents .description, .responses .description{
@@ -254,14 +255,12 @@ body{background: #e9e2ce;}
 	width: 100%;
 	background-color: #829c9b;
 	float: left;
-	padding-top:0px;
-	padding-bottom: 35px;
-	margin-top:35px;
 }
 .incidents_lists2 .incidents, .incidents_lists2 .responses{
 	padding-left: 43px;
 	width: 917px;
 	float: left;
+	margin-top: -11px;
 }
 .incidents_lists2 .responses{
 	padding-left: 0px;
@@ -318,7 +317,6 @@ ul#incidents li .description, ul#responses li .description{
 .map_wrapper .highlits{
 	float: left;
 	margin-left: 212px;
-	margin-bottom: 32px;
 }
 .highlight_box_wrapper{
 	float: left;
@@ -333,7 +331,7 @@ ul#incidents li .description, ul#responses li .description{
 	background-color: #9dc4c5;
 	float: left;
 	margin-left: 22px;
-	height:417px;
+	height:380px;
 }
 .highlight_box .title{
 	font-size: 33px;
@@ -537,7 +535,7 @@ ul#cities li span{color:#9dc4c5;}
   visibility: hidden;
 }
 .parser_footer{
-	padding:85px;
+	padding:65px 85px;
 	border:1px solid #000;
 	width:2222px;
 	background:#e9e2ce;
