@@ -42,6 +42,9 @@ class ParserController < ApplicationController
 		
 		@render_map = @graphical_cities.length < 10 ? true : false
 
+		@actions_by_local = parsed_string[:prevention][:p_local_coalitions_preventive_actions]
+		@strategies_by_local = parsed_string[:prevention][:p_local_strategies_to_prevent_hate_to_date]
+
 		render :layout => false
 	end
 

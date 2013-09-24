@@ -50,8 +50,8 @@
           backgroundColor: 'transparent',
           colors: ['#556161'],
           legend: {position: 'none'},
-          vAxis: { gridlines: {color: 'transparent'}, textStyle: {color: '#829c9b'}},
-          hAxis: { minorGridlines: {count: 10, color: '#000'}, textStyle: {color: '#829c9b'}, allowContainerBoundaryTextCufoff: true,
+          vAxis: { gridlines: {color: 'transparent'}, textStyle: {color: '#262626'}},
+          hAxis: { minorGridlines: {count: 10, color: '#000'}, textStyle: {color: '#262626'}, allowContainerBoundaryTextCufoff: true,
                    slantedText: true, slantedTextAngle: 30},
           chartArea:{left:130,top:15,width:"83%",height:"70%"},
           fontSize: 34,
@@ -83,12 +83,12 @@
 			</div>
 			<div class="full_width"><img src="images/black_d_arrow.png" /></div>
 			<div class="clear"></div>
-			<div class="number_placeholder gotham-black"><%=@total_incidents%></div>
 			<div class="description">
 				<span class="full_width gotham-bold">B I A S  &nbsp;&nbsp;&nbsp;&nbsp;M O T I V A T E D</span><br />
 				<span class="incidents gotham-ultra">INCIDENTS</span><br />
 				<span class="full_width gotham-bold">T &nbsp;H &nbsp;I &nbsp;S  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M &nbsp;O &nbsp;N &nbsp;T &nbsp;H</span>
 			</div>
+			<div class="number_placeholder gotham-black"><%=@total_incidents%></div>
 		</div>
 		<div class="responses">
 			<div class="header gotham-book">
@@ -96,7 +96,6 @@
 			</div>
 			<div class="full_width"><img src="images/green_d_arrow.png" /></div>
 			<div class="clear"></div>
-			<div class="number_placeholder gotham-black font-green-light"><%=@total_responses%></div>
 			<div class="description">
 				<% if Integer(@total_responses) == 1 %>
 				<span class="responses gotham-ultra">RESPONSE&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
@@ -107,41 +106,11 @@
 				<% end %>				
 				<div class="full_width gotham-ultra number_of_incidents">TO <span class="font-green-light"><%=@responses_to_incidents%></span> INCIDENTS</div><br />
 			</div>
+			<div class="number_placeholder gotham-black font-green-light"><%=@total_responses%></div>			
 		</div>
 	</div>
 	<div class="clear"></div>
-	<div class="monthly_statistics">
-		<div id="chart_div" style="width: 1010px; height: 390px;margin-left:-50px;"></div>
-		<div class="victim_characteristics" style="margin-top: 20px">
-			<div class="title gotham-light">
-				V I C T I M &nbsp;&nbsp;C H A R A C T E R I S T I C S
-			</div>
-			<div class="clear"></div>
-			<div class="first gotham-light"><div style="margin-left:5px;"><%=@vc[:first].first.last%> %</div></div>
-			<div class="second gotham-light"><div style="margin-left:5px;"><%=@vc[:second].first.last%> %</div></div>
-			<div class="third gotham-light"><div style="margin-left:5px;"><%=@vc[:third].first.last%> %</div></div>
-
-			<div class="first_lbl gotham-ultra"><%=@vc[:first].first.first.html_safe%></div>
-			<div class="second_lbl gotham-ultra" ><%=@vc[:second].first.first.html_safe%></div>
-			<div class="third_lbl gotham-ultra" ><%=@vc[:third].first.first.html_safe%></div>
-		</div>
-	</div>
-	<div class="since_month">
-		<div class="title gotham-black">SINCE <%=@since_month.upcase%> <%=@since_year.upcase%></div>
-		<div class="clocklike gotham-thin">
-			<div class="crimes">
-				<%=@since_incidents%>				
-			</div>
-			<div class="divider">:</div>
-			<div class="responses">
-				<%=@since_responses%>				
-			</div>			
-		</div>
-		<div style="width:472px;float:left;margin-left:55px;"><span class="description gotham-bold">hate incidents</span></div>
-		<div style="margin-left:40px;float:left"><span class="description gotham-bold">hate incidents<br />with at least<br />one response</span></div>
-	</div>
-	<div class="clear"></div>
-	<div class="incidents_lists">
+	<div class="incidents_lists2">
 		<div class="incidents">
 			<div class="title gotham-bold">
 				TYPES OF INCIDENTS
@@ -184,7 +153,7 @@
 						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_other]%></span><br />
 						<span class="gotham-medium description" >Other</span>
 					</li>
-					<li class="gotham-book" style="width:700px;font-size:23px;margin-left:-16px;padding-top:65px;height:85px;">Incidents can consist of several acts.<br />
+					<li class="gotham-bold" style="color:#546060;width:700px;font-size:23px;margin-left:-16px;padding-top:65px;height:85px;">Incidents can consist of several acts.<br />
 					A single incident may be reported under multiple categories.</li>
 				</ul>
 			</div>
@@ -227,6 +196,41 @@
 		</div>
 	</div>
 	<div class="clear"></div>
+	<div class="incidents_lists">
+		<div class="monthly_statistics">
+			<div class="victim_characteristics" style="margin-top: 20px">
+				<div class="title gotham-light">
+					V I C T I M &nbsp;&nbsp;C H A R A C T E R I S T I C S :
+				</div>
+				<div class="clear"></div>
+				<div class="first gotham-light"><div style="margin-left:5px;"><%=@vc[:first].first.last%> %</div></div>
+				<div class="second gotham-light"><div style="margin-left:5px;"><%=@vc[:second].first.last%> %</div></div>
+				<div class="third gotham-light"><div style="margin-left:5px;"><%=@vc[:third].first.last%> %</div></div>
+
+				<div class="first_lbl gotham-ultra"><%=@vc[:first].first.first.html_safe%></div>
+				<div class="second_lbl gotham-ultra" ><%=@vc[:second].first.first.html_safe%></div>
+				<div class="third_lbl gotham-ultra" ><%=@vc[:third].first.first.html_safe%></div>
+			</div>
+			<div class="clear"></div>
+			<div class="gotham-bold" style="font-size:32px;margin-top:40px;">HATE-MOTIVATED INCIDENTS SINCE <%=@since_month.upcase%> <%=@since_year%>: <%=@since_incidents%></div>
+			<div id="chart_div" style="width: 1010px; height: 390px;margin-left:-50px;float:left;margin-top:30px;"></div>
+		</div>
+		<div class="since_month">
+			<div class="title gotham-black">SINCE <%=@since_month.upcase%> <%=@since_year.upcase%></div>
+			<div class="clocklike gotham-thin">
+				<div class="crimes">
+					<%=@since_incidents%>				
+				</div>
+				<div class="divider">:</div>
+				<div class="responses">
+					<%=@since_responses%>				
+				</div>			
+			</div>
+			<div style="width:472px;float:left;margin-left:55px;"><span class="description gotham-bold">hate incidents</span></div>
+			<div style="margin-left:40px;float:left"><span class="description gotham-bold">hate incidents<br />with at least<br />one response</span></div>
+		</div>
+	</div>
+	<div class="clear"></div>
 	<div class="map_wrapper">
 		<div class="map <%='hide_map' unless @render_map%>">
 			<div class="title gotham-bold">INCIDENTS AND RESPONSES THIS MONTH</div>
@@ -252,49 +256,37 @@
 				<% end %>
 			</div>
 		</div>
-		<div class="highlits">
-			<div class="highlight_box_wrapper">
-				<div class="hl_left"></div>
-				<div class="highlight_box">
-					<div class="title gotham-light">Highlighted Actions</div>
-					<div class="clear"></div>
-					<div class="highlighted_txt gotham-bold"><%=@highlighted.html_safe%></div>
-				</div>
-				<div class="hl_right"></div>
+		<div class="hate_cases">
+			<div class="title gotham-bold">
+				H&nbsp;A&nbsp;T&nbsp;E &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C&nbsp;R&nbsp;I&nbsp;M&nbsp;E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C&nbsp;A&nbsp;S&nbsp;E&nbsp;S
 			</div>
 			<div class="clear"></div>
-			<div class="hate_cases">
-				<div class="title gotham-bold">
-					H&nbsp;A&nbsp;T&nbsp;E &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C&nbsp;R&nbsp;I&nbsp;M&nbsp;E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C&nbsp;A&nbsp;S&nbsp;E&nbsp;S
-				</div>
-				<div class="clear"></div>
-				<div class="gotham-light li">
-					<div class="txt">Trials Ongoing</div>
-					<% if Integer(@cases_ongoing) < 9 %>
-					<div class="dots">...........................................................................</div>
-					<% else %>
-					<div class="dots">.............................................................</div>
-					<% end %>
-					<div class="value"><%=@cases_ongoing%></div>
-				</div>
-				<div class="gotham-light li">
-					<div class="txt">Convictions in <%=@year%></div>
-					<% if Integer(@convictions) < 9 %>
-					<div class="dots">............................................................................</div>
-					<% else %>
-					<div class="dots">.................................................................</div>
-					<% end %>
-					<div class="value"><%=@convictions%></div>
-				</div>
-				<div class="gotham-light li">
-					<div class="txt">Acquittals in <%=@year%></div>
-					<% if Integer(@acquittals) < 9 %>
-					<div class="dots">.....................................................................</div>
-					<% else %>
-					<div class="dots">.................................................................</div>
-					<% end %>
-					<div class="value"><%=@acquittals%></div>
-				</div>
+			<div class="gotham-light li">
+				<div class="txt">Trials Ongoing</div>
+				<% if Integer(@cases_ongoing) < 9 %>
+				<div class="dots">...........................................................................</div>
+				<% else %>
+				<div class="dots">.............................................................</div>
+				<% end %>
+				<div class="value"><%=@cases_ongoing%></div>
+			</div>
+			<div class="gotham-light li">
+				<div class="txt">Convictions in <%=@year%></div>
+				<% if Integer(@convictions) < 9 %>
+				<div class="dots">.................................................................</div>
+				<% else %>
+				<div class="dots">.................................................................</div>
+				<% end %>
+				<div class="value"><%=@convictions%></div>
+			</div>
+			<div class="gotham-light li">
+				<div class="txt">Acquittals in <%=@year%></div>
+				<% if Integer(@acquittals) < 9 %>
+				<div class="dots">.....................................................................</div>
+				<% else %>
+				<div class="dots">.................................................................</div>
+				<% end %>
+				<div class="value"><%=@acquittals%></div>
 			</div>
 		</div>
 		<div class="preventions_wrapper">
@@ -302,14 +294,20 @@
 				P R E V E N T I O N
 			</div>
 			<div class="lists">
-				<div class="first width gotham-light"><%=@prevention[:p_local_coalitions_preventive_actions]%></div>
-				<div class="second width gotham-light"><%=@prevention[:p_working_groups_response]%></div>
-				<div class="third width gotham-light"><%=@prevention[:p_municipalities_adopted_strategies]%></div>
+				<div class="first width gotham-light"><%=@actions_by_local%></div>
+				<div class="second width gotham-light"><%=@strategies_by_local%></div>
 				<div class="clear"></div>
-				<div class="width lbl gotham-light">local coalitions<br /> preventive actions</div>
-				<div class="width lbl gotham-light">working group<br />response</div>
-				<div class="width lbl gotham-light" style="width:312px;">municipalities adopted<br />strategies</div>
+				<div class="width lbl gotham-light">Actions by local <br />coalitions against hate</div>
+				<div class="width lbl gotham-light">Local strategies to <br />prevent hate to date</div>
 			</div>
+		</div>
+		<div class="highlits">
+			<div class="highlight_box_wrapper">
+				<div class="highlight_box">
+					<div class="highlighted_txt gotham-bold"><%=@highlighted.html_safe%></div>
+				</div>
+			</div>
+			<div class="clear"></div>			
 		</div>
 	</div>
 	<div class="clear"></div>
