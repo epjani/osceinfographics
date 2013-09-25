@@ -84,7 +84,7 @@
 			<div class="full_width"><img src="images/black_d_arrow.png" /></div>
 			<div class="clear"></div>
 			<div class="description">
-				<span class="full_width gotham-bold">B I A S  &nbsp;&nbsp;&nbsp;&nbsp;M O T I V A T E D</span><br />
+				<span class="full_width gotham-bold">H A T E&nbsp;-&nbsp;M O T I V A T E D</span><br />
 				<span class="incidents gotham-ultra">INCIDENTS</span><br />
 				<span class="full_width gotham-bold">T &nbsp;H &nbsp;I &nbsp;S  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M &nbsp;O &nbsp;N &nbsp;T &nbsp;H</span>
 			</div>
@@ -99,12 +99,11 @@
 			<div class="description">
 				<% if Integer(@total_responses) == 1 %>
 				<span class="responses gotham-ultra">RESPONSE&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
-				<span class="full_width gotham-bold">T &nbsp;H &nbsp;I &nbsp;S  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M &nbsp;O &nbsp;N &nbsp;T &nbsp;H</span>
 				<% else %>
 				<span class="responses gotham-ultra">RESPONSES</span><br />
-				<span class="full_width gotham-bold">T &nbsp;H &nbsp;I &nbsp;S  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M &nbsp;O &nbsp;N &nbsp;T &nbsp;H</span>
 				<% end %>				
-				<div class="full_width gotham-ultra number_of_incidents">TO <span class="font-green-light"><%=@responses_to_incidents%></span> INCIDENTS</div><br />
+				<span class="full_width gotham-bold">TO &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HATE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INCIDENTS</span>
+				<div class="full_width gotham-ultra number_of_incidents">THIS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MONTH</div><br />
 			</div>
 			<div class="number_placeholder gotham-black font-green-light"><%=@total_responses%></div>			
 		</div>
@@ -139,7 +138,7 @@
 					</li>				
 					<li>
 						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_public_hate_speech]%></span><br />
-						<span class="gotham-medium description" >Public hate<br />speech</span>
+						<span class="gotham-medium description" >Hate<br />speech</span>
 					</li>
 					<li>
 						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_displaying_symbols]%></span><br />
@@ -237,7 +236,7 @@
 			<div class="cities">
 				<ul id="cities">
 					<% @graphical_cities.each_with_index do |city, i|%>						
-						<li class="gotham-light"><%=city[:key]%>&nbsp;&nbsp;<span class="gotham-bold"><%=city[:responses]%></span></li>	
+						<li class="gotham-bold"><%=city[:key]%>&nbsp;&nbsp;<span class="gotham-bold"><%=city[:responses]%></span></li>	
 						<% if i >10 && @render_map%>
 							<% break %>
 						<% else %>
@@ -302,8 +301,9 @@
 			</div>
 		</div>
 		<div class="highlits">
-			<div class="highlight_box_wrapper">
+			<div class="highlight_box_wrapper">				
 				<div class="highlight_box">
+					<div class="title gotham-light">Highlighted Actions</div>
 					<div class="highlighted_txt gotham-bold"><%=@highlighted.html_safe%></div>
 				</div>
 			</div>
