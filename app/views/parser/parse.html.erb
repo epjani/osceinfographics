@@ -103,7 +103,7 @@
 				<span class="responses gotham-ultra">RESPONSES</span><br />
 				<% end %>				
 				<span class="full_width gotham-bold">TO &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HATE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INCIDENTS</span>
-				<div class="full_width gotham-ultra number_of_incidents">THIS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MONTH</div><br />
+				<div class="full_width gotham-ultra number_of_incidents">T H I S &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; M O N T H</div><br />
 			</div>
 			<div class="number_placeholder gotham-black font-green-light"><%=@total_responses%></div>			
 		</div>
@@ -215,17 +215,17 @@
 			<div id="chart_div" style="width: 1010px; height: 390px;margin-left:-50px;float:left;margin-top:30px;"></div>
 		</div>
 		<div class="since_month">
-			<div class="title gotham-black">SINCE <%=@since_month.upcase%> <%=@since_year.upcase%></div>
+			<div class="title gotham-light">SINCE <%=@since_month.upcase%> <%=@since_year.upcase%>:</div>
 			<div class="clocklike gotham-thin">
 				<div class="crimes">
-					<%=@since_incidents%>				
+					<%=@since_responses%>				
 				</div>
 				<div class="divider">:</div>
 				<div class="responses">
-					<%=@since_responses%>				
+					<%=@since_responses_one%>				
 				</div>			
 			</div>
-			<div style="width:472px;float:left;margin-left:55px;"><span class="description gotham-bold">hate incidents</span></div>
+			<div style="width:472px;float:left;margin-left:55px;"><span class="description gotham-bold">hate responses</span></div>
 			<div style="margin-left:40px;float:left"><span class="description gotham-bold">hate incidents<br />with at least<br />one response</span></div>
 		</div>
 	</div>

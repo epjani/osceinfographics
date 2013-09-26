@@ -23,8 +23,10 @@ class ParserController < ApplicationController
 
 		@since_year = parsed_string[:incidents_since][:since_year]
 		@since_month = parsed_string[:incidents_since][:since_month]
+
 		@since_incidents = parsed_string[:incidents_since][:since_incidents]
-		@since_responses = parsed_string[:incidents_since][:since_at_least_one_response]
+		@since_responses = parsed_string[:incidents_since][:since_responses]
+		@since_responses_one = parsed_string[:incidents_since][:since_at_least_one_response]
 
 		@incidents = parsed_string[:incidents]
 		@responses = parsed_string[:responses]
