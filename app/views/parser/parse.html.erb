@@ -99,11 +99,12 @@
 			<div class="description">
 				<% if Integer(@total_responses) == 1 %>
 				<span class="responses gotham-ultra">RESPONSE&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+				<span class="full_width gotham-bold">T &nbsp;H &nbsp;I &nbsp;S  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M &nbsp;O &nbsp;N &nbsp;T &nbsp;H</span>
 				<% else %>
 				<span class="responses gotham-ultra">RESPONSES</span><br />
+				<span class="full_width gotham-bold">T &nbsp;H &nbsp;I &nbsp;S  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M &nbsp;O &nbsp;N &nbsp;T &nbsp;H</span>				
 				<% end %>				
-				<span class="full_width gotham-bold">TO &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HATE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INCIDENTS</span>
-				<div class="full_width gotham-ultra number_of_incidents">T H I S &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; M O N T H</div><br />
+				<div class="full_width gotham-ultra number_of_incidents">TO <span class="font-green-light"><%=@responses_to_incidents%></span> INCIDENTS</div><br />
 			</div>
 			<div class="number_placeholder gotham-black font-green-light"><%=@total_responses%></div>			
 		</div>
