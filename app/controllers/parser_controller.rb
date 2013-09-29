@@ -41,7 +41,7 @@ class ParserController < ApplicationController
 		
 		@prevention = parsed_string[:prevention]
 		
-		@render_map = @graphical_cities.length < 10 ? true : false
+		@render_map = @graphical_cities.length <= 10 ? true : false
 
 		@actions_by_local = parsed_string[:prevention][:p_local_coalitions_preventive_actions]
 		@strategies_by_local = parsed_string[:prevention][:p_local_strategies_to_prevent_hate_to_date]
@@ -106,10 +106,11 @@ class ParserController < ApplicationController
 			incident_k = i.first
 			response_v = responses[incident_k]
 			
-			if incident_v.to_i > 0 && response_v.to_i > 0
+			if incident_v.to_i > 0 || response_v.to_i > 0
 				graphical_presentation << {:key => incident_k, :incidents => incident_v, :responses => response_v}
 			end
 		end
+		puts "gp cout : #{graphical_presentation.count}"
 		return graphical_presentation
 	end
 
