@@ -1,0 +1,670 @@
+@font-face{
+	font-family: 'gothamultraregular';
+    src: url('/fonts/gothamultra-webfont.eot');
+    src: url('/fonts/gothamultra-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/gothamultra-webfont.woff') format('woff'),
+         url('/fonts/gothamultra-webfont.ttf') format('truetype'),
+         url('/fonts/gothamultra-webfont.svg#gothamultraregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+		font-family: 'gothambookregular';
+	    src: url('/fonts/gothambook-webfont.eot');
+	    src: url('/fonts/gothambook-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('/fonts/gothambook-webfont.woff') format('woff'),
+	         url('/fonts/gothambook-webfont.ttf') format('truetype'),
+	         url('/fonts/gothambook-webfont.svg#gothambookregular') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+}
+@font-face{
+		font-family: 'gothamblackregular';
+	    src: url('/fonts/gothamblack-webfont.eot');
+	    src: url('/fonts/gothamblack-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('/fonts/gothamblack-webfont.woff') format('woff'),
+	         url('/fonts/gothamblack-webfont.ttf') format('truetype'),
+	         url('/fonts/gothamblack-webfont.svg#gothamblackregular') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+}
+@font-face{
+		font-family: 'gothamboldregular';
+	    src: url('/fonts/gothambold-webfont.eot');
+	    src: url('/fonts/gothambold-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('/fonts/gothambold-webfont.woff') format('woff'),
+	         url('/fonts/gothambold-webfont.ttf') format('truetype'),
+	         url('/fonts/gothambold-webfont.svg#gothamboldregular') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+}
+@font-face{
+		font-family: 'gothamlightregular';
+	    src: url('/fonts/gothamlight-webfont.eot');
+	    src: url('/fonts/gothamlight-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('/fonts/gothamlight-webfont.woff') format('woff'),
+	         url('/fonts/gothamlight-webfont.ttf') format('truetype'),
+	         url('/fonts/gothamlight-webfont.svg#gothamlightregular') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+}
+@font-face{
+		font-family: 'gothamthinregular';
+	    src: url('/fonts/gothamthin-webfont.eot');
+	    src: url('/fonts/gothamthin-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('/fonts/gothamthin-webfont.woff') format('woff'),
+	         url('/fonts/gothamthin-webfont.ttf') format('truetype'),
+	         url('/fonts/gothamthin-webfont.svg#gothamthinregular') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+}
+@font-face{
+		font-family: 'gothammediumregular';
+	    src: url('/fonts/gothammedium-webfont.eot');
+	    src: url('/fonts/gothammedium-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('/fonts/gothammedium-webfont.woff') format('woff'),
+	         url('/fonts/gothammedium-webfont.ttf') format('truetype'),
+	         url('/fonts/gothammedium-webfont.svg#gothammediumregular') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+}
+@font-face{
+		font-family: 'gothamblackitalic';
+	    src: url('/fonts/gothamblackitalic-webfont.eot');
+	    src: url('/fonts/gothamblackitalic-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('/fonts/gothamblackitalic-webfont.woff') format('woff'),
+	         url('/fonts/gothamblackitalic-webfont.ttf') format('truetype'),
+	         url('/fonts/gothamblackitalic-webfont.svg#gothamblackitalicregular') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+}
+.gotham-blackitalic{
+	font-family: 'gothamblackitalic';
+}
+.gotham-ultra{
+	font-family: 'gothamultraregular';
+}
+.gotham-book{
+	font-family: 'gothambookregular';
+}
+.gotham-black{
+	font-family: 'gothamblackregular';
+}
+.gotham-bold{
+	font-family: 'gothamboldregular' !important;
+}
+.gotham-light{
+	font-family: 'gothamlightregular';
+}
+.gotham-thin{
+	font-family: 'gothamthinregular';
+}
+.gotham-medium{
+	font-family: 'gothammediumregular';
+}
+.font-black{
+	color:#262626;
+}
+.font-green{
+	color:#829c9b;
+}
+.font-green-light{
+	color: #9dc4c5;
+}
+.font-88{
+	font-size:88px;
+}
+.clear{
+	clear:both;
+}
+body{background: #e9e2ce;}
+.full_width{width:100%;}
+.infographic_wrapper{
+	width:2133px;
+	padding:75px 175px;
+	padding-bottom: 0px;
+	background-color:#e9e2ce;
+	float:left;
+	color:#262626;
+}
+.infographic_wrapper .header{
+	height:83px;
+}
+.infographic_wrapper .header .green_line{
+	height:6px;
+	width:532px;
+	background-color: #829c9b;
+	float:left;
+	margin-top:66px;
+}
+.infographic_wrapper .header .title{
+	font-size:120px;
+	float:left;
+	height:125px;
+	margin:0 46px;
+}
+.month{
+	font-size: 44px;
+	text-align: center;
+	float:left;
+	width: 100%;
+}
+.infographic_wrapper .description{
+	text-align: justify;
+	font-size:35px;
+	margin-top:44px;
+}
+.infographic_wrapper .incidents_responses{
+	float: left;
+}
+.incidents_responses .incidents{
+	float: left;
+}
+.incidents_responses .responses{
+	float: left;
+	margin-left: 212px;
+}
+.incidents_responses .incidents .header, .incidents_responses .responses .header{
+	font-size: 93px;
+	padding:40px 0px 60px 0px;
+	margin-top: 50px;
+	float: left;
+	width: 960px;
+	text-align: center;
+}
+.incidents_responses .incidents .header{
+	background-color: #262626;
+	color:#9dc4c5;
+}
+.incidents_responses .responses .header{
+	background-color: #9dc4c5;
+	color:#262626;
+}
+.incidents_responses .full_width{text-align: center;}
+.incidents_responses .number_placeholder{
+	width: 398px;
+	text-align: center;
+	font-size: 310px;
+	float: left;
+	margin-top: -22px;
+}
+.incidents_responses .description{
+	float: left;
+	padding: 30px 26px;
+	width: 494px;
+	height: 164px;
+	margin-top: 45px;
+	margin-left: 14px;
+}
+.incidents .description, .responses .description{
+	background-color: #829c9b;
+}
+
+.incidents_responses .description .full_width{text-align: justify;font-size: 36px;}
+.incidents_responses .description .full_width.number_of_incidents{font-size: 58px;}
+.incidents_responses .description .incidents{font-size: 85px;margin-top:-9px;margin-bottom: -6px;}
+.incidents_responses .description .responses{font-size: 78px;margin-top:-9px;margin-bottom: -6px;margin-left: 0px;}
+.monthly_statistics { width: 960px;float: left;margin-left: 30px;}
+.victim_characteristics .title{
+	text-align: justify;
+	font-size: 47px;
+	margin-bottom: 10px;
+}
+.victim_characteristics .first, .victim_characteristics .second, .victim_characteristics .third, .victim_characteristics .fourth{
+	height:58px;
+	float:left;
+	margin-bottom: 13px;
+	color:#e9e2ce;
+	font-size: 37px;
+	padding-top: 18px;
+	width: 312px;
+}
+.victim_characteristics .first_lbl, .victim_characteristics .second_lbl, .victim_characteristics .third_lbl, .victim_characteristics .fourth_lbl{
+	float:left;
+	font-size:26px;
+	width: 312px;
+}
+
+.victim_characteristics .first{background-color: #262626;}
+.victim_characteristics .second{background-color: #546060;}
+.victim_characteristics .third{background-color: #9dc4c5;}
+.victim_characteristics .fourth{background-color: #9dc4c5;}
+.victim_characteristics .first_lbl{color: #262626;}
+.victim_characteristics .second_lbl{color: #546060;}
+.victim_characteristics .third_lbl{color: #9dc4c5;}
+.victim_characteristics .fourth_lbl{color: #9dc4c5;}
+.since_month{
+	width: 1000px;
+	float: left;
+	margin-left: 80px;
+	margin-top: 20px
+}
+.since_month .title{
+	/*font-size: 46px;
+	color: #262626;*/
+	font-size: 56px;
+	color: #262626;
+	border-bottom: 8px solid #262626;
+}
+.clocklike{
+	font-size: 360px;
+	margin-top: 25px;
+}
+.clocklike .crimes, .clocklike .responses, .clocklike .divider{float: left; text-align: center;}
+.clocklike .crimes, .clocklike .responses{width: 445px;}
+.clocklike .divider{margin-top: -30px;margin-left: 20px;margin-right: 20px;}
+.since_month .description{color:#546060;font-size: 47px;}
+.incidents_lists{
+	width: 100%;
+	background-color: #829c9b;
+	float: left;
+}
+.incidents_lists2 .incidents, .incidents_lists2 .responses{
+	padding-left: 43px;
+	width: 917px;
+	float: left;
+	margin-top: -11px;
+}
+.incidents_lists2 .responses{
+	padding-left: 0px;
+	margin-left: 212px;
+}
+.incidents_lists2 .incidents .title, .incidents_lists2 .responses .title{
+	font-size: 47px;
+	float: left;
+	color:#262626;
+	border-bottom:7px solid #9dc4c5;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	width: 100%;
+}
+.incidents_lists2 .incidents .lists{
+	float: left;
+}
+ul#incidents, ul#responses{
+	list-style: none;
+	padding: 0px;
+}
+ul#incidents li{
+	width: 228px;
+	float:left;
+	height: 150px;
+}
+ul#responses li{
+	width:298px;
+	float:left;
+	height:150px;
+}
+ul#incidents li img, ul#responses li img{
+	float:left;
+	margin-top:18px;
+	margin-right: 10px;
+}
+ul#incidents li .description, ul#responses li .description{
+	font-size: 23px;
+	color:#546060;
+	float: left;
+	margin-top: -5px;
+	background-color: transparent;
+}
+.map_wrapper{
+	float: left;
+	background-color: #262626;
+	width: 100%;
+}
+.map_wrapper .map{
+	float: left;
+	width: 960px;
+	height: 100px;
+}
+.map_wrapper .highlits{
+	float: left;
+	margin-left: 212px;
+}
+.highlight_box_wrapper{
+	float: left;
+	width: 900px;
+	margin-top: 30px;
+}
+.hl_left, .hl_right{float: left;height: 128px;width: 24px;}
+.hl_left{background: url('/images/hl_left.png') no-repeat 0px 2px;}
+.hl_right{background: url('/images/hl_right.png') no-repeat 0px 2px;}
+.highlight_box{
+	padding-top: 10px;
+	width: 852px;
+	background-color: #9dc4c5;
+	float: left;
+	margin-left: 22px;
+	height:380px;
+}
+.highlight_box .title{
+	font-size: 33px;
+	text-align: center;
+	color:#272727;
+}
+.highlighted_txt{
+	font-size: 30px;
+	color:#272727;
+	padding:20px 25px 20px 25px;
+	line-height: 1.5;
+	text-align: justify;
+}
+.hate_cases{margin-top:30px;float: left;margin-left: 212px;margin-bottom: 30px;}
+.hate_cases .title{
+	font-size: 48px;
+	color:#9dc4c5;
+	border-bottom: 7px solid #9dc4c5;
+	padding-bottom: 25px;
+	padding-left: 5px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+.hate_cases .li{
+	font-size: 33px;
+	color:#829c9b;
+	padding-left: 15px;
+}
+
+.hate_cases .li .txt, .hate_cases .li .dots, .hate_cases .li .value{
+	float:left;
+	margin-bottom:12px;
+}
+.hate_cases .li .value{
+	margin-top: -15px;
+	font-size: 48px;
+}
+.hate_cases .li .dots{
+	margin-top: -10px;
+}
+.map_wrapper .map .title{
+	font-size: 41px;
+	color:#546060;
+}
+.map_wrapper .map{
+	padding-left: 43px;
+	margin-top:43px;
+	background: url('/images/bih_map.png') no-repeat 200px 60px;
+	min-height: 810px;
+}
+.map_wrapper .map.hide_map{
+	background: none;
+}
+.map_wrapper .map div.cities{
+	margin-top:200px;
+	float: left;
+	width: 240px;
+	position: absolute;
+}
+.map_wrapper .map.hide_map div.cities{
+	margin-top:50px;
+}
+ul#cities{
+	list-style: none;
+	padding:0;
+}
+ul#cities li{
+	font-size: 33px;
+	color:#829c9b;
+}
+ul#cities li span{color:#9dc4c5;}
+.graphical{
+	width:48px;
+	height:48px;
+	background-color: #fff;
+	font-size: 44px;
+	text-align: center;
+	position: absolute;
+}
+.graphical.incident{
+	margin-top:-10px;
+	margin-left: -50px;
+	background: url('/images/black_dot.png') no-repeat;
+	color: #b3caca;
+}
+.graphical.response{
+	background: url('/images/green_dot.png') no-repeat;
+	color: #272727;
+}
+
+/*	LAYOUT */
+.dashboard_box{
+	padding: 20px;
+	height: 200px;
+	margin-left: 30px;
+}
+.navbar-inner .container{margin-top: 0px;}
+.container{
+	margin-top: 50px;
+}
+.map_position{
+	float: left;
+	width: 700px;
+	height: 700px;
+	/*border: 1px solid #fff; */
+	position: relative;  		
+}
+.header-title{
+	text-align: center;
+	font-size: 32px;
+	border-bottom: 2px solid #000;
+	padding-bottom: 30px;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+.box-wrapper{
+	text-align: center;
+	background: #b3c9ca;
+}
+.box-wrapper h1{
+	font-size: 25px;
+	line-height: 25px;
+	margin-bottom: 25px;
+}
+#file_name_placeholder{
+	height:30px;
+	padding-top:35px;
+}
+#upload_file_the_file{
+	margin-left: 26px;
+}
+.preventions_wrapper{
+	float: left;
+	margin-left: 212px;
+	width: 912px;
+}
+.preventions_wrapper .preventions{
+	width:930px;
+	height:111px;
+	background: url('/images/prevention_box.png') no-repeat;
+	margin-left: -5px;
+	color:#9dc4c5;
+	font-size: 48px;
+	padding-left: 18px;
+	padding-top: 18px;
+}
+.preventions_wrapper .lists{
+	margin-left: 17px;
+}
+.preventions_wrapper .lists .width{
+	width: 419px;
+	float: left;
+}
+.preventions_wrapper .lists .first{
+	font-size: 49px;
+	color: #e9e2ce;
+	background: #546060;
+	padding-top:10px;
+	padding-left: 10px;
+	padding-bottom: 8px;
+}
+.preventions_wrapper .lists .second{
+	font-size: 49px;
+	color: #e9e2ce;
+	background: #829c9b;
+	padding-top:10px;
+	padding-left: 10px;
+	padding-bottom: 8px;
+}
+.preventions_wrapper .lists .third{
+	font-size: 49px;
+	color: #e9e2ce;
+	background: #9dc4c5;
+	padding-top:10px;
+	padding-left: 10px;
+	padding-bottom: 8px;
+}
+.preventions_wrapper .lists .lbl{
+	font-size: 31px;
+	color: #819b9b;
+	padding-right: 10px;
+	margin-top: 15px;
+}
+
+.monitor_provides{
+	font-size: 23px;
+	text-align: justify;
+}
+/* justyfies one line of text */
+.monitor_provides {
+  height: 40px;
+  line-height: 40px;
+  text-align: justify;
+  text-align-last: justify;
+}
+.monitor_provides:after {
+  content: ".";
+  display: inline-block;
+  width: 100%;
+  height: 0;
+  visibility: hidden;
+}
+.parser_footer{
+	padding:65px 85px;
+	border:1px solid #000;
+	width:2222px;
+	background:#e9e2ce;
+	padding-left:175px;
+}
+/* 	MAP  */
+
+.home {
+	padding:55px 105px;
+	background-color:#e9e2ce;
+	color:#262626;
+	float: left;
+}
+.home .header .green_line{
+	height:6px;
+	width:225px;
+	background-color: #829c9b;
+	float:left;
+	margin-top:8px;
+}
+.home .header .title{
+	font-size:50px;
+	float:left;
+	height:80px;
+	margin:0 46px;
+}
+.home .footer {
+	margin-top: 50px;
+	width: 950px;	
+	border-top: 1px black solid;
+}
+.home .footer .logo {
+	margin-top: 20px;	
+	/*background-image: url("/images/osce-logo.png");*/
+	width: 450px;
+    height: 100px;    
+    background-size:contain;
+}
+#headline {
+	font-size: 25px;
+	font-weight: 50px;
+	padding-bottom: 20px;
+}
+#upload_file_btn {
+	background-color: white;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	width: 150px;
+	height: 30px;
+}
+#blackbtn, #upload_file_submit {
+	font-family: 'gothamboldregular' !important;
+	text-align: center;
+	background-color: black !important;
+	border: 1px solid #ccc;
+	width: 150px;
+	height: 30px;
+	color: white;
+}
+.container.home{float:none;width:951px;}
+.Bihać{
+	left:167px;
+	top:100px;
+}
+.Banja.Luka{
+	left:270px;
+	top:120px;
+}
+.Bijeljina{
+	left:735px;
+	top:150px;
+}
+.Bugojno{
+	top:330px;
+	left:310px;
+}
+.Donji.Vakuf{
+	top:280px;
+	left: 310px;
+}
+.Doboj{
+	top:120px;
+	left:400px;
+}
+.Gradiška{
+	top:85px;
+	left:480px;
+}
+.Ilidža, .Sarajevo, .Stari.Grad.Sarajevo{
+	top: 300px;
+	left: 600px;
+}
+.Kneževo{
+	left:430px;
+	top:210px;
+}
+.Livno, .Tomislavgrad{
+	left:420px;
+	top:350px;
+}
+.Mostar{
+	top:500px;
+	left:440px;
+}
+.Novi.Travnik, .Travnik{
+	top:250px;
+	left:580px;
+}
+.Srebrenica{
+	left: 805px;
+	top: 386px;
+}
+.Prijedor{
+	top:120px;
+	left:3450px;
+}
+.Tuzla{
+	left: 680px;
+	top:202px;
+}
+.Trebinje{
+	left: 633px;
+	top: 602px;
+}
+.Zenica{
+	top: 230px;
+	left: 580px;
+}

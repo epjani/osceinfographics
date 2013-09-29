@@ -1,0 +1,97 @@
+general_info;
+month;December
+year;2013
+total_incidents_monthly;5
+total_responses_monthly;1
+incidents_since;
+since_incidents;19
+since_responses;20
+since_at_least_one_response;4
+since_year;2013
+since_month;May
+hate_crimes_cases_in_a_year;
+trials_ongoing;22
+convictions;8
+acquittals;10
+monthly_preview;
+i_jan;0
+i_feb;0
+i_mar;0
+i_apr;0
+i_may;20
+i_june;30
+i_july;15
+i_aug;0
+i_sep;0
+i_oct;0
+i_nov;0
+i_dec;0
+victim_characteristics;
+vc_ethnicity_religion;5
+vc_sexual_orientation;5
+vc_other;10
+incidents;
+i_physical_violence;4
+i_property_damage;7
+i_damage_religious_facilities_desecration_of_graveyards;8
+i_offensive_graffiti;6
+i_verbal_assault;2
+i_insulting_phone_internet_sms_messages;1
+i_hate_speech;15
+i_displaying_symbols;80
+i_other;10
+responses;
+r_public_condemnation_officials;24
+r_public_condemnation_religious_leaders;10
+r_public_condemnation_civil_society;7
+r_repairing_damaged_property_graffiti_removal_clean_up_action;40
+r_peaceful_gathering_march;8
+r_other;9
+r_highlighted_action;In Bihac, XX organized XX... We have tried and tried. Lets put some text here.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+prevention;
+p_local_coalitions_preventive_actions;7
+p_local_strategies_to_prevent_hate_to_date;3
+geographical_presentation_incidents;
+Banja Luka;0
+Bihać;0
+Bijeljina;0
+Bugojno;1
+Doboj;0
+Donji Vakuf;1
+Gradiška;1
+Ilidža;0
+Kneževo;0
+Livno;1
+Mostar;0
+Novi Travnik;0
+Prijedor;0
+Sarajevo;0
+Srebrenica;0
+Stari Grad Sarajevo;1
+Tomislavgrad;0
+Travnik;1
+Trebinje;0
+Tuzla;0
+Zenica;0
+geographical_presentation_responses;
+Banja Luka;6
+Bihać;0
+Bijeljina;0
+Bugojno;0
+Doboj;2
+Donji Vakuf;0
+Gradiška;0
+Ilidža;0
+Kneževo;0
+Livno;1
+Mostar;0
+Novi Travnik;0
+Prijedor;1
+Sarajevo;0
+Srebrenica;0
+Stari Grad Sarajevo;2
+Tomislavgrad;0
+Travnik;0
+Trebinje;4
+Tuzla;0
+Zenica;0

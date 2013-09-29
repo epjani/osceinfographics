@@ -1,5 +1,10 @@
 <script src="javascripts/jquery-2.0.3.min.js"></script>
-<link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+<% if I18n.locale == :bs %>
+	<% puts "aa : #{I18n.locale}" %>
+	<link rel="stylesheet" type="text/css" href="stylesheets/main_bs.css">
+<% else %>
+	<link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+<% end %>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
       google.load("visualization", "1", {packages:["corechart"]});
