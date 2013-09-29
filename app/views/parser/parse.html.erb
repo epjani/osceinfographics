@@ -289,7 +289,7 @@
 			<div class="cities">
 				<ul id="cities">
 					<% @graphical_cities.each_with_index do |city, i|%>						
-						<li class="gotham-bold"><%=city[:key]%>&nbsp;&nbsp;<span class="gotham-bold"><%=city[:responses]%></span></li>	
+						<li class="gotham-bold"><%=city[:key]%>&nbsp;&nbsp;<span class="gotham-bold"><%=city[:responses]%> / <%=city[:responses]%></span></li>	
 						<% if i >10 && @render_map%>
 							<% break %>
 						<% else %>
