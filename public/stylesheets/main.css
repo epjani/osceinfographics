@@ -117,7 +117,8 @@
 .clear{
 	clear:both;
 }
-body{background: #e9e2ce;}
+html{max-width: 2483px;}
+body{background: #e9e2ce;max-width: 2483px;}
 .full_width{width:100%;}
 .infographic_wrapper{
 	width:2133px;
@@ -404,7 +405,7 @@ ul#incidents li .description, ul#responses li .description{
 .map_wrapper .map div.cities{
 	margin-top:200px;
 	float: left;
-	width: 2730px;
+	width: 273px;
 	position: absolute;
 }
 .map_wrapper .map.hide_map div.cities{
@@ -557,6 +558,7 @@ ul#cities li span{color:#9dc4c5;}
 	width:2222px;
 	background:#e9e2ce;
 	padding-left:175px;
+	float: left;
 }
 /* 	MAP  */
 
