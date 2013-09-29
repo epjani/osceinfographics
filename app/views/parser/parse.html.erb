@@ -83,7 +83,11 @@
 <div class="infographic_wrapper">
 	<div class="header">
 		<div class="green_line"></div>
-		<div class="title gotham-ultra font-black"><%=I18n.t('hate_monitor')%></div>
+		<div class="title gotham-ultra font-black">
+			<%=I18n.t('hate_monitor')%>
+		</div>
+		<% if I18n.locale == :bs %><div class="title gotham-ultra font-black" 
+		style="position: relative;left: -350px;bottom: 45px;margin: 0;height: 20px;font-size: 90px;">-</div><% end %>
 		<div class="green_line"></div>
 		<div class="clear"></div>
 		<div class="month gotham-ultra font-green">			
