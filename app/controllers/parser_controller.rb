@@ -30,7 +30,12 @@ class ParserController < ApplicationController
 		@incidents = parsed_string[:incidents]
 		@responses = parsed_string[:responses]
 
-		@highlighted = parsed_string[:responses][:r_highlighted_action]
+		if I18n.locale == :en
+		@highlighted = parsed_string[:responses][:r_highlighted_action_en]
+		end
+		if I18n.locale == :bs
+		@highlighted = parsed_string[:responses][:r_highlighted_action_bs]
+		end
 
 		@cases_ongoing = parsed_string[:hate_crimes_cases_in_a_year][:trials_ongoing]
 		@convictions = parsed_string[:hate_crimes_cases_in_a_year][:convictions]

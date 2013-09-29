@@ -10,9 +10,9 @@ since_at_least_one_response;4
 since_year;2013
 since_month;May
 hate_crimes_cases_in_a_year;
-trials_ongoing;22
-convictions;8
-acquittals;10
+trials_ongoing;2
+convictions;80
+acquittals;1
 monthly_preview;
 i_jan;0
 i_feb;0
@@ -47,12 +47,13 @@ r_public_condemnation_civil_society;7
 r_repairing_damaged_property_graffiti_removal_clean_up_action;40
 r_peaceful_gathering_march;8
 r_other;9
-r_highlighted_action;In Bihac, XX organized XX... We have tried and tried. Lets put some text here.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+r_highlighted_action_en;Srebrenica and Bratunac joint coalition Bunt protiv mrnje condemned incidents in August: WE ARE ALL RESPONSIBLE, and when we say all, we mean the entire local community and each individual that lives in this area. We, the youth who have gathered for a common initiative, proclaim that we take responsibility and invite all citizens, meaning the civic, religious and political sector to do the same.
+r_highlighted_action_bs;U BIHACU... NAS TEXT.
 prevention;
 p_local_coalitions_preventive_actions;7
 p_local_strategies_to_prevent_hate_to_date;3
 geographical_presentation_incidents;
-Banja Luka;1
+Banja Luka;0
 Bihać;0
 Bijeljina;0
 Bugojno;1
