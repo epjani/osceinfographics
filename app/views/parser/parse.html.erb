@@ -105,21 +105,23 @@
 			<div class="description">
 				<span class="full_width gotham-bold">
 					<% if I18n.locale == :bs %>&nbsp;
-					<%=I18n.t('incidents_description1')%>&nbsp;&nbsp;
-					<%=I18n.t('incidents_description2')%>&nbsp;&nbsp;
-					<%=I18n.t('incidents_description3')%>
+						<%=I18n.t('incidents_description1')%>&nbsp;&nbsp;
+						<%=I18n.t('incidents_description2')%>&nbsp;&nbsp;
+						<%=I18n.t('incidents_description3')%>
 					<% end %>
 					<% if I18n.locale == :en %>
-					<%=I18n.t('incidents_description1')%>
+						<%=I18n.t('incidents_description1')%>
 					<% end %>
 				</span><br />
 				<span class="incidents gotham-ultra">
 					<%=I18n.t('incidents_description4')%>		
 				</span><br />
-				<span class="full_width gotham-bold"><% if I18n.locale == :en %>
-					T &nbsp;H &nbsp;I &nbsp;S  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M &nbsp;O &nbsp;N &nbsp;T &nbsp;H</span><% end %>
+				<span class="full_width gotham-bold">
+					<% if I18n.locale == :en %>
+						T &nbsp;H &nbsp;I &nbsp;S  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M &nbsp;O &nbsp;N &nbsp;T &nbsp;H</span>
+					<% end %>
 					<% if I18n.locale == :bs %>
-					&nbsp;&nbsp;U &nbsp;&nbsp;O&nbsp; V&nbsp; O&nbsp; M&nbsp;&nbsp;&nbsp; M&nbsp; J&nbsp; E&nbsp; S&nbsp; E&nbsp; C&nbsp; U
+					&nbsp;&nbsp;U &nbsp;&nbsp;O&nbsp; V&nbsp; O&nbsp; M&nbsp;&nbsp;&nbsp; M&nbsp; J&nbsp; E&nbsp; S&nbsp; E&nbsp; C&nbsp; U</span>
 					<% end %>
 			</div>
 			<div class="number_placeholder gotham-black"><%=@total_incidents%></div>
@@ -132,19 +134,19 @@
 			<div class="clear"></div>
 			<div class="description">
 				<% if I18n.locale == :en %>
-				<% if Integer(@total_responses) == 1 %>
-				<span class="responses gotham-ultra">RESPONSE&nbsp;&nbsp;&nbsp;&nbsp;</span><br />				
-				<% else %>
-				<span class="responses gotham-ultra">RESPONSES</span><br />							
-				<% end %>				
-				<div class="full_width gotham-bold" style="font-size: 30px;">&nbsp;T O&nbsp;&nbsp;&nbsp;H A T E&nbsp;&nbsp;&nbsp;I N C I D E N T S</div>
-				<span class="full_width gotham-ultra number_of_incidents">THIS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MONTH</span>
+					<% if Integer(@total_responses) == 1 %>
+						<span class="responses gotham-ultra">RESPONSE&nbsp;&nbsp;&nbsp;&nbsp;</span><br />				
+					<% else %>
+						<span class="responses gotham-ultra">RESPONSES</span><br />							
+					<% end %>				
+					<div class="full_width gotham-bold" style="font-size: 30px;">&nbsp;T O&nbsp;&nbsp;&nbsp;H A T E&nbsp;&nbsp;&nbsp;I N C I D E N T S</div>
+					<span class="full_width gotham-ultra number_of_incidents">THIS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MONTH</span>
 				<% end %>
 				<% if I18n.locale == :bs %>
-				<span class="responses gotham-ultra">REAKCIJE</span><br />
-				<span class="full_width gotham-bold" style="font-size: 25px;margin-right: -10px;"><br />N A&nbsp;&nbsp;I N C I D E N T E&nbsp;&nbsp;P O Č I NJ E N E</span><br />
-				<span class="full_width gotham-bold" style="font-size: 25px;">I Z&nbsp;&nbsp;M R Ž NJ E&nbsp;&nbsp;U</span>
-				<span class="full_width gotham-ultra number_of_incidents">OVOM&nbsp;MJESECU</span>	
+					<span class="responses gotham-ultra">REAKCIJE</span><br />
+					<span class="full_width gotham-bold" style="font-size: 25px;margin-right: -10px;"><br />N A&nbsp;&nbsp;I N C I D E N T E&nbsp;&nbsp;P O Č I NJ E N E</span><br />
+					<span class="full_width gotham-bold" style="font-size: 25px;">I Z&nbsp;&nbsp;M R Ž NJ E&nbsp;&nbsp;U</span>
+					<span class="full_width gotham-ultra number_of_incidents">OVOM&nbsp;MJESECU</span>	
 				<% end %>
 
 			</div>
@@ -355,54 +357,54 @@
 			<div class="gotham-light li">
 				<div class="txt"><%=I18n.t('trials')%></div>
 				<% if I18n.locale == :en %>
-				<% if Integer(@cases_ongoing) < 9 %>
-				<div class="dots">...........................................................................</div>
-				<% else %>
-				<div class="dots">.......................................................................</div>
-				<% end %>
+					<% if Integer(@cases_ongoing) < 9 %>
+						<div class="dots">...........................................................................</div>
+					<% else %>
+						<div class="dots">.......................................................................</div>
+					<% end %>
 				<% end %>
 				<% if I18n.locale == :bs %>
-				<% if Integer(@cases_ongoing) < 9 %>
-				<div class="dots">........................................................................</div>
-				<% else %>
-				<div class="dots">.....................................................................</div>
-				<% end %>
+					<% if Integer(@cases_ongoing) < 9 %>
+						<div class="dots">........................................................................</div>
+					<% else %>
+						<div class="dots">.....................................................................</div>
+					<% end %>
 				<% end %>				
 				<div class="value"><%=@cases_ongoing%></div>
 			</div>
 			<div class="gotham-light li">
 				<div class="txt"><%=I18n.t('convictions')%><%=@year%></div>
 				<% if I18n.locale == :en %>
-				<% if Integer(@convictions) < 9 %>
-				<div class="dots">................................................................</div>
-				<% else %>
-				<div class="dots">.............................................................</div>
-				<% end %>
+					<% if Integer(@convictions) < 9 %>
+						<div class="dots">................................................................</div>
+					<% else %>
+						<div class="dots">.............................................................</div>
+					<% end %>
 				<% end %>
 				<% if I18n.locale == :bs %>
-				<% if Integer(@convictions) < 9 %>
-				<div class="dots">...................................................</div>
-				<% else %>
-				<div class="dots">...............................................</div>
-				<% end %>
+					<% if Integer(@convictions) < 9 %>
+						<div class="dots">...................................................</div>
+					<% else %>
+						<div class="dots">...............................................</div>
+					<% end %>
 				<% end %>
 				<div class="value"><%=@convictions%></div>
 			</div>
 			<div class="gotham-light li">
 				<div class="txt"><%=I18n.t('acquittals')%><%=@year%></div>
 				<% if I18n.locale == :en %>
-				<% if Integer(@acquittals) < 9 %>
-				<div class="dots">.....................................................................</div>
-				<% else %> 
-				<div class="dots">.................................................................</div>
-				<% end %>
+					<% if Integer(@acquittals) < 9 %>
+						<div class="dots">.....................................................................</div>
+					<% else %> 
+						<div class="dots">.................................................................</div>
+					<% end %>
 				<% end %>
 				<% if I18n.locale == :bs %>
-				<% if Integer(@acquittals) < 9 %>
-				<div class="dots">..............................................</div>
-				<% else %>
-				<div class="dots">..........................................</div>
-				<% end %>
+					<% if Integer(@acquittals) < 9 %>
+						<div class="dots">..............................................</div>
+					<% else %>
+						<div class="dots">..........................................</div>
+					<% end %>
 				<% end %>
 				<div class="value"><%=@acquittals%></div>
 			</div>

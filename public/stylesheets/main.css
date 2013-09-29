@@ -405,7 +405,7 @@ ul#incidents li .description, ul#responses li .description{
 .map_wrapper .map div.cities{
 	margin-top:200px;
 	float: left;
-	width: 2730px;
+	width: 273px;
 	position: absolute;
 }
 .map_wrapper .map.hide_map div.cities{
