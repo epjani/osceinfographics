@@ -98,13 +98,12 @@
 			<div class="clear"></div>
 			<div class="description">
 				<% if Integer(@total_responses) == 1 %>
-				<span class="responses gotham-ultra">RESPONSE&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
-				<span class="full_width gotham-bold">T &nbsp;H &nbsp;I &nbsp;S  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M &nbsp;O &nbsp;N &nbsp;T &nbsp;H</span>
+				<span class="responses gotham-ultra">RESPONSE&nbsp;&nbsp;&nbsp;&nbsp;</span><br />				
 				<% else %>
-				<span class="responses gotham-ultra">RESPONSES</span><br />
-				<span class="full_width gotham-bold">T &nbsp;H &nbsp;I &nbsp;S  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M &nbsp;O &nbsp;N &nbsp;T &nbsp;H</span>				
+				<span class="responses gotham-ultra">RESPONSES</span><br />							
 				<% end %>				
-				<div class="full_width gotham-ultra number_of_incidents">TO <span class="font-green-light"><%=@responses_to_incidents%></span> INCIDENTS</div><br />
+				<div class="full_width gotham-bold" style="font-size: 30px;">&nbsp;T O&nbsp;&nbsp;&nbsp;H A T E&nbsp;&nbsp;&nbsp;I N C I D E N T S</div>
+				<span class="full_width gotham-ultra number_of_incidents">THIS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MONTH</span>	
 			</div>
 			<div class="number_placeholder gotham-black font-green-light"><%=@total_responses%></div>			
 		</div>
@@ -138,7 +137,7 @@
 						<span class="gotham-medium description" >Verbal<br />assault</span>
 					</li>				
 					<li>
-						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_public_hate_speech]%></span><br />
+						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_hate_speech]%></span><br />
 						<span class="gotham-medium description" >Hate<br />speech</span>
 					</li>
 					<li>
@@ -153,7 +152,7 @@
 						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_other]%></span><br />
 						<span class="gotham-medium description" >Other</span>
 					</li>
-					<li class="gotham-bold" style="color:#546060;width:700px;font-size:23px;margin-left:-16px;padding-top:65px;height:85px;">Incidents can consist of several acts.<br />
+					<li class="gotham-bold" style="color:#546060;width:730px;font-size:23px;margin-right: -100px;padding-top:65px;height:85px;">Incidents can consist of several acts.<br />
 					A single incident may be reported under multiple categories.</li>
 				</ul>
 			</div>
@@ -212,11 +211,11 @@
 				<div class="third_lbl gotham-ultra" ><%=@vc[:third].first.first.html_safe%></div>
 			</div>
 			<div class="clear"></div>
-			<div class="gotham-bold" style="font-size:32px;margin-top:40px;">HATE-MOTIVATED INCIDENTS SINCE <%=@since_month.upcase%> <%=@since_year%>: <%=@since_incidents%></div>
+			<div class="gotham-bold" style="font-size:32px;margin-top:40px;border-bottom: 4px solid #262626;margin-right: 25px;">HATE-MOTIVATED INCIDENTS SINCE <%=@since_month.upcase%> <%=@since_year%>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #9dc4c5;font-size:36px;"><%=@since_incidents%></span></div>
 			<div id="chart_div" style="width: 1010px; height: 390px;margin-left:-50px;float:left;margin-top:30px;"></div>
 		</div>
 		<div class="since_month">
-			<div class="title gotham-light">SINCE <%=@since_month.upcase%> <%=@since_year.upcase%>:</div>
+			<div class="title gotham-black">SINCE <%=@since_month.upcase%> <%=@since_year.upcase%>:</div>
 			<div class="clocklike gotham-thin">
 				<div class="crimes">
 					<%=@since_responses%>				
@@ -226,7 +225,7 @@
 					<%=@since_responses_one%>				
 				</div>			
 			</div>
-			<div style="width:472px;float:left;margin-left:55px;"><span class="description gotham-bold">hate responses</span></div>
+			<div style="width:472px;float:left;margin-left:55px;"><span class="description gotham-bold">responses</span></div>
 			<div style="margin-left:40px;float:left"><span class="description gotham-bold">hate incidents<br />with at least<br />one response</span></div>
 		</div>
 	</div>
@@ -266,7 +265,7 @@
 				<% if Integer(@cases_ongoing) < 9 %>
 				<div class="dots">...........................................................................</div>
 				<% else %>
-				<div class="dots">.............................................................</div>
+				<div class="dots">.......................................................................</div>
 				<% end %>
 				<div class="value"><%=@cases_ongoing%></div>
 			</div>
@@ -284,7 +283,7 @@
 				<% if Integer(@acquittals) < 9 %>
 				<div class="dots">.....................................................................</div>
 				<% else %>
-				<div class="dots">.................................................................</div>
+				<div class="dots">..................................................................</div>
 				<% end %>
 				<div class="value"><%=@acquittals%></div>
 			</div>
@@ -304,7 +303,7 @@
 		<div class="highlits">
 			<div class="highlight_box_wrapper">				
 				<div class="highlight_box">
-					<div class="title gotham-light">Highlighted Actions</div>
+					<div class="title gotham-light">Highlighted</div>
 					<div class="highlighted_txt gotham-bold"><%=@highlighted.html_safe%></div>
 				</div>
 			</div>
