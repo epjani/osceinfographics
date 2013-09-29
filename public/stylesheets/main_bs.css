@@ -327,7 +327,7 @@ ul#incidents li .description, ul#responses li .description{
 }
 .map_wrapper .map{
 	float: left;
-	width: 1049px;
+	width: 1054px;
 	height: 100px;
 }
 .map_wrapper .highlits{
@@ -356,7 +356,7 @@ ul#incidents li .description, ul#responses li .description{
 	color:#272727;
 }
 .highlighted_txt{
-	font-size: 30px;
+	font-size: 27px;
 	color:#272727;
 	padding:20px 25px 20px 25px;
 	line-height: 1.5;
@@ -494,7 +494,7 @@ ul#cities li span{color:#9dc4c5;}
 	width:930px;
 	height:111px;
 	background: url('/images/prevention_box.png') no-repeat;
-	margin-left: -5px;
+	margin-left: -10px;
 	color:#9dc4c5;
 	font-size: 48px;
 	padding-left: 18px;
