@@ -110,7 +110,7 @@
 				<span class="full_width gotham-bold">
 					<% if I18n.locale == :bs %>&nbsp;
 						<%=I18n.t('incidents_description1')%>&nbsp;&nbsp;
-						<%=I18n.t('incidents_description2')%>&nbsp;&nbsp;
+						<%=I18n.t('incidents_description2')%>&nbsp;&nbsp;						
 						<%=I18n.t('incidents_description3')%>
 					<% end %>
 					<% if I18n.locale == :en %>
@@ -118,7 +118,10 @@
 					<% end %>
 				</span><br />
 				<span class="incidents gotham-ultra">
-					<%=I18n.t('incidents_description4')%>		
+					<%=I18n.t('incidents_description4')%>
+					<% if I18n.locale == :bs %>
+					<span style="position: relative;font-size: 60px;top: -125px;left: 280px;">-</span>
+					<% end %>		
 				</span><br />
 				<span class="full_width gotham-bold">
 					<% if I18n.locale == :en %>
