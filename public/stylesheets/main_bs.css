@@ -210,8 +210,8 @@ body{background: #e9e2ce;}
 
 .incidents_responses .description .full_width{text-align: justify;font-size: 28px;}
 .incidents_responses .description .full_width.number_of_incidents{font-size: 58px;}
-.incidents_responses .description .incidents{font-size: 85px;margin-top:-9px;margin-bottom: -6px;}
-.incidents_responses .description .responses{font-size: 78px;margin-top:-9px;margin-bottom: -6px;margin-left: 0px;}
+.incidents_responses .description .incidents{font-size: 85px;margin-top:-9px;margin-bottom: -6px;padding-left: 5px;}
+.incidents_responses .description .responses{font-size: 78px;margin-top:-15px;margin-bottom: -6px;margin-left: 0px;padding-left: 45px;}
 .monthly_statistics { width: 960px;float: left;margin-left: 30px;}
 .victim_characteristics .title{
 	text-align: justify;
@@ -395,7 +395,7 @@ ul#incidents li .description, ul#responses li .description{
 .map_wrapper .map{
 	padding-left: 43px;
 	margin-top:43px;
-	background: url('/images/bih_map.png') no-repeat 200px 60px;
+	background: url('/images/bih_map_bs.png') no-repeat 200px 60px;
 	min-height: 810px;
 }
 .map_wrapper .map.hide_map{

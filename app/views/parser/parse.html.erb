@@ -135,7 +135,7 @@
 			<div class="clear"></div>
 			<div class="description">
 				<span class="full_width gotham-bold">
-					<% if I18n.locale == :bs %>
+					<% if I18n.locale == :bs %>&nbsp;
 					<%=I18n.t('incidents_description1')%>&nbsp;&nbsp;
 					<%=I18n.t('incidents_description2')%>&nbsp;&nbsp;
 					<%=I18n.t('incidents_description3')%>
@@ -150,7 +150,7 @@
 				<span class="full_width gotham-bold"><% if I18n.locale == :en %>
 					T &nbsp;H &nbsp;I &nbsp;S  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M &nbsp;O &nbsp;N &nbsp;T &nbsp;H</span><% end %>
 					<% if I18n.locale == :bs %>
-					&nbsp;U &nbsp;&nbsp;O&nbsp; V&nbsp; O&nbsp; M&nbsp;&nbsp; M&nbsp; J&nbsp; E&nbsp; S&nbsp; E&nbsp; C&nbsp; U
+					&nbsp;&nbsp;U &nbsp;&nbsp;O&nbsp; V&nbsp; O&nbsp; M&nbsp;&nbsp;&nbsp; M&nbsp; J&nbsp; E&nbsp; S&nbsp; E&nbsp; C&nbsp; U
 					<% end %>
 			</div>
 			<div class="number_placeholder gotham-black"><%=@total_incidents%></div>
@@ -162,13 +162,22 @@
 			<div class="full_width"><img src="images/green_d_arrow.png" /></div>
 			<div class="clear"></div>
 			<div class="description">
+				<% if I18n.locale == :en %>
 				<% if Integer(@total_responses) == 1 %>
 				<span class="responses gotham-ultra">RESPONSE&nbsp;&nbsp;&nbsp;&nbsp;</span><br />				
 				<% else %>
 				<span class="responses gotham-ultra">RESPONSES</span><br />							
 				<% end %>				
 				<div class="full_width gotham-bold" style="font-size: 30px;">&nbsp;T O&nbsp;&nbsp;&nbsp;H A T E&nbsp;&nbsp;&nbsp;I N C I D E N T S</div>
-				<span class="full_width gotham-ultra number_of_incidents">THIS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MONTH</span>	
+				<span class="full_width gotham-ultra number_of_incidents">THIS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MONTH</span>
+				<% end %>
+				<% if I18n.locale == :bs %>
+				<span class="responses gotham-ultra">REAKCIJE</span><br />
+				<span class="full_width gotham-bold" style="font-size: 25px;margin-right: -10px;"><br />N A&nbsp;&nbsp;I N C I D E N T E&nbsp;&nbsp;P O Č I NJ E N E</span><br />
+				<span class="full_width gotham-bold" style="font-size: 25px;">I Z&nbsp;&nbsp;M R Ž NJ E&nbsp;&nbsp;U</span>
+				<span class="full_width gotham-ultra number_of_incidents">OVOM&nbsp;MJESECU</span>	
+				<% end %>
+
 			</div>
 			<div class="number_placeholder gotham-black font-green-light"><%=@total_responses%></div>			
 		</div>
@@ -312,12 +321,13 @@
 			<div class="clear"></div>
 			<div class="gotham-bold" style="font-size:32px;margin-top:40px;border-bottom: 4px solid #262626;margin-right: 25px;">
 				<%=I18n.t('graph_title')%>
-				<%=@since_month.upcase%> <%=@since_year%>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #9dc4c5;font-size:36px;"><%=@since_incidents%></span></div>
+				<%=I18n.t("since_month.#{@since_month}").upcase%> <%=@since_year%>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #9dc4c5;font-size:36px;"><%=@since_incidents%></span></div>
 			<div id="chart_div" style="width: 1010px; height: 390px;margin-left:-50px;float:left;margin-top:30px;"></div>
 		</div>
 		<div class="since_month">
 			<div class="title gotham-black"><%=I18n.t('since')%>
-				<%=@since_month.upcase%> <%=@since_year.upcase%>:</div>
+				<%=I18n.t("since_month.#{@since_month}").upcase%>
+				<%=@since_year.upcase%>:</div>
 			<div class="clocklike gotham-thin">
 				<div class="crimes">
 					<%=@since_responses%>				

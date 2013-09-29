@@ -10,7 +10,7 @@ class ParserController < ApplicationController
 		file_name = params[:file_name]
 		parsed_string = CsvData.parse(file_name)
 		puts "#{parsed_string}"
-		@month = parsed_string[:general_info][:month]
+		@month = parsed_string[:general_info][:month] 
 		@year = parsed_string[:general_info][:year]
 		@total_incidents = parsed_string[:general_info][:total_incidents_monthly]
 		@total_responses = parsed_string[:general_info][:total_responses_monthly]
@@ -90,7 +90,8 @@ class ParserController < ApplicationController
 	end
 
 	def stringify_vc(string)
-		splitted = string[3..-1].split('_')
+	    string1 = I18n.t("#{string}")		
+		splitted = string1[3..-1].split('_')
 		unless splitted[2].nil?
 			splitted.delete_at(2)
 		end
