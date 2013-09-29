@@ -8,6 +8,8 @@ en:
  description: "Hate-motivated incidents are often violent manifestations of intolerance which instil fear and divide communities. Tackling underlying prejudice is essential in combating the spread of these divisive actions. The OSCE Mission to BiH supports the work of government institutions, the criminal justice system, local authorities and civil society to effectively respond to these incidents. The Hate Monitor provides a monthly update on incidents and responses throughout BiH."
  incidents_description1: "H A T E - M O T I V A T E D"
  incidents_description2: ""
+ incidents_description3: ""
+ incidents_description4: "INCIDENTS"
  type_incidents: "TYPES OF INCIDENTS"
  type_responses: "TYPES OF RESPONSES"
  i_physical_violence1: "Physical"
@@ -65,3 +67,7 @@ en:
  map_title: "INCIDENTS AND RESPONSES THIS MONTH"
  highligted: "Highlighted"
  footer_info: "The Hate Monitor provides an update on all hate-motivated incidents and responses known to the OSCE Mission to BiH at the time of publishing the report each month."
+ month:
+  May:  "May"
+  June: "June"
+  December: "December"

@@ -74,7 +74,9 @@
 		<div class="title gotham-ultra font-black"><%=I18n.t('hate_monitor')%></div>
 		<div class="green_line"></div>
 		<div class="clear"></div>
-		<div class="month gotham-ultra font-green"><%="#{@month.upcase} #{@year}"%></div>
+		<div class="month gotham-ultra font-green">			
+			<%=I18n.t("month.#{@month}").upcase%>&nbsp;<%="#{@year}"%>
+		</div>
 	</div>
 	<div class="clear"></div>
 	<div class="description gotham-book">
@@ -90,11 +92,23 @@
 			<div class="clear"></div>
 			<div class="description">
 				<span class="full_width gotham-bold">
+					<% if I18n.locale == :bs %>
+					<%=I18n.t('incidents_description1')%>&nbsp;&nbsp;
+					<%=I18n.t('incidents_description2')%>&nbsp;&nbsp;
+					<%=I18n.t('incidents_description3')%>
+					<% end %>
+					<% if I18n.locale == :en %>
 					<%=I18n.t('incidents_description1')%>
-					<%=I18n.t('incidents_description2')%>
+					<% end %>
 				</span><br />
-				<span class="incidents gotham-ultra">INCIDENTS</span><br />
-				<span class="full_width gotham-bold">T &nbsp;H &nbsp;I &nbsp;S  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M &nbsp;O &nbsp;N &nbsp;T &nbsp;H</span>
+				<span class="incidents gotham-ultra">
+					<%=I18n.t('incidents_description4')%>		
+				</span><br />
+				<span class="full_width gotham-bold"><% if I18n.locale == :en %>
+					T &nbsp;H &nbsp;I &nbsp;S  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M &nbsp;O &nbsp;N &nbsp;T &nbsp;H</span><% end %>
+					<% if I18n.locale == :bs %>
+					&nbsp;U &nbsp;&nbsp;O&nbsp; V&nbsp; O&nbsp; M&nbsp;&nbsp; M&nbsp; J&nbsp; E&nbsp; S&nbsp; E&nbsp; C&nbsp; U
+					<% end %>
 			</div>
 			<div class="number_placeholder gotham-black"><%=@total_incidents%></div>
 		</div>
@@ -183,7 +197,7 @@
 						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_other]%></span><br />
 						<span class="gotham-medium description" ><%=I18n.t('i_other')%></span>
 					</li>
-					<li class="gotham-bold" style="color:#546060;width:730px;font-size:23px;margin-right: -100px;padding-top:65px;height:85px;"><%=I18n.t('incidents_info1')%><br/>
+					<li class="gotham-bold incidents_info"><%=I18n.t('incidents_info1')%><br/>
 						<%=I18n.t('incidents_info2')%><br/>
 						</li>
 				</ul>
@@ -255,7 +269,7 @@
 			<div class="clear"></div>
 			<div class="gotham-bold" style="font-size:32px;margin-top:40px;border-bottom: 4px solid #262626;margin-right: 25px;">
 				<%=I18n.t('graph_title')%>
-				<%=@since_month.upcase%> <%=@since_year%>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #9dc4c5;font-size:36px;"><%=@since_incidents%></span></div>
+				<%=@since_month.upcase%> <%=@since_year%>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #9dc4c5;font-size:36px;"><%=@since_incidents%></span></div>
 			<div id="chart_div" style="width: 1010px; height: 390px;margin-left:-50px;float:left;margin-top:30px;"></div>
 		</div>
 		<div class="since_month">
@@ -273,7 +287,7 @@
 			<div style="width:472px;float:left;margin-left:55px;"><span class="description gotham-bold">
 				<%=I18n.t('since_responses')%>
 			</span></div>
-			<div style="margin-left:40px;float:left"><span class="description gotham-bold">
+			<div class="since_at_least"><span class="description gotham-bold">
 				<%=I18n.t('since_at_least_one_response1')%><br />
 				<%=I18n.t('since_at_least_one_response2')%><br />
 				<%=I18n.t('since_at_least_one_response3')%>
@@ -315,28 +329,55 @@
 			<div class="clear"></div>
 			<div class="gotham-light li">
 				<div class="txt"><%=I18n.t('trials')%></div>
+				<% if I18n.locale == :en %>
 				<% if Integer(@cases_ongoing) < 9 %>
 				<div class="dots">...........................................................................</div>
 				<% else %>
 				<div class="dots">.......................................................................</div>
 				<% end %>
+				<% end %>
+				<% if I18n.locale == :bs %>
+				<% if Integer(@cases_ongoing) < 9 %>
+				<div class="dots">........................................................................</div>
+				<% else %>
+				<div class="dots">.....................................................................</div>
+				<% end %>
+				<% end %>				
 				<div class="value"><%=@cases_ongoing%></div>
 			</div>
 			<div class="gotham-light li">
 				<div class="txt"><%=I18n.t('convictions')%><%=@year%></div>
-				<% if Integer(@convictions) < 9 %> <!-- 11 tackica izbrisala radi bos -->
-				<div class="dots">......................................................</div>
+				<% if I18n.locale == :en %>
+				<% if Integer(@convictions) < 9 %>
+				<div class="dots">................................................................</div>
 				<% else %>
-				<div class="dots">.................................................................</div>
+				<div class="dots">.............................................................</div>
+				<% end %>
+				<% end %>
+				<% if I18n.locale == :bs %>
+				<% if Integer(@convictions) < 9 %>
+				<div class="dots">...................................................</div>
+				<% else %>
+				<div class="dots">...............................................</div>
+				<% end %>
 				<% end %>
 				<div class="value"><%=@convictions%></div>
 			</div>
 			<div class="gotham-light li">
 				<div class="txt"><%=I18n.t('acquittals')%><%=@year%></div>
+				<% if I18n.locale == :en %>
 				<% if Integer(@acquittals) < 9 %>
 				<div class="dots">.....................................................................</div>
-				<% else %> <!-- 11 tackica izbrisala radi bos -->
-				<div class="dots">.......................................................</div>
+				<% else %> 
+				<div class="dots">.................................................................</div>
+				<% end %>
+				<% end %>
+				<% if I18n.locale == :bs %>
+				<% if Integer(@acquittals) < 9 %>
+				<div class="dots">..............................................</div>
+				<% else %>
+				<div class="dots">..........................................</div>
+				<% end %>
 				<% end %>
 				<div class="value"><%=@acquittals%></div>
 			</div>
