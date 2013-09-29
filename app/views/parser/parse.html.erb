@@ -89,7 +89,10 @@
 			<div class="full_width"><img src="images/black_d_arrow.png" /></div>
 			<div class="clear"></div>
 			<div class="description">
-				<span class="full_width gotham-bold">H A T E&nbsp;-&nbsp;M O T I V A T E D</span><br />
+				<span class="full_width gotham-bold">
+					<%=I18n.t('incidents_description1')%>
+					<%=I18n.t('incidents_description2')%>
+				</span><br />
 				<span class="incidents gotham-ultra">INCIDENTS</span><br />
 				<span class="full_width gotham-bold">T &nbsp;H &nbsp;I &nbsp;S  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M &nbsp;O &nbsp;N &nbsp;T &nbsp;H</span>
 			</div>
@@ -123,39 +126,62 @@
 				<ul id="incidents">
 					<li>
 						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_physical_violence]%></span><br />
-						<span class="gotham-medium description" >Physical<br />violence</span>
+						<span class="gotham-medium description" >
+							<%=I18n.t('i_physical_violence1')%><br />
+							<%=I18n.t('i_physical_violence2')%>
+						</span>
 					</li>
 					<li>
 						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_property_damage]%></span><br />
-						<span class="gotham-medium description" >Property<br />damage</span>
+						<span class="gotham-medium description" >
+							<%=I18n.t('i_property_damage1')%><br />
+							<%=I18n.t('i_property_damage2')%>
+						</span>
 					</li>
 					<li >
 						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_offensive_graffiti]%></span><br />
-						<span class="gotham-medium description" >Offensive graffiti</span>
+						<span class="gotham-medium description" ><%=I18n.t('i_offensive_graffiti')%></span>
 					</li>
 					<li style="height:170px;">
 						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_damage_religious_facilities_desecration_of_graveyards]%></span><br />
-						<span style="width:270px;" class="gotham-medium description" >Damage to religious<br />facilities / Desecration <br />of graveyards</span>
+						<span style="width:270px;" class="gotham-medium description" >
+							<%=I18n.t('i_damage_religious_facilities_desecration_of_graveyards1')%><br />
+							<%=I18n.t('i_damage_religious_facilities_desecration_of_graveyards2')%><br />
+							<%=I18n.t('i_damage_religious_facilities_desecration_of_graveyards3')%>
+						</span>
 					</li>
 					<li>
 						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_verbal_assault]%></span><br />
-						<span class="gotham-medium description" >Verbal<br />assault</span>
+						<span class="gotham-medium description" >
+							<%=I18n.t('i_verbal_assault1')%><br />
+							<%=I18n.t('i_verbal_assault2')%>
+						</span>
 					</li>				
 					<li>
 						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_hate_speech]%></span><br />
-						<span class="gotham-medium description" >Hate<br />speech</span>
+						<span class="gotham-medium description" >
+							<%=I18n.t('i_hate_speech1')%><br />
+							<%=I18n.t('i_hate_speech2')%>
+						</span>
 					</li>
 					<li>
 						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_displaying_symbols]%></span><br />
-						<span class="gotham-medium description" >Displaying<br />symbols</span>
+						<span class="gotham-medium description" >
+							<%=I18n.t('i_displaying_symbols1')%><br />
+							<%=I18n.t('i_displaying_symbols2')%>
+						</span>
 					</li>
 					<li style="height:195px;">
 						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_insulting_phone_internet_sms_messages]%></span><br />
-						<span class="gotham-medium description" style="width:270px;">Insulting phone,<br /> Internet and <br />sms messages</span>
+						<span class="gotham-medium description" style="width:270px;">
+							<%=I18n.t('i_insulting_phone_internet_sms_messages1')%><br />
+							<%=I18n.t('i_insulting_phone_internet_sms_messages2')%><br />
+							<%=I18n.t('i_insulting_phone_internet_sms_messages3')%>
+						</span>
 					</li>
 					<li>
 						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_other]%></span><br />
-						<span class="gotham-medium description" >Other</span>
+						<span class="gotham-medium description" ><%=I18n.t('i_other')%></span>
 					</li>
 					<li class="gotham-bold" style="color:#546060;width:730px;font-size:23px;margin-right: -100px;padding-top:65px;height:85px;"><%=I18n.t('incidents_info1')%><br/>
 						<%=I18n.t('incidents_info2')%><br/>
@@ -233,7 +259,8 @@
 			<div id="chart_div" style="width: 1010px; height: 390px;margin-left:-50px;float:left;margin-top:30px;"></div>
 		</div>
 		<div class="since_month">
-			<div class="title gotham-black">SINCE <%=@since_month.upcase%> <%=@since_year.upcase%>:</div>
+			<div class="title gotham-black"><%=I18n.t('since')%>
+				<%=@since_month.upcase%> <%=@since_year.upcase%>:</div>
 			<div class="clocklike gotham-thin">
 				<div class="crimes">
 					<%=@since_responses%>				
@@ -243,8 +270,14 @@
 					<%=@since_responses_one%>				
 				</div>			
 			</div>
-			<div style="width:472px;float:left;margin-left:55px;"><span class="description gotham-bold">responses</span></div>
-			<div style="margin-left:40px;float:left"><span class="description gotham-bold">hate incidents<br />with at least<br />one response</span></div>
+			<div style="width:472px;float:left;margin-left:55px;"><span class="description gotham-bold">
+				<%=I18n.t('since_responses')%>
+			</span></div>
+			<div style="margin-left:40px;float:left"><span class="description gotham-bold">
+				<%=I18n.t('since_at_least_one_response1')%><br />
+				<%=I18n.t('since_at_least_one_response2')%><br />
+				<%=I18n.t('since_at_least_one_response3')%>
+			</span></div>
 		</div>
 	</div>
 	<div class="clear"></div>
