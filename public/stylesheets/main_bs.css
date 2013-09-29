@@ -410,10 +410,13 @@ ul#incidents li .description, ul#responses li .description{
 }
 .map_wrapper .map.hide_map div.cities{
 	margin-top:50px;
-	width: auto;
+	width: 1056px;
 }
 .map_wrapper .map.hide_map div.cities ul#cities li{
-	padding-top: 15px;
+	margin-right: 15px;
+	float: left;
+	height: 80px;
+	width: 325px;
 }
 ul#cities{
 	list-style: none;
