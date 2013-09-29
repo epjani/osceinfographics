@@ -211,7 +211,7 @@ body{background: #e9e2ce;max-width: 2483px;}
 
 .incidents_responses .description .full_width{text-align: justify;font-size: 28px;}
 .incidents_responses .description .full_width.number_of_incidents{font-size: 58px;}
-.incidents_responses .description .incidents{font-size: 85px;margin-top:-9px;margin-bottom: -6px;padding-left: 5px;}
+.incidents_responses .description .incidents{font-size: 85px;margin-top:-9px;margin-bottom: -6px;padding-left: 10px;}
 .incidents_responses .description .responses{font-size: 78px;margin-top:-15px;margin-bottom: -6px;margin-left: 0px;padding-left: 45px;}
 .monthly_statistics { width: 960px;float: left;margin-left: 30px;}
 .victim_characteristics .title{
@@ -487,6 +487,9 @@ ul#cities li span{color:#9dc4c5;}
 }
 #upload_file_the_file{
 	margin-left: 26px;
+}
+.padd {
+	padding-top: 8px;
 }
 .preventions_wrapper{
 	float: left;

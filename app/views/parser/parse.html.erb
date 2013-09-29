@@ -117,18 +117,20 @@
 						<%=I18n.t('incidents_description1')%>
 					<% end %>
 				</span><br />
-				<span class="incidents gotham-ultra">
-					<%=I18n.t('incidents_description4')%>
-					<% if I18n.locale == :bs %>
-					<span style="position: relative;font-size: 60px;top: -125px;left: 280px;">-</span>
-					<% end %>		
-				</span><br />
-				<span class="full_width gotham-bold">
+				<span class="incidents gotham-ultra padd">
+					<%=I18n.t('incidents_description4')%>							
+				</span>
+				<% if I18n.locale == :bs %>
+					<span class="incidents gotham-ultra" style="position: relative;font-size: 60px;top: -110px;left: 260px;">-</span>
+					<% end %>
+				<br />				
 					<% if I18n.locale == :en %>
+					<span class="full_width gotham-bold">
 						T &nbsp;H &nbsp;I &nbsp;S  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M &nbsp;O &nbsp;N &nbsp;T &nbsp;H</span>
 					<% end %>
 					<% if I18n.locale == :bs %>
-					&nbsp;&nbsp;U &nbsp;&nbsp;O&nbsp; V&nbsp; O&nbsp; M&nbsp;&nbsp;&nbsp; M&nbsp; J&nbsp; E&nbsp; S&nbsp; E&nbsp; C&nbsp; U</span>
+					<span class="full_width gotham-bold" style="margin-left: -10px;">
+					&nbsp;U &nbsp;&nbsp;O&nbsp; V&nbsp; O&nbsp; M&nbsp;&nbsp;&nbsp; M&nbsp; J&nbsp; E&nbsp; S&nbsp; E&nbsp; C&nbsp; U</span>
 					<% end %>
 			</div>
 			<div class="number_placeholder gotham-black"><%=@total_incidents%></div>
