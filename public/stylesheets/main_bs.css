@@ -132,7 +132,7 @@ body{background: #e9e2ce;}
 }
 .infographic_wrapper .header .green_line{
 	height:6px;
-	width:532px;
+	width:449;
 	background-color: #829c9b;
 	float:left;
 	margin-top:66px;
@@ -151,11 +151,19 @@ body{background: #e9e2ce;}
 }
 .infographic_wrapper .description{
 	text-align: justify;
-	font-size:35px;
+	font-size:34px;
 	margin-top:44px;
 }
 .infographic_wrapper .incidents_responses{
 	float: left;
+}
+.incidents_info {
+	color:#546060;
+	width:730px !important;
+	font-size:23px;
+	margin-right: -100px;
+	padding-top:40px;
+	height:85px;
 }
 .incidents_responses .incidents{
 	float: left;
@@ -200,10 +208,10 @@ body{background: #e9e2ce;}
 	background-color: #829c9b;
 }
 
-.incidents_responses .description .full_width{text-align: justify;font-size: 36px;}
+.incidents_responses .description .full_width{text-align: justify;font-size: 28px;}
 .incidents_responses .description .full_width.number_of_incidents{font-size: 58px;}
-.incidents_responses .description .incidents{font-size: 85px;margin-top:-9px;margin-bottom: -6px;}
-.incidents_responses .description .responses{font-size: 78px;margin-top:-9px;margin-bottom: -6px;margin-left: 0px;}
+.incidents_responses .description .incidents{font-size: 85px;margin-top:-9px;margin-bottom: -6px;padding-left: 5px;}
+.incidents_responses .description .responses{font-size: 78px;margin-top:-15px;margin-bottom: -6px;margin-left: 0px;padding-left: 45px;}
 .monthly_statistics { width: 960px;float: left;margin-left: 30px;}
 .victim_characteristics .title{
 	text-align: justify;
@@ -245,6 +253,10 @@ body{background: #e9e2ce;}
 	font-size: 56px;
 	color: #262626;
 	border-bottom: 8px solid #262626;
+}
+.since_at_least {
+	float: left;
+	width: 470px;
 }
 .clocklike{
 	font-size: 360px;
@@ -383,7 +395,7 @@ ul#incidents li .description, ul#responses li .description{
 .map_wrapper .map{
 	padding-left: 43px;
 	margin-top:43px;
-	background: url('/images/bih_map.png') no-repeat 200px 60px;
+	background: url('/images/bih_map_bs.png') no-repeat 200px 60px;
 	min-height: 810px;
 }
 .map_wrapper .map.hide_map{
@@ -521,7 +533,7 @@ ul#cities li span{color:#9dc4c5;}
 }
 
 .monitor_provides{
-	font-size: 23px;
+	font-size: 21px;
 	text-align: justify;
 }
 /* justyfies one line of text */

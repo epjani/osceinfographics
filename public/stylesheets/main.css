@@ -157,6 +157,14 @@ body{background: #e9e2ce;}
 .infographic_wrapper .incidents_responses{
 	float: left;
 }
+.incidents_info {
+	color:#546060;
+	width:730px !important;
+	font-size:23px;
+	margin-right: -100px;
+	padding-top:65px;
+	height:85px;
+}
 .incidents_responses .incidents{
 	float: left;
 }
@@ -245,6 +253,10 @@ body{background: #e9e2ce;}
 	font-size: 56px;
 	color: #262626;
 	border-bottom: 8px solid #262626;
+}
+.since_at_least {
+	margin-left:60px;
+	float: left;
 }
 .clocklike{
 	font-size: 360px;
