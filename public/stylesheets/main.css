@@ -117,7 +117,8 @@
 .clear{
 	clear:both;
 }
-body{background: #e9e2ce;}
+html{max-width: 2483px;}
+body{background: #e9e2ce;max-width: 2483px;}
 .full_width{width:100%;}
 .infographic_wrapper{
 	width:2133px;
