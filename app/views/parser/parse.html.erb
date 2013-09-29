@@ -26,7 +26,12 @@
           	['APR',  <%=@monthly[:i_apr]%>],
           <% end %>
           <% if @monthly[:i_may].to_i > 0 %>
+          <% if I18n.locale == :en %>
           	['MAY',  <%=@monthly[:i_may]%>],
+          	<% end %>
+          	<% if I18n.locale == :bs %>
+          	['MAJ',  <%=@monthly[:i_may]%>],
+          	<% end %>
           <% end %>
           <% if @monthly[:i_june].to_i > 0 %>
           	['JUN',  <%=@monthly[:i_june]%>],
@@ -41,7 +46,12 @@
           	['SEP',  <%=@monthly[:i_sep]%>],
           <% end %>
           <% if @monthly[:i_oct].to_i > 0 %>
+           <% if I18n.locale == :en %>
           	['OCT',  <%=@monthly[:i_oct]%>],
+          	 <% end %>
+          <% if I18n.locale == :bs %>
+			['OKT',  <%=@monthly[:i_oct]%>],
+          	 <% end %>
           <% end %>
           <% if @monthly[:i_nov].to_i > 0 %>
           	['NOV',  <%=@monthly[:i_nov]%>],

@@ -64,7 +64,7 @@ bs:
  prevention_actions2: "protiv mržnje"
  prevention_strategies1: "Postojeće lokalne strategije"
  prevention_strategies2: "za prevenciju mržnje"
- map_title: "INCIDENTI I REAKCIJE U OVOM MJESECU"
+ map_title: "INCIDENTI / REAKCIJE U OVOM MJESECU"
  highligted: "Izdvojeno"
  footer_info: "Monitor pruža ažurirane podatke o svim incidentima počinjenim iz mržnje i reakcijama na te incidente o kojima Misija OSCE-a u BiH ima saznanja u trenutku mjesečnog objavljivanja podataka."
  month:
@@ -92,4 +92,4 @@ bs:
   September: "septembra"
   October: "oktobra"
   November: "novembra"
-  December: "decembra"
+  December: "decembra" 
