@@ -160,11 +160,9 @@ body{background: #e9e2ce;max-width: 2483px;}
 }
 .incidents_info {
 	color:#546060;
-	width:730px !important;
+	width: 850px !important;
 	font-size:23px;
-	margin-right: -100px;
-	padding-top:40px;
-	height:85px;
+	height: 65px !important;
 }
 .incidents_responses .incidents{
 	float: left;
@@ -243,30 +241,35 @@ body{background: #e9e2ce;max-width: 2483px;}
 .victim_characteristics .third_lbl{color: #9dc4c5;}
 .victim_characteristics .fourth_lbl{color: #9dc4c5;}
 .since_month{
-	width: 1000px;
+	width: 950px;
 	float: left;
-	margin-left: 80px;
+	margin-left: 170px;
 	margin-top: 20px
 }
 .since_month .title{
 	/*font-size: 46px;
 	color: #262626;*/
-	font-size: 56px;
+	font-size: 36px;
 	color: #262626;
 	border-bottom: 8px solid #262626;
 }
 .since_at_least {
-	float: left;
+	float: right;
 	width: 470px;
+	margin-top: -35px;
+}
+.since_responses {
+	width:472px;float:left;
+	margin-left: 150px;
 }
 .clocklike{
-	font-size: 360px;
+	font-size: 190px;
 	margin-top: 25px;
 }
 .clocklike .crimes, .clocklike .responses, .clocklike .divider{float: left; text-align: center;}
-.clocklike .crimes, .clocklike .responses{width: 445px;}
+.clocklike .crimes, .clocklike .responses{width: 405px;}
 .clocklike .divider{margin-top: -30px;margin-left: 20px;margin-right: 20px;}
-.since_month .description{color:#546060;font-size: 47px;}
+.since_month .description{color:#546060;font-size: 30px;}
 .incidents_lists{
 	width: 100%;
 	background-color: #829c9b;
@@ -299,9 +302,9 @@ ul#incidents, ul#responses{
 	padding: 0px;
 }
 ul#incidents li{
-	width: 228px;
+	width: 298px;
 	float:left;
-	height: 150px;
+	height: 170px;
 }
 ul#responses li{
 	width:298px;
@@ -336,7 +339,7 @@ ul#incidents li .description, ul#responses li .description{
 }
 .highlight_box_wrapper{
 	float: left;
-	width: 900px;
+	width: 450px;
 	margin-top: 30px;
 }
 .hl_left, .hl_right{float: left;height: 128px;width: 24px;}
@@ -344,11 +347,11 @@ ul#incidents li .description, ul#responses li .description{
 .hl_right{background: url('/images/hl_right.png') no-repeat 0px 2px;}
 .highlight_box{
 	padding-top: 10px;
-	width: 852px;
+	width: 440px;
 	background-color: #9dc4c5;
 	float: left;
-	margin-left: 22px;
-	height:380px;
+	margin-left: 452px;
+	height: 740px;
 }
 .highlight_box .title{
 	font-size: 33px;
@@ -362,7 +365,7 @@ ul#incidents li .description, ul#responses li .description{
 	line-height: 1.5;
 	text-align: justify;
 }
-.hate_cases{margin-top:30px;float: left;margin-left: 120px;margin-bottom: 30px;}
+.hate_cases{margin-top:30px;float: left;margin-left: 180px;margin-bottom: 30px;}
 .hate_cases .title{
 	font-size: 48px;
 	color:#9dc4c5;
@@ -374,7 +377,7 @@ ul#incidents li .description, ul#responses li .description{
 }
 .hate_cases .li{
 	font-size: 33px;
-	color:#829c9b;
+	color: #262626;
 	padding-left: 15px;
 }
 
@@ -493,14 +496,14 @@ ul#cities li span{color:#9dc4c5;}
 }
 .preventions_wrapper{
 	float: left;
-	margin-left: 120px;
+	margin-left: 200px;
 	width: 912px;
+	margin-top: 50px;
 }
 .preventions_wrapper .preventions{
 	width:930px;
-	height:111px;
+	height: 91px;
 	background: url('/images/prevention_box.png') no-repeat;
-	margin-left: -10px;
 	color:#9dc4c5;
 	font-size: 48px;
 	padding-left: 18px;
@@ -508,6 +511,7 @@ ul#cities li span{color:#9dc4c5;}
 }
 .preventions_wrapper .lists{
 	margin-left: 17px;
+	margin-top: -10px;
 }
 .preventions_wrapper .lists .width{
 	width: 419px;
@@ -538,10 +542,11 @@ ul#cities li span{color:#9dc4c5;}
 	padding-bottom: 8px;
 }
 .preventions_wrapper .lists .lbl{
-	font-size: 31px;
-	color: #819b9b;
+	font-size: 25px;
+	color: #546060;
 	padding-right: 10px;
-	margin-top: 15px;
+	margin-top: 5px;
+	font-family: 'gothammediumregular';
 }
 
 .monitor_provides{

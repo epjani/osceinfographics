@@ -170,21 +170,21 @@
 			</div>
 			<div class="lists">
 				<ul id="incidents">
-					<li>
+					<li style="margin-top: -20px;">
 						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_physical_violence]%></span><br />
 						<span class="gotham-medium description" >
 							<%=I18n.t('i_physical_violence1')%><br />
 							<%=I18n.t('i_physical_violence2')%>
 						</span>
 					</li>
-					<li>
+					<li style="margin-top: -20px;">
 						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_property_damage]%></span><br />
 						<span class="gotham-medium description" >
 							<%=I18n.t('i_property_damage1')%><br />
 							<%=I18n.t('i_property_damage2')%>
 						</span>
 					</li>
-					<li >
+					<li style="margin-top: -20px;">
 						<img src="images/incidents.png" /><span class="gotham-light font-88"><%=@incidents[:i_offensive_graffiti]%></span><br />
 						<span class="gotham-medium description" ><%=I18n.t('i_offensive_graffiti')%></span>
 					</li>
@@ -279,6 +279,18 @@
 				</ul>
 			</div>
 		</div>
+		<div class="preventions_wrapper">
+			<div class="preventions gotham-blackitalic">
+				<%=I18n.t('prevention')%>
+			</div>
+			<div class="lists">
+				<div class="first width gotham-light"><%=@actions_by_local%></div>
+				<div class="second width gotham-light"><%=@strategies_by_local%></div>
+				<div class="clear"></div>
+				<div class="width lbl gotham-light"><%=I18n.t('prevention_actions1')%><br /><%=I18n.t('prevention_actions2')%></div>
+				<div class="width lbl gotham-light"><%=I18n.t('prevention_strategies1')%><br /><%=I18n.t('prevention_strategies2')%></div>
+			</div>
+		</div>
 	</div>
 	<div class="clear"></div>
 	<div class="incidents_lists">
@@ -317,7 +329,7 @@
 					<%=@since_responses_one%>				
 				</div>			
 			</div>
-			<div style="width:472px;float:left;margin-left:55px;"><span class="description gotham-bold">
+			<div class="since_responses"><span class="description gotham-bold">
 				<%=I18n.t('since_responses')%>
 			</span></div>
 			<div class="since_at_least"><span class="description gotham-bold">
@@ -325,36 +337,6 @@
 				<%=I18n.t('since_at_least_one_response2')%><br />
 				<%=I18n.t('since_at_least_one_response3')%>
 			</span></div>
-		</div>
-	</div>
-	<div class="clear"></div>
-	<div class="map_wrapper">
-		<div class="map <%='hide_map' unless @render_map%>">
-			<div class="title gotham-bold"><%=I18n.t('map_title')%></div>
-			<div class="cities">
-				<ul id="cities">
-					<% @graphical_cities.each_with_index do |city, i|%>						
-						<li class="gotham-bold"><%=city[:key]%>&nbsp;&nbsp;<span class="gotham-bold"><%=city[:responses]%> / <%=city[:incidents]%></span></li>	
-						<% if i >10 && @render_map%>
-							<% break %>
-						<% else %>
-							
-						<% end %>
-					<% end %>
-				</ul>								
-			</div>
-			<div class="map_position">
-				<% if @render_map %>
-					<% @graphical_cities.each do |gcity| %>
-						<% if gcity[:incidents].to_i > 0 %>
-							<div class="<%=gcity[:key]%> incident graphical gotham-light"><%=gcity[:incidents]%></div>
-						<% end %>
-						<% if gcity[:responses].to_i > 0 %>
-							<div class="<%=gcity[:key]%> response graphical gotham-light"><%=gcity[:responses]%></div>
-						<% end %>
-					<% end %>
-				<% end %>
-			</div>
 		</div>
 		<div class="hate_cases">
 			<div class="title gotham-bold">
@@ -417,19 +399,37 @@
 				<% end %>
 				<div class="value"><%=@acquittals%></div>
 			</div>
-		</div>
-		<div class="preventions_wrapper">
-			<div class="preventions gotham-blackitalic">
-				<%=I18n.t('prevention')%>
+		</div>	
+	</div>
+	<div class="clear"></div>
+	<div class="map_wrapper">
+		<div class="map <%='hide_map' unless @render_map%>">
+			<div class="title gotham-bold"><%=I18n.t('map_title')%></div>
+			<div class="cities">
+				<ul id="cities">
+					<% @graphical_cities.each_with_index do |city, i|%>						
+						<li class="gotham-bold"><%=city[:key]%>&nbsp;&nbsp;<span class="gotham-bold"><%=city[:responses]%> / <%=city[:incidents]%></span></li>	
+						<% if i >10 && @render_map%>
+							<% break %>
+						<% else %>
+							
+						<% end %>
+					<% end %>
+				</ul>								
 			</div>
-			<div class="lists">
-				<div class="first width gotham-light"><%=@actions_by_local%></div>
-				<div class="second width gotham-light"><%=@strategies_by_local%></div>
-				<div class="clear"></div>
-				<div class="width lbl gotham-light"><%=I18n.t('prevention_actions1')%><br /><%=I18n.t('prevention_actions2')%></div>
-				<div class="width lbl gotham-light"><%=I18n.t('prevention_strategies1')%><br /><%=I18n.t('prevention_strategies2')%></div>
+			<div class="map_position">
+				<% if @render_map %>
+					<% @graphical_cities.each do |gcity| %>
+						<% if gcity[:incidents].to_i > 0 %>
+							<div class="<%=gcity[:key]%> incident graphical gotham-light"><%=gcity[:incidents]%></div>
+						<% end %>
+						<% if gcity[:responses].to_i > 0 %>
+							<div class="<%=gcity[:key]%> response graphical gotham-light"><%=gcity[:responses]%></div>
+						<% end %>
+					<% end %>
+				<% end %>
 			</div>
-		</div>
+		</div>	
 		<div class="highlits">
 			<div class="highlight_box_wrapper">				
 				<div class="highlight_box">
