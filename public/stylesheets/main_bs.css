@@ -330,12 +330,12 @@ ul#incidents li .description, ul#responses li .description{
 }
 .map_wrapper .map{
 	float: left;
-	width: 1054px;
+	width: 1523px;
 	height: 100px;
 }
 .map_wrapper .highlits{
 	float: left;
-	margin-left: 120px;
+	margin-left: 70px;
 }
 .highlight_box_wrapper{
 	float: left;
@@ -350,7 +350,6 @@ ul#incidents li .description, ul#responses li .description{
 	width: 440px;
 	background-color: #9dc4c5;
 	float: left;
-	margin-left: 452px;
 	height: 740px;
 }
 .highlight_box .title{
@@ -399,8 +398,8 @@ ul#incidents li .description, ul#responses li .description{
 .map_wrapper .map{
 	padding-left: 43px;
 	margin-top:43px;
-	background: url('/images/bih_map_bs.png') no-repeat 300px 60px;
-	min-height: 810px;
+	background: url('/images/bih_map_bs.png') no-repeat 722px -13px;
+	min-height: 816px;
 }
 .map_wrapper .map.hide_map{
 	background: none;
