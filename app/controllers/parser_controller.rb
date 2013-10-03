@@ -30,10 +30,10 @@ class ParserController < ApplicationController
 		@incidents = parsed_string[:incidents]
 		@responses = parsed_string[:responses]
 
-		if I18n.locale == :en
+		if I18n.locale == :en || I18n.locale == "en"
 		@highlighted = parsed_string[:responses][:r_highlighted_action_en]
 		end
-		if I18n.locale == :bs
+		if I18n.locale == :bs || I18n.locale == "bs"
 		@highlighted = parsed_string[:responses][:r_highlighted_action_bs]
 		end
 
