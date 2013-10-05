@@ -85,7 +85,8 @@
 	font-family: 'gothamultraregular';
 }
 .gotham-book{
-	font-family: 'gothambookregular';
+	/*font-family: 'gothambookregular';*/
+	font-family: 'Varela' sans-serif;
 }
 .gotham-black{
 	font-family: 'gothamblackregular';
@@ -100,7 +101,8 @@
 	font-family: 'gothamthinregular';
 }
 .gotham-medium{
-	font-family: 'gothammediumregular';
+	/*font-family: 'gothammediumregular';*/
+	font-family: 'Varela' sans-serif;
 }
 .font-black{
 	color:#262626;
@@ -155,6 +157,9 @@ body{background: #e9e2ce;max-width: 2483px;}
 	font-size:34px;
 	margin-top:44px;
 }
+.desc-height {
+	line-height: 38px;
+}
 .infographic_wrapper .incidents_responses{
 	float: left;
 }
@@ -163,6 +168,8 @@ body{background: #e9e2ce;max-width: 2483px;}
 	width: 850px !important;
 	font-size:23px;
 	height: 65px !important;
+	font-family: 'Varela' sans-serif !important;
+	font-weight: bolder;
 }
 .incidents_responses .incidents{
 	float: left;
@@ -193,29 +200,32 @@ body{background: #e9e2ce;max-width: 2483px;}
 	text-align: center;
 	font-size: 310px;
 	float: left;
-	margin-top: -22px;
+	margin-top: -27px;
+	margin-left: 4px;
 }
 .incidents_responses .description{
 	float: left;
 	padding: 30px 26px;
 	width: 494px;
 	height: 164px;
-	margin-top: 45px;
-	margin-left: 14px;
+	margin-top: 40px;
+	margin-left: 11px;
 }
 .incidents .description, .responses .description{
 	background-color: #829c9b;
 }
 
-.incidents_responses .description .full_width{text-align: justify;font-size: 28px;}
-.incidents_responses .description .full_width.number_of_incidents{font-size: 58px;}
+.incidents_responses .description .full_width{text-align: justify;font-size: 28px;font-family: 'Varela' sans-serif !important;}
+.incidents_responses .description .full_width.number_of_incidents{font-size: 58px;font-family: 'gothamultraregular' !important;}
 .incidents_responses .description .incidents{font-size: 85px;margin-top:-9px;margin-bottom: -6px;padding-left: 10px;}
-.incidents_responses .description .responses{font-size: 78px;margin-top:-15px;margin-bottom: -6px;margin-left: 0px;padding-left: 45px;}
+.incidents_responses .description .responses{font-size: 78px;margin-top: -30px;margin-left: 0px;padding-left: 45px;}
 .monthly_statistics { width: 960px;float: left;margin-left: 30px;}
 .victim_characteristics .title{
 	text-align: justify;
 	font-size: 47px;
 	margin-bottom: 10px;
+	font-family: 'Varela' sans-serif;
+	margin-top: -10px;
 }
 .victim_characteristics .first, .victim_characteristics .second, .victim_characteristics .third, .victim_characteristics .fourth{
 	height:58px;
@@ -230,6 +240,9 @@ body{background: #e9e2ce;max-width: 2483px;}
 	float:left;
 	font-size:26px;
 	width: 312px;
+	font-family: 'Varela' sans-serif;
+	font-weight: bold;
+	margin-bottom: -8px;
 }
 
 .victim_characteristics .first{background-color: #262626;}
@@ -269,7 +282,8 @@ body{background: #e9e2ce;max-width: 2483px;}
 .clocklike .crimes, .clocklike .responses, .clocklike .divider{float: left; text-align: center;}
 .clocklike .crimes, .clocklike .responses{width: 405px;}
 .clocklike .divider{margin-top: -30px;margin-left: 20px;margin-right: 20px;}
-.since_month .description{color:#546060;font-size: 30px;}
+.since_month .description{color:#546060;font-size: 30px;font-family: 'Varela' sans-serif !important;
+font-weight: bold;}
 .incidents_lists{
 	width: 100%;
 	background-color: #829c9b;
@@ -279,7 +293,7 @@ body{background: #e9e2ce;max-width: 2483px;}
 	padding-left: 43px;
 	width: 917px;
 	float: left;
-	margin-top: -11px;
+	margin-top: -12px;
 }
 .incidents_lists2 .responses{
 	padding-left: 0px;
@@ -307,9 +321,9 @@ ul#incidents li{
 	height: 170px;
 }
 ul#responses li{
-	width:298px;
+	width: 305px;
 	float:left;
-	height:150px;
+	height:165px;
 }
 ul#incidents li img, ul#responses li img{
 	float:left;
@@ -363,15 +377,17 @@ ul#incidents li .description, ul#responses li .description{
 	padding:20px 25px 20px 25px;
 	line-height: 1.5;
 	text-align: justify;
+	font-family: 'Varela' sans-serif !important;
+	font-weight: bold;
 }
-.hate_cases{margin-top:30px;float: left;margin-left: 180px;margin-bottom: 30px;}
+.hate_cases{margin-top:30px;float: left;margin-left: 180px;margin-bottom: 0px;}
 .hate_cases .title{
 	font-size: 48px;
 	color:#9dc4c5;
 	border-bottom: 7px solid #9dc4c5;
-	padding-bottom: 25px;
+	padding-bottom: 20px;
 	padding-left: 5px;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	text-align: center;
 }
 .hate_cases .li{
@@ -383,6 +399,7 @@ ul#incidents li .description, ul#responses li .description{
 .hate_cases .li .txt, .hate_cases .li .dots, .hate_cases .li .value{
 	float:left;
 	margin-bottom:12px;
+	font-family: 'Varela' sans-serif;
 }
 .hate_cases .li .value{
 	margin-top: -15px;
@@ -439,14 +456,22 @@ ul#cities li span{color:#9dc4c5;}
 	position: absolute;
 }
 .graphical.incident{
-	margin-top:-10px;
-	margin-left: -30px;
+	margin-top:-7px;
+	margin-left: -33px;
 	background: url('/images/black_dot.png') no-repeat;
 	color: #b3caca;
 }
 .graphical.response{
 	background: url('/images/green_dot.png') no-repeat;
 	color: #272727;
+}
+.graph-title {
+    font-size:32px;
+    margin-top:34px;
+    border-bottom: 4px solid #262626;
+    margin-right: 25px;
+    font-family: 'Varela' sans-serif !important;
+	font-weight: bold;
 }
 
 /*	LAYOUT */
@@ -498,7 +523,7 @@ ul#cities li span{color:#9dc4c5;}
 	float: left;
 	margin-left: 200px;
 	width: 912px;
-	margin-top: 50px;
+	margin-top: 25px;
 }
 .preventions_wrapper .preventions{
 	width:930px;
@@ -546,7 +571,8 @@ ul#cities li span{color:#9dc4c5;}
 	color: #546060;
 	padding-right: 10px;
 	margin-top: 5px;
-	font-family: 'gothammediumregular';
+	font-family: 'Varela' sans-serif;
+	font-weight: bold;
 }
 
 .monitor_provides{
@@ -559,6 +585,7 @@ ul#cities li span{color:#9dc4c5;}
   line-height: 40px;
   text-align: justify;
   text-align-last: justify;
+  font-family: 'Varela' sans-serif !important;
 }
 .monitor_provides:after {
   content: ".";

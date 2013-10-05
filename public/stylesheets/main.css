@@ -193,15 +193,16 @@ body{background: #e9e2ce;max-width: 2483px;}
 	text-align: center;
 	font-size: 310px;
 	float: left;
-	margin-top: -22px;
+	margin-top: -27px;
+	margin-left: 4px;
 }
 .incidents_responses .description{
 	float: left;
 	padding: 30px 26px;
 	width: 494px;
 	height: 164px;
-	margin-top: 45px;
-	margin-left: 14px;
+	margin-top: 40px;
+	margin-left: 11px;
 }
 .incidents .description, .responses .description{
 	background-color: #829c9b;
@@ -276,7 +277,7 @@ body{background: #e9e2ce;max-width: 2483px;}
 	padding-left: 43px;
 	width: 917px;
 	float: left;
-	margin-top: -11px;
+	margin-top: -12px;
 }
 .incidents_lists2 .responses{
 	padding-left: 0px;
@@ -361,7 +362,7 @@ ul#incidents li .description, ul#responses li .description{
 	line-height: 1.5;
 	text-align: justify;
 }
-.hate_cases{margin-top: 60px;float: left;margin-left: 180px;margin-bottom: 10px;}
+.hate_cases{margin-top: 57px;float: left;margin-left: 180px;margin-bottom: 10px;}
 .hate_cases .title{
 	font-size: 48px;
 	color:#9dc4c5;
@@ -436,14 +437,17 @@ ul#cities li span{color:#9dc4c5;}
 	position: absolute;
 }
 .graphical.incident{
-	margin-top:-10px;
-	margin-left: -30px;
+	margin-top:-7px;
+	margin-left: -33px;
 	background: url('/images/black_dot.png') no-repeat;
 	color: #b3caca;
 }
 .graphical.response{
 	background: url('/images/green_dot.png') no-repeat;
 	color: #272727;
+}
+.graph-title {
+    font-size:32px;margin-top:40px;border-bottom: 4px solid #262626;margin-right: 25px;
 }
 
 /*	LAYOUT */

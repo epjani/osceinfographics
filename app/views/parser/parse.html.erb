@@ -96,7 +96,7 @@
 		</div>
 	</div>
 	<div class="clear"></div>
-	<div class="description gotham-book">
+	<div class="description gotham-book desc-height">
 		<%=I18n.t('description')%>		
 	</div>
 	<div class="clear"></div>
@@ -154,7 +154,7 @@
 				<% end %>
 				<% if I18n.locale == :bs %>
 					<span class="responses gotham-ultra">REAKCIJE</span><br />
-					<span class="full_width gotham-bold" style="font-size: 25px;margin-right: -10px;"><br />N A&nbsp;&nbsp;I N C I D E N T E&nbsp;&nbsp;P O Č I NJ E N E</span><br />
+					<span class="full_width gotham-bold" style="font-size: 25px;margin-right: -10px;">&nbsp;&nbsp;&nbsp;&nbsp;N A&nbsp;&nbsp;I N C I D E N T E&nbsp;&nbsp;P O Č I NJ E N E</span><br />
 					<span class="full_width gotham-bold" style="font-size: 25px;">I Z&nbsp;&nbsp;M R Ž NJ E&nbsp;&nbsp;U</span>
 					<span class="full_width gotham-ultra number_of_incidents">OVOM&nbsp;MJESECU</span>	
 				<% end %>
@@ -312,7 +312,7 @@
 				<div class="third_lbl gotham-ultra" ><%=@vc[:third].first.first.html_safe%></div>
 			</div>
 			<div class="clear"></div>
-			<div class="gotham-bold" style="font-size:32px;margin-top:40px;border-bottom: 4px solid #262626;margin-right: 25px;">
+			<div class="gotham-bold graph-title">
 				<%=I18n.t('graph_title')%>
 				<%=I18n.t("since_month.#{@since_month}").upcase%> <%=@since_year%>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #9dc4c5;font-size:36px;"><%=@since_incidents%></span></div>
 			<div id="chart_div" style="width: 1010px; height: 390px;margin-left:-50px;float:left;margin-top:30px;"></div>
