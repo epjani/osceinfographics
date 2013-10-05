@@ -422,10 +422,10 @@
 				<% if @render_map %>
 					<% @graphical_cities.each do |gcity| %>
 						<% if gcity[:incidents].to_i > 0 %>
-							<div class="<%=gcity[:key]%> incident graphical gotham-light"><%=gcity[:incidents]%></div>
+							<div class="<%=gcity[:key]%> incident graphical gotham-light"></div>
 						<% end %>
 						<% if gcity[:responses].to_i > 0 %>
-							<div class="<%=gcity[:key]%> response graphical gotham-light"><%=gcity[:responses]%></div>
+							<div class="<%=gcity[:key]%> response graphical gotham-light"></div>
 						<% end %>
 					<% end %>
 				<% end %>

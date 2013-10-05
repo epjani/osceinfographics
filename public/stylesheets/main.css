@@ -424,6 +424,7 @@ ul#cities{
 ul#cities li{
 	font-size: 30px;
 	color:#829c9b;
+	font-family: 'Varela' sans-serif !important;
 }
 ul#cities li span{color:#9dc4c5;}
 .graphical{
@@ -436,7 +437,7 @@ ul#cities li span{color:#9dc4c5;}
 }
 .graphical.incident{
 	margin-top:-10px;
-	margin-left: -50px;
+	margin-left: -30px;
 	background: url('/images/black_dot.png') no-repeat;
 	color: #b3caca;
 }
