@@ -405,7 +405,7 @@
 	<div class="clear"></div>
 	<div class="map_wrapper">
 		<div class="map <%='hide_map' unless @render_map%>">
-			<div class="title gotham-bold"><%=I18n.t('map_title')%></div>
+			<div class="title gotham-bold"><%=I18n.t('map_title1')%><br/><%=I18n.t('map_title2')%></div>
 			<div class="cities">
 				<ul id="cities">
 					<% @graphical_cities.each_with_index do |city, i|%>						
