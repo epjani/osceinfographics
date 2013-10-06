@@ -454,7 +454,7 @@
 					<% if Integer(@convictions) < 9 %>
 						<div class="dots">...................................................</div>
 					<% else %>
-						<div class="dots">...............................................</div>
+						<div class="dots">............................................</div>
 					<% end %>
 				<% end %>
 				<div class="value"><%=@convictions%></div>
@@ -470,9 +470,9 @@
 				<% end %>
 				<% if I18n.locale == :bs %>
 					<% if Integer(@acquittals) < 9 %>
-						<div class="dots">..............................................</div>
+						<div class="dots">...........................................</div>
 					<% else %>
-						<div class="dots">..........................................</div>
+						<div class="dots">......................................</div>
 					<% end %>
 				<% end %>
 				<div class="value"><%=@acquittals%></div>
