@@ -470,7 +470,7 @@
 		<div class="map <%='hide_map' unless @render_map%>">
 			<div class="title gotham-bold"><%=I18n.t('map_title1')%><br/><%=I18n.t('map_title2')%></div>
 			<div class="cities">
-				<ul id="cities" class="<%= 'small' if @graphical_cities.size > 36 %>">
+				<ul id="cities" class="<%= @graphical_cities.size > 36 ? (@graphical_cities.size > 60 ? 'small' : 'medium') : '' %>">
 					<% @graphical_cities.each_with_index do |city, i|%>						
 						<li class="gotham-bold"><%=city[:key]%>&nbsp;&nbsp;<span class="gotham-bold"><%=city[:responses]%> / <%=city[:incidents]%></span></li>
 						<% if i >75 && @render_map%>

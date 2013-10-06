@@ -431,6 +431,11 @@ ul#cities li{
 	float: left;
 	width: 365px;	
 }
+ul#cities.medium li{
+	font-size: 25px;
+	width: 295px;
+	float: left;
+}
 ul#cities.small li{
 	font-size: 20px;
 	width: 251px;
