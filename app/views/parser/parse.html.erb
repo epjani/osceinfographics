@@ -467,20 +467,26 @@
 	</div>
 	<div class="clear"></div>
 	<div class="map_wrapper">
-		<div class="map">
+		<div class="map <%='hide_map' unless @render_map%>">
 			<div class="title gotham-bold"><%=I18n.t('map_title1')%><br/><%=I18n.t('map_title2')%></div>
 			<div class="cities">
-				<ul id="cities" class="<%= 'small' if @graphical_cities.size > 20 %>">
+				<ul id="cities" class="<%= 'small' if @graphical_cities.size > 36 %>">
 					<% @graphical_cities.each_with_index do |city, i|%>						
-						<li class="gotham-bold"><%=city[:key]%>&nbsp;&nbsp;<span class="gotham-bold"><%=city[:responses]%> / <%=city[:incidents]%></span></li>	
+						<li class="gotham-bold"><%=city[:key]%>&nbsp;&nbsp;<span class="gotham-bold"><%=city[:responses]%> / <%=city[:incidents]%></span></li>
+						<% if i >75 && @render_map%>
+							<% break %>
+						<% else %>
+
+						<% end %>	
 					<% end %>
 				</ul>								
 			</div>
 			<div class="map_position">
+				<% if @render_map %>
 					<% @graphical_cities.each_with_index do |gcity, i| %>
-						<% #if i > 10 %>
-							<% #break %>
-						<% #end %>
+						<% if i > 75%>
+							<% break %>
+						<% end %>
 						<% if gcity[:incidents].to_i > 0 %>
 							<div class="<%=gcity[:key]%> incident graphical gotham-light"></div>
 						<% end %>
@@ -488,6 +494,7 @@
 							<div class="<%=gcity[:key]%> response graphical gotham-light"></div>
 						<% end %>
 					<% end %>
+				<% end %>
 			</div>
 		</div>	
 		<div class="highlits">

@@ -427,14 +427,16 @@ ul#incidents li .description, ul#responses li .description{
 	position: absolute;
 }
 .map_wrapper .map.hide_map div.cities{
-	margin-top:50px;
 	width: 1056px;
 }
 .map_wrapper .map.hide_map div.cities ul#cities li{
-	margin-right: 15px;
 	float: left;
-	height: 80px;
-	width: 325px;
+	width: 285px;
+	padding-right: 15px;
+	font-size: 19px;
+}
+.map_wrapper .map.hide_map div.cities ul#cities {
+	width: 1550px;
 }
 ul#cities{
 	list-style: none;
@@ -442,12 +444,14 @@ ul#cities{
 	width: 755px;
 }
 ul#cities li{
-	font-size: 30px;
+	font-size: 29px;
 	color:#829c9b;
-	font-family: 'Varela' sans-serif !important;	
+	font-family: 'Varela' sans-serif !important;
+	float: left;
+	width: 365px;	
 }
 ul#cities.small li{
-	font-size: 21px;
+	font-size: 20px;
 	width: 251px;
 	float: left;
 }
