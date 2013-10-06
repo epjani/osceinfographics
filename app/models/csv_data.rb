@@ -15,7 +15,6 @@ class CsvData < ActiveRecord::Base
 		csv = CsvData.new 
 		csv.csv_file_location = "csv/#{tmp_file_name}.csv"
 		csv.date = tmp_file_name
-		csv.save
 
 		parsed_data = CsvData.parse(tmp_file_name, false)
 		year = parsed_data[:general_info][:year].to_i
@@ -23,12 +22,14 @@ class CsvData < ActiveRecord::Base
 		quarter = month <= 3 ? 1 : (month <= 6 ? 2 : ( month <= 9 ? 3 : 4))
 		stringified_date = stringify_date(year, month)
 		
-		csv.image_file_location = "infographs/#{stringified_date}.png"
-		csv.date = stringified_date
-		csv.year = year
-		csv.month = month
-		csv.quarter = quarter
-		csv.save
+		unless (CsvData.where(:date => stringified_date).count > 0)
+			csv.image_file_location = "infographs/#{stringified_date}.png"
+			csv.date = stringified_date
+			csv.year = year
+			csv.month = month
+			csv.quarter = quarter
+			csv.save
+		end
 
 		FileUtils.mv(tmp_file, File.join("public/csv", stringified_date + ".csv"))
 		
