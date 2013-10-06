@@ -12,7 +12,7 @@
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
 
-   //    function drawChart(){
+      function drawChart(){
    //    	var data = new google.visualization.DataTable();
    //    	  data.addColumn('string', 'Name');
    //    	  data.addColumn('number', 'Value');
@@ -72,77 +72,89 @@
    //    	  view.setColumns([0, 1, 1, 2]);
 
    //    	  var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
-   //    }
 
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['', ''],
-          <% if @monthly[:i_jan].to_i > 0 %>
-          	['JAN',  <%=@monthly[:i_jan]%>],
-          <% end %>
-          <% if @monthly[:i_feb].to_i > 0 %>
-          	['FEB',  <%=@monthly[:i_feb]%>],
-          <% end %>	
-          <% if @monthly[:i_mar].to_i > 0 %>
-          	['MAR',  <%=@monthly[:i_mar]%>],
-          <% end %>
-          <% if @monthly[:i_apr].to_i > 0 %>
-          	['APR',  <%=@monthly[:i_apr]%>],
-          <% end %>
-          <% if @monthly[:i_may].to_i > 0 %>
-          <% if I18n.locale == :en %>
-          	['MAY',  <%=@monthly[:i_may]%>],
-          	<% end %>
-          	<% if I18n.locale == :bs %>
-          	['MAJ',  <%=@monthly[:i_may]%>],
-          	<% end %>
-          <% end %>
-          <% if @monthly[:i_june].to_i > 0 %>
-          	['JUN',  <%=@monthly[:i_june]%>],
-          <% end %>
-          <% if @monthly[:i_july].to_i > 0 %>
-          	['JUL',  <%=@monthly[:i_july]%>],
-          <% end %>
-          <% if @monthly[:i_aug].to_i > 0 %>
-          	['AUG',  <%=@monthly[:i_aug]%>],
-          <% end %>
-          <% if @monthly[:i_sep].to_i > 0 %>
-          	['SEP',  <%=@monthly[:i_sep]%>],
-          <% end %>
-          <% if @monthly[:i_oct].to_i > 0 %>
-           <% if I18n.locale == :en %>
-          	['OCT',  <%=@monthly[:i_oct]%>],
-          	 <% end %>
-          <% if I18n.locale == :bs %>
-			['OKT',  <%=@monthly[:i_oct]%>],
-          	 <% end %>
-          <% end %>
-          <% if @monthly[:i_nov].to_i > 0 %>
-          	['NOV',  <%=@monthly[:i_nov]%>],
-          <% end %>
-          <% if @monthly[:i_dec].to_i > 0 %>
-          	['DEC',  <%=@monthly[:i_dec]%>]
-          <% end %>
-        ]);
+		var data = new google.visualization.DataTable();
+		  data.addColumn('string', 'Name');
+		  data.addColumn('number', 'Value');
+		  data.addColumn({type: 'string', role: 'annotation'});
+		  
+		  data.addRows([
+		              <% if @monthly[:i_jan].to_i > 0 %>
+		              	['JAN',  <%=@monthly[:i_jan]%>, '<%=@monthly[:i_jan]%>'],
+		              <% end %>
+		              <% if @monthly[:i_feb].to_i > 0 %>
+		              	['FEB',  <%=@monthly[:i_feb]%>, '<%=@monthly[:i_feb]%>'],
+		              <% end %>	
+		              <% if @monthly[:i_mar].to_i > 0 %>
+		              	['MAR',  <%=@monthly[:i_mar]%>, '<%=@monthly[:i_mar]%>'],
+		              <% end %>
+		              <% if @monthly[:i_apr].to_i > 0 %>
+		              	['APR',  <%=@monthly[:i_apr]%>, '<%=@monthly[:i_apr]%>'],
+		              <% end %>
+		              <% if @monthly[:i_may].to_i > 0 %>
+		              <% if I18n.locale == :en %>
+		              	['MAY',  <%=@monthly[:i_may]%>, '<%=@monthly[:i_may]%>'],
+		              	<% end %>
+		              	<% if I18n.locale == :bs %>
+		              	['MAJ',  <%=@monthly[:i_may]%>, '<%=@monthly[:i_may]%>'],
+		              	<% end %>
+		              <% end %>
+		              <% if @monthly[:i_june].to_i > 0 %>
+		              	['JUN',  <%=@monthly[:i_june]%>, '<%=@monthly[:i_june]%>'],
+		              <% end %>
+		              <% if @monthly[:i_july].to_i > 0 %>
+		              	['JUL',  <%=@monthly[:i_july]%>, '<%=@monthly[:i_july]%>'],
+		              <% end %>
+		              <% if @monthly[:i_aug].to_i > 0 %>
+		              	['AUG',  <%=@monthly[:i_aug]%>, '<%=@monthly[:i_aug]%>'],
+		              <% end %>
+		              <% if @monthly[:i_sep].to_i > 0 %>
+		              	['SEP',  <%=@monthly[:i_sep]%>, '<%=@monthly[:i_sep]%>'],
+		              <% end %>
+		              <% if @monthly[:i_oct].to_i > 0 %>
+		               <% if I18n.locale == :en %>
+		              	['OCT',  <%=@monthly[:i_oct]%>, '<%=@monthly[:i_oct]%>'],
+		              	 <% end %>
+		              <% if I18n.locale == :bs %>
+		    			['OKT',  <%=@monthly[:i_oct]%>, '<%=@monthly[:i_oct]%>'],
+		              	 <% end %>
+		              <% end %>
+		              <% if @monthly[:i_nov].to_i > 0 %>
+		              	['NOV',  <%=@monthly[:i_nov]%>, '<%=@monthly[:i_nov]%>'],
+		              <% end %>
+		              <% if @monthly[:i_dec].to_i > 0 %>
+		              	['DEC',  <%=@monthly[:i_dec]%>, '<%=@monthly[:i_dec]%>']
+		              <% end %>
+		  ]);
 
-        var options = {
-          title: '',
-          backgroundColor: 'transparent',
-          colors: ['#556161'],
-          legend: {position: 'none'},
-          vAxis: { gridlines: {color: 'transparent'}, textStyle: {color: '#262626'}},
-          hAxis: { minorGridlines: {count: 10, color: '#000'}, textStyle: {color: '#262626'}, allowContainerBoundaryTextCufoff: true,
-                   slantedText: true, slantedTextAngle: 30},
-          chartArea:{left:130,top:15,width:"83%",height:"70%"},
-          fontSize: 34,
-          fontName: 'gothamultraregular',
-          isStacked: true,
-          tooltip: { isHtml: true}
-        };
-
-        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
+		var view = new google.visualization.DataView(data);
+		view.setColumns([0, 1, 1, 2]);		
+		var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+		chart.draw(view, {
+		    backgroundColor: 'transparent',
+		    colors: ['#556161'],
+		    fontName: 'gothamultraregular',
+		    legend: {position: 'none'},
+		    series: {
+		      0: {
+		        type: 'bars'
+		      },
+		      1: {
+		        type: 'line',
+		        color: '#000000',
+		        lineWidth: 0,
+		        pointSize: 0,
+		        visibleInLegend: false
+		      }
+		    },
+		    vAxis: {
+		      maxValue: 40,
+		      gridlines: {color: 'transparent'}, textStyle: {color: '#262626'}
+		    }
+		  });
       }
+
+      
     </script>
 <div class="infographic_wrapper">
 	<div class="header">
