@@ -403,7 +403,6 @@ ul#incidents li .description, ul#responses li .description{
 	background: none;
 }
 .map_wrapper .map div.cities{
-	margin-top:200px;
 	float: left;
 	width: 273px;
 	position: absolute;
@@ -421,11 +420,17 @@ ul#incidents li .description, ul#responses li .description{
 ul#cities{
 	list-style: none;
 	padding:0;
+	width: 755px;
 }
 ul#cities li{
 	font-size: 30px;
 	color:#829c9b;
-	font-family: 'Varela' sans-serif !important;
+	font-family: 'Varela' sans-serif !important;	
+}
+ul#cities.small li{
+	font-size: 21px;
+	width: 251px;
+	float: left;
 }
 ul#cities li span{color:#9dc4c5;}
 .graphical{

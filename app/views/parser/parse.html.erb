@@ -11,6 +11,69 @@
     <script type="text/javascript">
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
+
+   //    function drawChart(){
+   //    	var data = new google.visualization.DataTable();
+   //    	  data.addColumn('string', 'Name');
+   //    	  data.addColumn('number', 'Value');
+   //    	  data.addColumn({type: 'string', role: 'annotation'});
+      	  
+   //    	  data.addRows([
+   //    	    ['', ''],
+   //        <% if @monthly[:i_jan].to_i > 0 %>
+   //        	['JAN',  <%=@monthly[:i_jan]%>, <%=@monthly[:i_jan]%>],
+   //        <% end %>
+   //        <% if @monthly[:i_feb].to_i > 0 %>
+   //        	['FEB',  <%=@monthly[:i_feb]%>, <%=@monthly[:i_feb]%>],
+   //        <% end %>	
+   //        <% if @monthly[:i_mar].to_i > 0 %>
+   //        	['MAR',  <%=@monthly[:i_mar]%>, <%=@monthly[:i_mar]%>],
+   //        <% end %>
+   //        <% if @monthly[:i_apr].to_i > 0 %>
+   //        	['APR',  <%=@monthly[:i_apr]%>, <%=@monthly[:i_apr]%>],
+   //        <% end %>
+   //        <% if @monthly[:i_may].to_i > 0 %>
+   //        <% if I18n.locale == :en %>
+   //        	['MAY',  <%=@monthly[:i_may]%>, <%=@monthly[:i_may]%>],
+   //        	<% end %>
+   //        	<% if I18n.locale == :bs %>
+   //        	['MAJ',  <%=@monthly[:i_may]%>, <%=@monthly[:i_may]%>],
+   //        	<% end %>
+   //        <% end %>
+   //        <% if @monthly[:i_june].to_i > 0 %>
+   //        	['JUN',  <%=@monthly[:i_june]%>, <%=@monthly[:i_june]%>],
+   //        <% end %>
+   //        <% if @monthly[:i_july].to_i > 0 %>
+   //        	['JUL',  <%=@monthly[:i_july]%>, <%=@monthly[:i_july]%>],
+   //        <% end %>
+   //        <% if @monthly[:i_aug].to_i > 0 %>
+   //        	['AUG',  <%=@monthly[:i_aug]%>, <%=@monthly[:i_aug]%>],
+   //        <% end %>
+   //        <% if @monthly[:i_sep].to_i > 0 %>
+   //        	['SEP',  <%=@monthly[:i_sep]%>, <%=@monthly[:i_sep]%>],
+   //        <% end %>
+   //        <% if @monthly[:i_oct].to_i > 0 %>
+   //         <% if I18n.locale == :en %>
+   //        	['OCT',  <%=@monthly[:i_oct]%>, <%=@monthly[:i_oct]%>],
+   //        	 <% end %>
+   //        <% if I18n.locale == :bs %>
+			// ['OKT',  <%=@monthly[:i_oct]%>, <%=@monthly[:i_oct]%>],
+   //        	 <% end %>
+   //        <% end %>
+   //        <% if @monthly[:i_nov].to_i > 0 %>
+   //        	['NOV',  <%=@monthly[:i_nov]%>, <%=@monthly[:i_nov]%>],
+   //        <% end %>
+   //        <% if @monthly[:i_dec].to_i > 0 %>
+   //        	['DEC',  <%=@monthly[:i_dec]%>, <%=@monthly[:i_dec]%>]
+   //        <% end %>
+   //    	  ]);
+
+   //    	  var view = new google.visualization.DataView(data);
+   //    	  view.setColumns([0, 1, 1, 2]);
+
+   //    	  var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+   //    }
+
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['', ''],
@@ -303,9 +366,9 @@
 					<%=I18n.t('victim_chars2')%>
 				</div>
 				<div class="clear"></div>
-				<div class="first gotham-light"><div style="margin-left:5px;"><%=@vc[:first].first.last%> %</div></div>
-				<div class="second gotham-light"><div style="margin-left:5px;"><%=@vc[:second].first.last%> %</div></div>
-				<div class="third gotham-light"><div style="margin-left:5px;"><%=@vc[:third].first.last%> %</div></div>
+				<div class="first gotham-light"><div style="margin-left:5px;"><%=@vc[:first].first.last.round(2)%> %</div></div>
+				<div class="second gotham-light"><div style="margin-left:5px;"><%=@vc[:second].first.last.round(2)%> %</div></div>
+				<div class="third gotham-light"><div style="margin-left:5px;"><%=@vc[:third].first.last.round(2)%> %</div></div>
 
 				<div class="first_lbl gotham-ultra"><%=@vc[:first].first.first.html_safe%></div>
 				<div class="second_lbl gotham-ultra" ><%=@vc[:second].first.first.html_safe%></div>
@@ -404,23 +467,20 @@
 	</div>
 	<div class="clear"></div>
 	<div class="map_wrapper">
-		<div class="map <%='hide_map' unless @render_map%>">
+		<div class="map">
 			<div class="title gotham-bold"><%=I18n.t('map_title1')%><br/><%=I18n.t('map_title2')%></div>
 			<div class="cities">
-				<ul id="cities">
+				<ul id="cities" class="<%= 'small' if @graphical_cities.size > 20 %>">
 					<% @graphical_cities.each_with_index do |city, i|%>						
 						<li class="gotham-bold"><%=city[:key]%>&nbsp;&nbsp;<span class="gotham-bold"><%=city[:responses]%> / <%=city[:incidents]%></span></li>	
-						<% if i >10 && @render_map%>
-							<% break %>
-						<% else %>
-							
-						<% end %>
 					<% end %>
 				</ul>								
 			</div>
 			<div class="map_position">
-				<% if @render_map %>
-					<% @graphical_cities.each do |gcity| %>
+					<% @graphical_cities.each_with_index do |gcity, i| %>
+						<% #if i > 10 %>
+							<% #break %>
+						<% #end %>
 						<% if gcity[:incidents].to_i > 0 %>
 							<div class="<%=gcity[:key]%> incident graphical gotham-light"></div>
 						<% end %>
@@ -428,7 +488,6 @@
 							<div class="<%=gcity[:key]%> response graphical gotham-light"></div>
 						<% end %>
 					<% end %>
-				<% end %>
 			</div>
 		</div>	
 		<div class="highlits">
