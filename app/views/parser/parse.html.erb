@@ -134,6 +134,7 @@
 		    backgroundColor: 'transparent',
 		    colors: ['#556161'],
 		    fontName: 'gothamultraregular',
+		    fontSize: 34,
 		    legend: {position: 'none'},
 		    series: {
 		      0: {
@@ -147,9 +148,12 @@
 		        visibleInLegend: false
 		      }
 		    },
+		    isStacked: true,
+		    chartArea:{left:100,top:15,width:"83%",height:"70%"},
+		    hAxis: { minorGridlines: {count: 10, color: '#000'}, textStyle: {color: '#262626'}, allowContainerBoundaryTextCufoff: true,
+                   slantedText: true, slantedTextAngle: 30},
 		    vAxis: {
-		      maxValue: 40,
-		      gridlines: {color: 'transparent'}, textStyle: {color: '#262626'}
+		      gridlines: {color: 'transparent'}, textStyle: {color: '#829c9b'}
 		    }
 		  });
       }
