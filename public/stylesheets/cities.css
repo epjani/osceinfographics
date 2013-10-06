@@ -39,8 +39,9 @@
 	top:-33px;
 }
 .Doboj{
-	left:1087px;
-	top:-41px;
+	
+left:1085px;
+	top:-38px;
 }
 .Gračanica{
 	left:1135px;
@@ -55,12 +56,12 @@
 	top:13px;
 }
 .Bos.Brod{
-	top:1084px;
-	left:-62px;
+	left:1084px;
+	top:-62px;
 }
 .Orašje{
-	top:1214px;
-	left:-42px;
+	left:1214px;
+	top:-42px;
 }
 .Tuzla{
 	left:1211px;
@@ -107,6 +108,10 @@
 	top:323px;
 }
 .Goražde{
+	left:1275px;
+	top:360px;
+}
+.Novo.Goražde{
 	left:1275px;
 	top:360px;
 }
@@ -169,4 +174,188 @@
 .Donji.Vakuf{
 	left:941px;
 	top:212px;
+}
+.Jajce{
+	left:906px;
+	top:160px;
+}
+.Mrkonjić.Grad{
+	left:869px;
+	top:136px;
+}
+.Ključ{
+	left:809px;
+	top:100px;
+}
+.Drvar{
+	left:723px;
+	top:150px;
+}
+.Jezero{
+	left:887px;
+	top:150px;
+}
+.Glamoč{
+	left:819px;
+	top:248px;
+}
+.Kupres{
+	left:915px;
+	top:263px;
+}
+.Kupres.RS{
+	left:915px;
+	top:263px;
+}
+.Livno{
+	left:857px;
+	top:313px;
+}
+.Tomislavgrad{
+	left:00px;
+	top:00px;
+}
+.Neum{
+	left:985px;
+	top:580px;
+}
+.Nevesinje{
+	left:1093px;
+	top:479px;
+}
+.Berkovići{
+	left:1103px;
+	top:526px;
+}
+.Posušje{
+	left:926px;
+	top:412px;
+}
+.Prozor-Rama{
+	left:984px;
+	top:319px;
+}
+.Široki.Brijeg{
+	left:978px;
+	top:448px;
+}
+.Usora{
+	left:1055px;
+	top:51px;
+} 
+.Teslić{
+	left:1038px;
+	top:77px;
+} 
+.Tešanj{
+	left:1061px;
+	top:70px;
+} 
+.Maglaj{
+	left:1090px;
+	top:93px;
+} 
+.Žepče{
+	left:1076px;
+	top:125px;
+} 
+.Zavidovići{
+	left:1080px;
+	top:117px;
+} 
+.Zenica{
+	left:1049px;
+	top:197px;
+} 
+.Kakanj{
+	left:186px;
+	top:218px;
+} 
+.Busovača{
+	left:1041px;
+	top:232px;
+} 
+.Visoko{
+	left:1107px;
+	top:259px;
+} 
+.Breza{
+	left:1157px;
+	top:248px;
+}
+.Ilijaš{
+	left:1139px;
+	top:278px;
+}
+.Vogošća{
+	left:1145px;
+	top:287px;
+}
+.Kiseljak{
+	left:1083px;
+	top:277px;
+}
+.Travnik{
+	left:994px;
+	top:194px;
+}
+.Novi.Travnik{
+	left:994px;
+	top:211px;
+}
+.Vitez{
+	left:1020px;
+	top:211px;
+}
+.Stari.Grad.Sarajevo{
+	left:1163px;
+	top:296px;
+}
+.Ilidža{
+	left:1163px;
+	top:296px;
+}
+.Istočna.Ilidža{
+	left:1163px;
+	top:296px;
+}
+.Centar.Sarajevo{
+	left:1163px;
+	top:296px;
+}
+.Istočni.Stari.Grad{
+	left:1163px;
+	top:296px;
+}
+.Ist.Novo.Sarajevo{
+	left:1163px;
+	top:296px;
+}
+.Novo.Sarajevo{
+	left:1163px;
+	top:296px;
+}
+.Novi.Grad{
+	left:1163px;
+	top:296px;
+}
+.Novi.Grad.Sarajevo{
+	left:1163px;
+	top:296px;
+}
+.Hadžići{
+	left:1163px;
+	top:296px;
+}
+.Pale{
+	left:1196px;
+	top:305px;
+}
+.Trnovo.FBiH{
+	left:1182px;
+	top:323px;
+}
+.Trnovo.RS{
+	left:1182px;
+	top:305px;
 }
