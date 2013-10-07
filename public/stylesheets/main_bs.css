@@ -415,7 +415,7 @@ ul#incidents li .description, ul#responses li .description{
 .map_wrapper .map{
 	padding-left: 43px;
 	margin-top:43px;
-	background: url('/images/bih_map_bs.png') no-repeat 722px -13px;
+	background: url('/images/bih_map.png') no-repeat 722px -13px;
 	min-height: 816px;
 }
 .map_wrapper .map.hide_map{
