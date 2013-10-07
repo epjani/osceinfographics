@@ -134,7 +134,7 @@
 		    backgroundColor: 'transparent',
 		    colors: ['#556161'],	
 		    fontName: 'gothamultraregular',
-		    fontSize: 34,
+		    fontSize: 32,
 		    legend: {position: 'none'},
 		    series: {
 		      0: {
@@ -149,9 +149,9 @@
 		      }
 		    },
 		    isStacked: true,
-		    chartArea:{left:100,top:15,width:"83%",height:"70%"},
+		    chartArea:{left:90,top:15,width:"85%",height:"70%"},
 		    hAxis: { minorGridlines: {count: 10, color: '#000'}, textStyle: {color: '#262626'}, allowContainerBoundaryTextCufoff: true,
-                   slantedText: true, slantedTextAngle: 30},
+                   slantedText: true, slantedTextAngle: 35},
 		    vAxis: {
 		      gridlines: {color: 'transparent'}, textStyle: {color: '#829c9b'}
 		    }
@@ -427,7 +427,7 @@
 				<div class="txt"><%=I18n.t('trials')%></div>
 				<% if I18n.locale == :en %>
 					<% if Integer(@cases_ongoing) < 9 %>
-						<div class="dots">..........................................................................</div>
+						<div class="dots">.........................................................................</div>
 					<% else %>
 						<div class="dots">......................................................................</div>
 					<% end %>
@@ -445,7 +445,7 @@
 				<div class="txt"><%=I18n.t('convictions')%><%=@year%></div>
 				<% if I18n.locale == :en %>
 					<% if Integer(@convictions) < 9 %>
-						<div class="dots">................................................................</div>
+						<div class="dots">...............................................................</div>
 					<% else %>
 						<div class="dots">.............................................................</div>
 					<% end %>
@@ -463,7 +463,7 @@
 				<div class="txt"><%=I18n.t('acquittals')%><%=@year%></div>
 				<% if I18n.locale == :en %>
 					<% if Integer(@acquittals) < 9 %>
-						<div class="dots">....................................................................</div>
+						<div class="dots">..................................................................</div>
 					<% else %> 
 						<div class="dots">................................................................</div>
 					<% end %>
