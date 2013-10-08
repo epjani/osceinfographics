@@ -165,7 +165,7 @@ body{background: #e9e2ce;max-width: 2483px;}
 }
 .incidents_info {
 	color:#546060;
-	width: 850px !important;
+	width: 930px !important;
 	font-size:23px;
 	height: 65px !important;
 	font-family: 'Varela' sans-serif !important;
@@ -331,7 +331,7 @@ ul#incidents li img, ul#responses li img{
 	margin-right: 10px;
 }
 ul#incidents li .description, ul#responses li .description{
-	font-size: 23px;
+	font-size: 22px;
 	color:#546060;
 	float: left;
 	margin-top: -5px;
