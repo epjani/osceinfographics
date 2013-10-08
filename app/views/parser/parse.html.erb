@@ -391,7 +391,7 @@
 			<div class="clear"></div>
 			<div class="gotham-bold graph-title">
 				<%=I18n.t('graph_title')%>
-				<%=I18n.t("since_month.#{@since_month}").upcase%> <%=@since_year%>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #9dc4c5;font-size:36px;"><%=@since_incidents%></span></div>
+				<%=I18n.t("since_month.#{@since_month}").upcase%> <%=@since_year%>:&nbsp;&nbsp;&nbsp;&nbsp;<span class="since_inc_numb"><%=@since_incidents%></span></div>
 			<div id="chart_div" style="width: 1010px; height: 390px;margin-left:-50px;float:left;margin-top:30px;"></div>
 		</div>
 		<div class="since_month">
@@ -486,7 +486,7 @@
 			<div class="cities">
 				<ul id="cities" class="<%= 'small' if @graphical_cities.size > 36 %>">
 					<% @graphical_cities.each_with_index do |city, i|%>						
-						<li class="gotham-bold"><%=city[:key]%>&nbsp;&nbsp;<span class="gotham-bold"><%=city[:responses]%> / <%=city[:incidents]%></span></li>
+						<li class="gotham-bold"><%=city[:key]%>&nbsp;&nbsp;<span class="gotham-bold"><%=city[:incidents]%> / <%=city[:responses]%></span></li>
 						<% if i >75 && @render_map%>
 							<% break %>
 						<% else %>
@@ -515,7 +515,7 @@
 			<div class="highlight_box_wrapper">				
 				<div class="highlight_box">
 					<div class="title gotham-light"><%=I18n.t('highligted')%></div>
-					<div class="highlighted_txt gotham-bold"><%=@highlighted.html_safe%></div>
+					<div class="highlighted_txt gotham-bold"><%=@highlighted%></div>
 				</div>
 			</div>
 			<div class="clear"></div>			

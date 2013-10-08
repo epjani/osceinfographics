@@ -260,6 +260,9 @@ body{background: #e9e2ce;max-width: 2483px;}
 .since_responses {
 	width:472px;float:left;margin-left:150px;
 }
+.since_inc_numb {
+	color: #9dc4c5;font-size:36px;
+}
 .clocklike{
 	font-size: 190px;
 	margin-top: 25px;
