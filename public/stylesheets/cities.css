@@ -39,9 +39,16 @@
 	top:-33px;
 }
 .Doboj{
-	
-left:1085px;
+	left:1085px;
 	top:-38px;
+}
+.Doboj.Istok{
+	left:1085px;
+	top:-38px;
+}
+.Doboj.Jug{
+	left:1039px;
+	top:81px;
 }
 .Gračanica{
 	left:1135px;
@@ -212,8 +219,8 @@ left:1085px;
 	top:313px;
 }
 .Tomislavgrad{
-	left:00px;
-	top:00px;
+	left:900px;
+	top:337px;
 }
 .Neum{
 	left:985px;
@@ -268,7 +275,7 @@ left:1085px;
 	top:197px;
 } 
 .Kakanj{
-	left:186px;
+	left:1086px;
 	top:218px;
 } 
 .Busovača{
@@ -358,4 +365,200 @@ left:1085px;
 .Trnovo.RS{
 	left:1182px;
 	top:305px;
+}
+.Banovići{
+	left:1164px;
+	top:127px;
+}
+.Bileća{
+	left:1159px;
+	top:608px;
+}
+.Bos.Grahovo{
+	left:745px;
+	top:220px;
+}
+.Bužim{
+	left:653px;
+	top:-59px;
+}
+.Čajniče{
+	left:1300px;
+	top:386px;
+}
+.Čelić{
+	left:1219px;
+	top:39px;
+}
+.Čelinac{
+	left:943px;
+	top:39px;
+}
+.Dobretići{
+	left:955px;
+	top:138px;
+}
+.Domaljevac{
+	left:00px;
+	top:00px;
+}
+.Donji.Žabar{
+	left:1155px;
+	top:-61px;
+}
+.Vukosavlje{
+	left:1126px;
+	top:-40px;
+}
+.Han.Pijesak{
+	left:1273px;
+	top:211px;
+}
+.Istočni.Drvar{
+	left:767px;
+	top:132px;
+}
+.Kalinovik{
+	left:1162px;
+	top:404px;
+}
+.Kladanj{
+	left:1215px;
+	top:193px;
+}
+.Kneževo{
+	left:936px;
+	top:112px;
+}
+.Kostajnica{
+	left:761px;
+	top:-107px;
+}
+.Kotor.Varoš{
+	left:934px;
+	top:80px;
+}
+.Koz.Dubica{
+	left:803px;
+	top:-91px;
+}
+.Kreševo{
+	left:1074px;
+	top:300px;
+}
+.Krupa.na.Uni{
+	left:699px;
+	top:-28px;
+}
+.Laktaši{
+	left:913px;
+	top:-5px;
+}
+.Milići{
+	left:1269px;
+	top:230px;
+}
+.Ljubinje{
+	left:1097px;
+	top:577px;
+}
+.Lopare{
+	left:1247px;
+	top:67px;
+}
+.Lukavac{
+	left:1124px;
+	top:-25px;
+}
+.Modriča{
+	left:1184px;
+	top:104px;
+}
+.Osmaci{
+	left:1266px;
+	top:137px;
+}
+.Oštra.Luka{
+	left:768px;
+	top:33px;
+}
+.Pale.Prača{
+	left:1273px;
+	top:337px;
+}
+.Pelagićevo{
+	left:1209px;
+	top:00px;
+}
+.Petrovac{
+	left:737px;
+	top:113px;
+}
+.Petrovo{
+	left:1127px;
+	top:75px;
+}
+.Prnjavor{
+	left:997px;
+	top:00px;
+}
+.Ravno{
+	left:1059px;
+	top:589px;
+}
+.Ribnik{
+	left:821px;
+	top:137px;
+}
+.Rudo{
+	left:1359px;
+	top:371px;
+}
+.Šamac{
+	left:1169px;
+	top:-71px;
+}
+.Sapna{
+	left:1269px;
+	top:121px;
+}
+.Šekovići{
+	left:1255px;
+	top:165px;
+}
+.Šipovo{
+	left:886px;
+	top:209px;
+}
+.Sokolac{
+	left:1237px;
+	top:278px;
+}
+.Srbac{
+	left:962px;
+	top:-71px;
+}
+.Srebrenik{
+	left:1188px;
+	top:46px;
+}
+.Teočak{
+	left:1255px;
+	top:79px;
+}
+.Foča.Ustikolina{
+	left:1256px;
+	top:395px;
+}
+.Gacko{
+	left:1175px;
+	top:504px;
+}
+.Olovo{
+	left:1191px;
+	top:223px;
+}
+.Odžak{
+	left:1131px;
+	top:-50px;
 }
