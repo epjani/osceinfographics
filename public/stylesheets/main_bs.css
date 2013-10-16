@@ -475,11 +475,11 @@ ul#cities li span{color:#9dc4c5;}
 .graphical.incident{
 	margin-top:-7px;
 	margin-left: -33px;
-	background: url('/images/black_dot.png') no-repeat;
+	background: url('/images/black_dot4.png') no-repeat;
 	color: #b3caca;
 }
 .graphical.response{
-	background: url('/images/green_dot.png') no-repeat;
+	background: url('/images/green_dot4.png') no-repeat;
 	color: #272727;
 }
 .graph-title {
@@ -613,8 +613,7 @@ ul#cities li span{color:#9dc4c5;}
   visibility: hidden;
 }
 .parser_footer{
-	padding:65px 85px;
-	border:1px solid #000;
+	padding:64px 85px;
 	width:2222px;
 	background:#e9e2ce;
 	padding-left:175px;
