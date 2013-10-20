@@ -365,14 +365,14 @@ ul#incidents li .description, ul#responses li .description{
 	line-height: 1.5;
 	text-align: justify;
 }
-.hate_cases{margin-top: 57px;float: left;margin-left: 150px;margin-bottom: 10px;}
+.hate_cases{margin-top: 57px;float: left;margin-left: 175px;margin-bottom: 10px;}
 .hate_cases .title{
 	font-size: 48px;
 	color:#9dc4c5;
 	border-bottom: 7px solid #9dc4c5;
 	padding-bottom: 25px;
 	padding-left: 5px;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	text-align: center;
 }
 .hate_cases .li{
@@ -711,3 +711,27 @@ ul#cities li span{color:#9dc4c5;}
 	top: 230px;
 	left: 580px;
 }*/
+.dots-line{
+    border-bottom: 2px dotted #262626;
+    line-height: 1em;
+    text-align: right;
+    clear: both;
+    margin: 0.5em 0 0 -1em;
+    font-size: 33px;
+	color: #262626;
+	font-family: 'gothamlightregular';
+}
+span.case-txt {
+    float: left;
+	margin-bottom: 12px;
+}
+span.case-txt, span.case-value {
+    display: inline-block;
+    border: 2px solid #829c9b;
+    padding: 0;
+    padding-right: 5px;
+    margin: 0 0 -2px 0;
+}
+ul {
+	list-style-type: none !important;
+}

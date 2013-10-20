@@ -423,7 +423,12 @@
 				<%=I18n.t('cases_title3')%>					
 			</div>
 			<div class="clear"></div>
-			<div class="gotham-light li">
+			<ul>
+			    <li class="dots-line"><span class="case-txt"><%=I18n.t('trials')%></span><span class="case-value"><%=@cases_ongoing%></span></li>
+			    <li class="dots-line"><span class="case-txt"><%=I18n.t('convictions')%><%=@year%></span><span class="case-value"><%=@convictions%></span></li>
+			    <li class="dots-line"><span class="case-txt"><%=I18n.t('acquittals')%><%=@year%></span><span class="case-value"><%=@acquittals%></span></li>
+			</ul>
+			<!-- <div class="gotham-light li">
 				<div class="txt"><%=I18n.t('trials')%></div>
 				<% if I18n.locale == :en %>
 					<% if Integer(@cases_ongoing) < 9 %>
@@ -440,8 +445,8 @@
 					<% end %>
 				<% end %>				
 				<div class="value"><%=@cases_ongoing%></div>
-			</div>
-			<div class="gotham-light li">
+			</div> -->
+			<!-- <div class="gotham-light li">
 				<div class="txt"><%=I18n.t('convictions')%><%=@year%></div>
 				<% if I18n.locale == :en %>
 					<% if Integer(@convictions) < 9 %>
@@ -458,8 +463,8 @@
 					<% end %>
 				<% end %>
 				<div class="value"><%=@convictions%></div>
-			</div>
-			<div class="gotham-light li">
+			</div> -->
+			<!-- <div class="gotham-light li">
 				<div class="txt"><%=I18n.t('acquittals')%><%=@year%></div>
 				<% if I18n.locale == :en %>
 					<% if Integer(@acquittals) < 9 %>
@@ -476,7 +481,7 @@
 					<% end %>
 				<% end %>
 				<div class="value"><%=@acquittals%></div>
-			</div>
+			</div> -->
 		</div>	
 	</div>
 	<div class="clear"></div>

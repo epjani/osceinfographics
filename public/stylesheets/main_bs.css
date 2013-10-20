@@ -383,15 +383,18 @@ ul#incidents li .description, ul#responses li .description{
 	font-family: 'Varela' sans-serif !important;
 	font-weight: bold;
 }
-.hate_cases{margin-top:30px;float: left;margin-left: 170px;margin-bottom: 0px;}
+.hate_cases{margin-top:30px;float: left;margin-left: 180px;margin-bottom: 0px;}
 .hate_cases .title{
 	font-size: 48px;
 	color:#9dc4c5;
 	border-bottom: 7px solid #9dc4c5;
 	padding-bottom: 20px;
-	padding-left: 5px;
+	padding-left: 40px;
 	margin-bottom: 20px;
 	text-align: center;
+}
+.hate_cases .ul {
+	list-style-type: none;
 }
 .hate_cases .li{
 	font-size: 33px;
@@ -742,3 +745,27 @@ ul#cities li span{color:#9dc4c5;}
 	top: 230px;
 	left: 580px;
 }*/
+.dots-line{
+    border-bottom: 2px dotted #262626;
+    line-height: 1em;
+    text-align: right;
+    clear: both;
+    margin: 0.5em 0 0 -1em;
+    font-size: 33px;
+	color: #262626;
+	font-family: 'Varela' sans-serif;
+}
+span.case-txt {
+    float: left;
+	margin-bottom: 12px;
+}
+span.case-txt, span.case-value {
+    display: inline-block;
+    border: 2px solid #829c9b;
+    padding: 0;
+    padding-right: 5px;
+    margin: 0 0 -2px 0;
+}
+ul {
+	list-style-type: none !important;
+}
