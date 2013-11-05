@@ -55,7 +55,7 @@ class ParserController < ApplicationController
 	end
 
 	def show_image
-		aws_ip = "54.218.15.104"
+		aws_ip = "54.213.79.234"
 		file_name = params[:file_name]
 		local_file = "public/images/infographs/#{file_name}.png"
 

@@ -61,13 +61,13 @@
 		final_file_name = file_name + '-' + __lang;
 		$.ajax({
 			type : 'GET',
-			url : 'http://54.218.15.104/invoke_rasterization?file_name=' + file_name + '&locale=' + __lang,
+			url : 'http://54.213.79.234/invoke_rasterization?file_name=' + file_name + '&locale=' + __lang,
 			dataType: 'jsonp',
 			success : function(){
-				window.open('http://54.218.15.104/images/infographs/' + final_file_name + '.png');
+				window.open('http://54.213.79.234/images/infographs/' + final_file_name + '.png');
 			},
 			error : function(data){
-				window.open('http://54.218.15.104/images/infographs/' + final_file_name + '.png');
+				window.open('http://54.213.79.234/images/infographs/' + final_file_name + '.png');
 			}
 		});
 	}
