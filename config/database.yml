@@ -2,9 +2,9 @@
 #   gem install sqlite3-ruby (not necessary on OS X Leopard)
 development:
   adapter: postgresql
-  database: infograph
-  username: adminvyr4vgj
-  password: XflyQvRJVxXU
+  database: osceinfo_prod
+  username: osceinfo_prod
+  password: OsceInfo2013?
   pool: 5
   host: <%= ENV["OPENSHIFT_POSTGRESQL_DB_HOST"] %>
   port: <%= ENV["OPENSHIFT_POSTGRESQL_DB_PORT"] %>
@@ -20,9 +20,9 @@ test:
 
 production:
   adapter: postgresql
-  database: infograph
-  username: adminvyr4vgj
-  password: XflyQvRJVxXU
+  database: osceinfo_prod
+  username: osceinfo_prod
+  password: OsceInfo2013?
   pool: 5
   host: <%= ENV["OPENSHIFT_POSTGRESQL_DB_HOST"] %>
   port: <%= ENV["OPENSHIFT_POSTGRESQL_DB_PORT"] %>
