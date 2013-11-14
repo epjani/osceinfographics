@@ -8,6 +8,8 @@ gem 'rails', '3.0.3'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'rake', '0.8.7'
 gem 'pg', '0.11.0'
+gem 'newrelic_rpm'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
