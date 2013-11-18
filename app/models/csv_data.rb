@@ -44,9 +44,9 @@ class CsvData < ActiveRecord::Base
 		file_path = "public/csv/#{file_name}.csv"		
 		
 		begin
-			raw_csv = CSV.read(file_path, {:headers => true, :col_sep => ";", :encoding => "UTF-8"})
+			raw_csv = CSV.read(file_path, {:headers => true, :col_sep => ",", :encoding => "UTF-8"})
 		rescue
-			raw_csv = CSV.read(file_path, {:headers => true, :col_sep => ";", :encoding => "ISO-8859-2"})
+			raw_csv = CSV.read(file_path, {:headers => true, :col_sep => ",", :encoding => "ISO-8859-2"})
 		end
 		switcher = :general_info
 		rafined_data[switcher] = {}
