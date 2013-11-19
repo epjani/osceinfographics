@@ -39,7 +39,6 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.23)
-    newrelic_rpm (3.6.9.171)
     pg (0.11.0)
     polyglot (0.3.3)
     rack (1.2.8)
@@ -74,7 +73,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  newrelic_rpm
   pg (= 0.11.0)
   rails (= 3.0.3)
   rake (= 0.8.7)
